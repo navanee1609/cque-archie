@@ -7,7 +7,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 const CarouselSection = () => {
   return (
-    <div className="container mx-auto sm:px-4 max-w-full pt-12 pb-12">
+    <div className="container mx-auto sm:px-4 max-w-full pt-12 mt-8 pb-12">
       <div className="flex flex-wrap items-center justify-center">
         <h3 className="text-center text-4xl font-semibold mb-8 w-full">
           Why customers win with CQUE AI?
