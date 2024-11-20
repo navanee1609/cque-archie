@@ -4,17 +4,31 @@ import Image from "next/image";
 import Link from "next/link";
 
 // MIDDLE LINKS DATA
+
+
+// Define the LinkType interface for each link
+interface LinkType {
+  name: string;
+  path: string;
+}
+
+// Define the ProductType interface for the overall structure
 interface ProductType {
   id: number;
   section: string;
-  link: string[];
+  link: LinkType[]; // Each link is an array of LinkType
 }
 
+// Define the products array using the ProductType interface
 const products: ProductType[] = [
   {
     id: 1,
     section: "Quick Links",
-    link: [ "About us", "Pricing", "Blogs"],
+    link: [
+      { name: "About Us", path: "/aboutus" },
+      { name: "Pricing", path: "/pricing" },
+      { name: "Blogs", path: "/blogs" },
+    ],
   },
 ];
 
@@ -87,13 +101,13 @@ const footer = () => {
                 {product.section}
               </p>
               <ul className="text-center sm:text-left">
-                {product.link.map((link, index) => (
+              {product.link.map((link, index) => (
                   <li key={index} className="mb-5">
                     <Link
-                      href="/"
+                      href={link.path} // Dynamically link to the respective path
                       className="text-white text-lg font-normal mb-6 space-links"
                     >
-                      {link}
+                      {link.name} {/* Display the dynamic name */}
                     </Link>
                   </li>
                 ))}
