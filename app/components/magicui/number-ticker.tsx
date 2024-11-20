@@ -33,8 +33,9 @@ export default function NumberTicker({
     () =>
       springValue.on("change", (latest) => {
         if (ref.current) {
+          // Fix the issue by converting `latest.toFixed(0)` to a number
           ref.current.textContent = Intl.NumberFormat("en-US").format(
-            latest.toFixed(0),
+            parseFloat(latest.toFixed(0))
           );
         }
       }),
