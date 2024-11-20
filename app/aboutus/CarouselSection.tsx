@@ -73,7 +73,7 @@ const CarouselSection = () => {
             ].map((item, index) => (
               <SwiperSlide key={index}>
                 <div
-                  className={`p-6 rounded-lg shadow-lg ${item.bgColor} transform transition-transform duration-500 hover:scale-105 flex flex-col h-full`}
+                  className={`p-6 rounded-lg shadow-lg ${item.bgColor} transform transition-transform duration-500 hover:scale-105 flex flex-col h-[250px]`}
                 >
                   <div className="flex items-center justify-start mb-4">
                     <i className={`fas ${item.icon} text-4xl mr-3 text-black`} />
