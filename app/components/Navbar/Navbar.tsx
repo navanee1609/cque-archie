@@ -70,14 +70,14 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
                     src="/images/new_logo.png"
                     alt="logo"
                     className="max-w-full h-auto logo-color mt-1"
-                    style={{ width: 150, height: 40 }}
+                    style={{ width: 150, height: 45 }}
                   />
                 </Link>
               </div>
 
               {/* LINKS */}
 
-              <div className="hidden lg:flex items-center border-right">
+              <div className="hidden lg:flex items-center border-right text-lg font-medium">
   <div className="flex justify-center space-x-6"> {/* Increased space between links */}
     {navigation.map((item) => (
       <Link

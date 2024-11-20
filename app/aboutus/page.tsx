@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import { InlineWidget } from 'react-calendly';
+import CarouselSection from "./CarouselSection";
 
 interface datatype {
   heading: string;
@@ -106,7 +107,7 @@ const handleCloseCalendly = () => {
                 <div className="fixed inset-0 flex items-center justify-center z-50">
                     <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
                         <button
-                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-black"
                             onClick={handleCloseCalendly}
                         >
                             &#10005; {/* X button */}
@@ -180,119 +181,8 @@ const handleCloseCalendly = () => {
       
 
 
-<div className="container mx-auto bg-lightgrey sm:px-4 max-w-full pt-12 pb-12">
-      <div className="flex flex-wrap items-center justify-center">
-        <h3 className="text-center text-4xl font-semibold mb-8 w-full">
-          Why customers win with CQUE AI?
-        </h3>
-        <div className="w-full lg:w-5/6 pr-4 pl-4">
-          <Swiper
-            spaceBetween={2}
-            slidesPerView={1}
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 5,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 15,
-              },
-            }}
-            className="swiper"
-            id="owl-carousell"
-          >
-           
-           
-            <SwiperSlide>
-              <div className="bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
-                <div className="text-center w-full font-semibold text-gray-900 mt-4">
-                  <h3 className="text-2xl mb-3 text-black">Happier  <br /> Shoppers</h3>
-                
-            
-                  <hr className="mx-auto" style={{ width: '80%', color:"lightgrey" , }} />
-                </div>
-                <p className="text-center py-3 text-black">
-                  CQUE AI provides delightful conversations, making shopping experiences more engaging and enjoyable.
-                </p>
-              </div>
-            </SwiperSlide>
+ <CarouselSection/>
 
-            <SwiperSlide>
-              <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
-                <div className="text-center w-full font-semibold text-gray-900 mt-4">
-                  <h3 className="text-2xl mb-3 text-black">
-                  Effortless
-                <br />
-                Assistance
-
-                  </h3>
-                  <hr className="mx-auto" style={{ width: '80%', color:"lightgrey" , }} />
-                </div>
-                <p className="text-center text-black py-3">
-                Get instant answers and product recommendations, leading to faster purchases and fewer frustrated customers.
-                </p>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
-                <div className="text-center w-full font-semibold text-gray-900 mt-4">
-                  <h3 className="text-2xl mb-3 text-black">
-                  Personalized
-                <br />
-                Touch
-
-                  </h3>
-                  <hr className="mx-auto" style={{ width: '80%', color:"lightgrey" , }} />
-                </div>
-                <p className="text-center text-black py-3">
-                CQUE AI learns buyer preferences, offering relevant suggestions and boosting customer satisfaction.
-                </p>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
-                <div className="text-center w-full font-semibold text-gray-900 mt-4">
-                  <h3 className="text-2xl mb-3 text-black">
-                  24/7 support
-                <br />
-                  </h3>
-                  <hr className="mx-auto" style={{ width: '80%', color:"lightgrey" , }} />
-                </div>
-                <p className="text-center text-black py-3">
-                With round-the-clock AI assistance that continues conversations even after business hours, you'll never miss a sale.
-                </p>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
-                <div className="text-center w-full font-semibold text-gray-900 mt-4">
-                  <h3 className="text-2xl mb-3 text-black">
-                  Data-Driven 
-                <br />
-                Insights
-                  </h3>
-                  <hr className="mx-auto" style={{ width: '80%', color:"lightgrey" , }} />
-                </div>
-                <p className="text-center text-black py-3">
-                Through CQUE AI interactions, obtain useful consumer data that can be used to improve marketing strategies and product suggestions.
-                </p>
-              </div>
-            </SwiperSlide>
-
-            
-           
-          </Swiper>
-        </div>
-      </div>
-    </div>
 
 
 
@@ -321,7 +211,7 @@ const handleCloseCalendly = () => {
                 <div className="fixed inset-0 flex items-center justify-center z-50">
                     <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
                         <button
-                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-black"
                             onClick={handleCalendlyClose}
                         >
                             &#10005; {/* X button */}
