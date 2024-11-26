@@ -153,37 +153,48 @@ const Banner = () => {
               borderRadius: 49,
               display: "flex",
               flexDirection: "column",
-              justifyContent: "flex-end",
+              justifyContent: "space-between", // Adjusted to separate top and chat
               padding: "1rem",
               overflowY: "auto",
               scrollbarWidth: "none",
             }}
           >
-            <h3
+            {/* Assistant Title */}
+            <div
               style={{
-                fontSize: "1.1rem", // Reduced font size
-                fontWeight: "bold",
-                margin: "0.5rem",
+                flexShrink: 0, // Prevent collapsing
+                marginBottom: "1rem",
                 textAlign: "center",
               }}
             >
-              CQUE Assistant
-            </h3>
-            <div
-  className="chat-container"
-  style={{
-    display: "flex",
-    flexDirection: "column-reverse",
-    maxHeight: "400px",
-    overflowY: "auto",
-    scrollbarWidth: "none",
-  }}
->
-  {/* Messages */}
-  <ChatMessages/>
-</div>
+              <h3
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "bold",
+                  marginTop: "1.7rem",
+                  textAlign: "center",
+                  fontFamily: "Urbanist, sans-serif",
+                }}
+              >
+                CQUE Assistant
+              </h3>
+            </div>
 
-           
+            {/* Chat Container */}
+            <div
+              className="chat-container"
+              style={{
+                display: "flex",
+                flexDirection: "column-reverse",
+                maxHeight: "400px",
+                overflowY: "auto",
+                scrollbarWidth: "none",
+                flexGrow: 1, // Allow chat to fill the rest of the space
+              }}
+            >
+              {/* Messages */}
+              <ChatMessages />
+            </div>
 
             {/* Input */}
             <div
@@ -193,6 +204,7 @@ const Banner = () => {
                 border: "1px solid #4CAF50",
                 borderRadius: "20px",
                 padding: "0.3rem 1rem",
+                marginTop: "1rem",
               }}
             >
               <input
@@ -204,6 +216,7 @@ const Banner = () => {
                   outline: "none",
                   padding: "0.3rem",
                   fontSize: "0.75rem",
+                  fontFamily: "Urbanist, sans-serif",
                 }}
               />
               <button
@@ -225,6 +238,7 @@ const Banner = () => {
     </div>
   </div>
 </div>
+
 
 
 

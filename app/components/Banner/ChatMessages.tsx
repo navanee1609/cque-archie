@@ -53,7 +53,7 @@ const ChatMessages = () => {
       const timer = setTimeout(() => {
         setMessages((prevMessages) => [...prevMessages, chatData[currentIndex]]);
         setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, 1500); // 1.5s delay for each chat bubble
+      }, 2000); // 1.5s delay for each chat bubble
       return () => clearTimeout(timer);
     }
   }, [currentIndex, chatData]);
