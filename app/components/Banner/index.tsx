@@ -176,7 +176,7 @@ const Banner = () => {
                   fontFamily: "Urbanist, sans-serif",
                 }}
               >
-                CQUE Assistant
+                CQUE AI Assistant
               </h3>
             </div>
 
