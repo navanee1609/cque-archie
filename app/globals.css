@@ -701,7 +701,7 @@ body {
   opacity: var(--bar-opacity, 0);
 }
 .content .text:before {
-  content: "Smartle.AI";
+  content: "CQUE.AI";
   order: 1;
   text-transform: uppercase;
   font-family: inherit;
@@ -1360,4 +1360,136 @@ input[type="number"] {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); 
   z-index: 10; 
+}
+
+/* Keyframes for Typewriting Effect */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Apply the typing animation to chat bubbles */
+/* Typing Effect */
+.typing-effect {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Message and Image Delays */
+.message-1 {
+  animation-delay: 0.5s; /* Increased delay */
+}
+
+.message-2 {
+  animation-delay: 1.5s; /* Increased delay */
+}
+
+.message-3 {
+  animation-delay: 2.5s; /* Increased delay */
+}
+
+.message-4 {
+  animation-delay: 3.5s; /* Increased delay */
+}
+
+.message-5 {
+  animation-delay: 4.5s; /* Increased delay */
+}
+
+/* Ensure images are hidden initially */
+.image-1, .image-2 {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Set delays for images */
+.image-1 {
+  animation-delay: 3s; /* Increased delay */
+}
+
+.image-2 {
+  animation-delay: 4.5s; /* Increased delay */
+}
+
+/* Buttons */
+.button-1, .button-2 {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Set delays for buttons */
+.button-1 {
+  animation-delay: 5s; /* Increased delay */
+}
+
+.button-2 {
+  animation-delay: 5.5s; /* Increased delay */
+}
+.custom-scrollbar{
+  scrollbar-width: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Avatar Delay */
+.avatar-1, .avatar-2, .avatar-3, .avatar-4, .avatar-5 {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Delays for avatars */
+.avatar-1 {
+  animation-delay: 0.5s; /* Matches message-1 */
+}
+
+.avatar-2 {
+  animation-delay: 1.5s; /* Matches message-2 */
+}
+
+.avatar-3 {
+  animation-delay: 2.5s; /* Matches message-3 */
+}
+
+.avatar-4 {
+  animation-delay: 3.5s; /* Matches message-4 */
+}
+
+.avatar-5 {
+  animation-delay: 4.5s; /* Matches message-5 */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message {
+  animation: fadeInUp 0.4s ease-in-out;
 }

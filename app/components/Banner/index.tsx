@@ -3,12 +3,14 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "../magicui/animated-gradient-text";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { InlineWidget } from "react-calendly";
+import ChatMessages from "./ChatMessages";
 
 const Banner = () => {
   const [showsCalendly, setShowsCalendly] = useState(false);
   const [overlayVisible, setOverlayVisible] = useState(false);
+
 
   const handleButtonClicks = () => {
     setShowsCalendly(true);
@@ -56,8 +58,8 @@ const Banner = () => {
             letterSpacing: "0.02em"
         }}
     >
-        Welcome to <span className="text-style-gradient">CQUE AI</span> the future of eCommerce support. 
-        Our cutting-edge AI transforms online shopping experiences.
+        Welcome to <span className="text-style-gradient">CQUE AI</span> – the future of eCommerce support.
+        Empower your business with AI-driven sales, marketing, and customer service excellence to redefine online shopping experiences.
 
     </p>
 </div>
@@ -100,64 +102,133 @@ const Banner = () => {
         {/* COLUMN-2 */}
 
         <div className="lg:-m-24 lg:pt-20 lg:block">
-          <Image
-            src="/images/banner/banner.svg"
-            alt="hero-image"
-            width={800}
-            height={442}
-            style={{ position: "absolute" }}
-            className="lg:block hidden"
-          />
-          <div className="scene" style={{ margin: "0 auto" }}>
-            <div className="phone-con" style={{ width: 300 }}>
-              <div className="phone" style={{ width: 300 }}>
-                <div className="buttons">
-                  <div className="left">
-                    <div className="button" />
-                    <div className="button" />
-                    <div className="button" />
-                  </div>
-                  <div className="right">
-                    <div className="button" />
-                  </div>
-                </div>
-                <div className="camera" />
-                <div className="screen-container">
-                  <iframe
-                    src="https://chat.smartle.ai/"
-                    width="100%"
-                    height="100%"
-                    style={{ borderRadius: 49, border: "none" }}
+  <Image
+    src="/images/banner/banner.svg"
+    alt="hero-image"
+    width={800}
+    height={442}
+    style={{ position: "absolute" }}
+    className="lg:block hidden"
+  />
+  <div className="scene" style={{ margin: "0 auto" }}>
+    <div className="phone-con" style={{ width: 300 }}>
+      <div className="phone" style={{ width: 300, position: "relative" }}>
+        <div className="buttons">
+          <div className="left">
+            <div className="button" />
+            <div className="button" />
+            <div className="button" />
+          </div>
+          <div className="right">
+            <div className="button" />
+          </div>
+        </div>
+        <div className="camera" />
+        <div className="screen-container">
+          <div className="notch-container" tabIndex={0}>
+            <div className="notch">
+              <div className="content">
+                <div className="left" style={{ margin: "auto 0" }}>
+                  <img
+                    src="/images/logo-white.jpg"
+                    style={{
+                      height: 20,
+                      width: "20px",
+                      marginLeft: "1.2rem",
+                    }}
                   />
-                  <div className="notch-container" tabIndex={0}>
-                    <div className="notch">
-                      <div className="content">
-                        <div className="left" style={{ margin: "auto 0" }}>
-                          {/* <div class="tile"> */}
-                          <img
-                            src="/images/Sicon.png"
-                            style={{
-                              height: 20,
-                              width: "20x",
-                              marginLeft: "1.2rem",
-                            }}
-                          />
-                          {/* </div> */}
-                          <div className="text" />
-                        </div>
-                        <div className="right" />
-                        <div className="bar">
-                          <div className="duration" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="notch-blur" />
+                  <div className="text" />
+                </div>
+                <div className="right" />
+                <div className="bar">
+                  <div className="duration" />
                 </div>
               </div>
             </div>
           </div>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: 49,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-end",
+              padding: "1rem",
+              overflowY: "auto",
+              scrollbarWidth: "none",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "1.1rem", // Reduced font size
+                fontWeight: "bold",
+                margin: "0.5rem",
+                textAlign: "center",
+              }}
+            >
+              CQUE Assistant
+            </h3>
+            <div
+  className="chat-container"
+  style={{
+    display: "flex",
+    flexDirection: "column-reverse",
+    maxHeight: "400px",
+    overflowY: "auto",
+    scrollbarWidth: "none",
+  }}
+>
+  {/* Messages */}
+  <ChatMessages/>
+</div>
+
+           
+
+            {/* Input */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                border: "1px solid #4CAF50",
+                borderRadius: "20px",
+                padding: "0.3rem 1rem",
+              }}
+            >
+              <input
+                type="text"
+                placeholder="Type a message..."
+                style={{
+                  flexGrow: 1,
+                  border: "none",
+                  outline: "none",
+                  padding: "0.3rem",
+                  fontSize: "0.75rem",
+                }}
+              />
+              <button
+                style={{
+                  backgroundColor: "transparent",
+                  border: "none",
+                  marginLeft: "0.5rem",
+                  cursor: "pointer",
+                  fontSize: "1.3rem",
+                  color: "#4CAF50",
+                }}
+              >
+                <i className="fa-brands fa-telegram"></i>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
       </div>
       <div className="lg:block hidden">
         <div className="blur-box">
