@@ -213,7 +213,7 @@ const Banner = () => {
                   marginLeft: "0.5rem",
                   cursor: "pointer",
                   fontSize: "1.3rem",
-                  color: "#4CAF50",
+                  color: "#286955",
                 }}
               >
                 <i className="fa-brands fa-telegram"></i>
