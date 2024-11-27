@@ -55,7 +55,7 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
             <div className="flex flex-1 items-center sm:justify-between">
               {/* LOGO */}
 
-              <div className="flex flex-shrink-0 items-center border-right">
+              <div className="flex flex-shrink-0 items-center">
                 {/* <a
                   href="/"
                   className="inline-block pt-1 pb-1 mr-4 text-lg whitespace-no-wrap flex items-center md:mb-0 text-decoration-none"
@@ -70,15 +70,15 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
                     src="/images/new_logo.png"
                     alt="logo"
                     className="max-w-full h-auto logo-color mt-1"
-                    style={{ width: 150, height: 45 }}
+                    style={{ width: 180, height: 50 }}
                   />
                 </Link>
               </div>
 
               {/* LINKS */}
 
-              <div className="hidden lg:flex items-center border-right text-lg font-medium">
-  <div className="flex justify-center space-x-6"> {/* Increased space between links */}
+              <div className="hidden lg:flex items-center text-lg font-medium">
+  <div className="flex justify-center space-x-6 text-lg font-medium"> {/* Increased space between links */}
     {navigation.map((item) => (
       <Link
         key={item.name}
@@ -87,7 +87,7 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
           item.current
             ? "bg-gray-900"
             : "navlinks hover:text-black",
-          "px-6 py-2 rounded-md text-lg font-normal"
+          "px-6 py-2 rounded-md text-lg font-medium"
         )}
         aria-current={item.href ? "page" : undefined}
       >
@@ -100,7 +100,7 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
               <a className="hidden lg:block">
               <div>
               <button
-        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
+        className="relative flex-grow max-w-full flex- 1 inline-block align-middle text-center select-none border font-medium whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
         onClick={handleButtonClicks}
       >
          Start for Free

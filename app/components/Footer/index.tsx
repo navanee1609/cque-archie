@@ -72,13 +72,13 @@ const footer = () => {
               className="text-2xl sm:text-4xl font-semibold text-black"
             >
               <img
-                src="/images/logo-white.jpg"
+                src="/images/notch-logo.png"
                 alt="logo"
                 className="max-w-full h-auto logo-color mt-1 mx-auto sm:ml-0" // Center the logo horizontally on mobile and tablet screens
                 style={{ width: "auto", height: 60, marginTop: "-2rem" }}
               />
             </Link>
-            <h5 className="text-white text-center m-2 mt-6 mb-5 sm:mb-0 sm:text-left">
+            <h5 className="text-white text-center text-lg font-medium m-2 mt-6 mb-5 sm:mb-0 sm:text-left">
               Transform your shopping experience with Cque's revolutionary
               conversational AI chatbot for E-commerce crafted to boost sales by
               converting potential chats into revenue.
@@ -105,7 +105,7 @@ const footer = () => {
                   <li key={index} className="mb-5">
                     <Link
                       href={link.path} // Dynamically link to the respective path
-                      className="text-white text-lg font-normal mb-6 space-links"
+                      className="text-white text-lg font-medium mb-6 space-links"
                     >
                       {link.name} {/* Display the dynamic name */}
                     </Link>
@@ -126,7 +126,7 @@ const footer = () => {
             }}
           >
             <h5 className="text-white text-xl font-extrabold mb-9">Location</h5>
-            <p className="mb-4">
+            <p className="mb-4 text-lg font-medium">
               <a
                 className="text-white"
                 href="https://maps.app.goo.gl/JqpMB7DdQkqQvkir5"
@@ -317,7 +317,7 @@ const footer = () => {
         <div className="pt-5 pb-5 px-4 sm:px-6 lg:px-4 border-solid border-t border-footer">
           <div className="mt-4 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 xl:gap-x-8">
             <div>
-              <h3 className="text-center md:text-start text-offwhite text-lg">
+              <h3 className="text-center md:text-start text-offwhite text-lg font-medium">
                 @2024 - All Rights Reserved by{" "}
                 <Link href="" target="_blank">
                   {" "}
@@ -327,10 +327,10 @@ const footer = () => {
             </div>
             <div className="flex justify-center md:justify-end">
               <Link href="">
-                <h3 className="text-offwhite pr-6">Privacy policy</h3>
+                <h3 className="text-offwhite pr-6 text-lg font-medium">Privacy policy</h3>
               </Link>
               <Link href="">
-                <h3 className="text-offwhite pl-6 border-solid border-l border-footer">
+                <h3 className="text-offwhite pl-6 border-solid border-l border-footer text-lg font-medium">
                   Terms & conditions
                 </h3>
               </Link>

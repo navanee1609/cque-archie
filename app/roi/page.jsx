@@ -275,10 +275,10 @@ const Roi = () => {
             <h3 className="mb-3 txt-blk fs-40 fw-600 text-center">
               Still Not Sure?
             </h3>
-            <p className="txt-blk fs-18 text-center">
-              Let us show you a quick DEMO tailored to your store. You’ll be
-              impressed.
-            </p>
+            <p className="text-black font-medium text-center text-md" style={{fontSize:"large"}}>
+                Let us show you a quick DEMO tailored to your store. You’ll be
+                impressed.
+              </p>
             <div className="flex justify-center">
               <button
                 className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"

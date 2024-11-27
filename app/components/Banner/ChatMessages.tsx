@@ -45,7 +45,7 @@ const ChatMessages = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false); // Hide skeleton loader after 1 second
-    }, 1000);
+    }, 800);
   }, []);
 
   useEffect(() => {
@@ -74,26 +74,115 @@ const ChatMessages = () => {
           ::-webkit-scrollbar {
             display: none;
           }
-          @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-          }
-          .skeleton {
-            background: #e0e0e0;
-            border-radius: 8px;
-            animation: shimmer 1.5s infinite linear;
-          }
           @keyframes shimmer {
             0% { background-position: -200px 0; }
             100% { background-position: 200px 0; }
           }
+          .skeleton {
+            background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite linear;
+          }
         `}
       </style>
 
-      {/* Display skeleton loading if still loading */}
       {isLoading ? (
-        <div className="skeleton" style={{ height: "20px", width: "80%", margin: "10px auto" }}></div>
-      ) : (
+        <><div>
+          {/* Bot Skeleton */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "flex-start",
+              marginBottom: "15px",
+            }}
+          >
+            <div
+              className="skeleton"
+              style={{
+                marginRight: "10px",
+                borderRadius: "50%",
+                width: "50px",
+                height: "50px",
+              }} />
+            <div
+              className="skeleton"
+              style={{
+                borderRadius: "12px",
+                width: "80%",
+                height: "40px",
+                padding: "10px",
+              }} />
+          </div>
+
+          {/* User Skeleton */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row-reverse",
+              alignItems: "flex-start",
+              marginBottom: "15px",
+            }}
+          >
+            <div
+              className="skeleton"
+              style={{
+                borderRadius: "12px",
+                width: "60%",
+                height: "40px",
+                padding: "10px",
+              }} />
+          </div>
+        </div><div>
+            {/* Bot Skeleton */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "flex-start",
+                marginTop: "10px",
+                marginBottom: "15px",
+              }}
+            >
+              <div
+                className="skeleton"
+                style={{
+                  
+                  marginRight: "10px",
+                  borderRadius: "50%",
+                  width: "50px",
+                  height: "50px",
+                }} />
+              <div
+                className="skeleton"
+                style={{
+                  borderRadius: "12px",
+                  width: "80%",
+                  height: "40px",
+                  padding: "10px",
+                }} />
+            </div>
+
+            {/* User Skeleton */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row-reverse",
+                alignItems: "flex-start",
+                marginBottom: "15px",
+              }}
+            >
+              <div
+                className="skeleton"
+                style={{
+                  borderRadius: "12px",
+                  width: "60%",
+                  height: "40px",
+                  padding: "10px",
+                }} />
+            </div>
+          </div></>
+      ) :(
         messages.map((message) => (
           <div
             key={message.id}
@@ -131,18 +220,15 @@ const ChatMessages = () => {
                 maxWidth: "90%",
                 padding: "12px",
                 borderRadius: "12px",
-                fontFamily: message.type === "bot"
-                  ? "Urbanist, sans-serif"
-                  : "Urbanist, sans-serif",
-                background: message.type === "bot"
-                  ? "transparent" // No background for bot
-                  : "linear-gradient(to right, #e6f7ff, #cce7ff)", // User bubble gradient
-                border: message.type === "bot" ? "1px solid green" : "none", // Green border for bot
-                color: message.type === "bot" ? "black" : "inherit", // Bot text black
-                fontSize: message.type === "user" ? "14px" : "12px", // Increased user text size
+                fontFamily: "Urbanist, sans-serif",
+                background: message.type === "bot" ? "transparent" : "linear-gradient(to right, #e6f7ff, #cce7ff)",
+                border: message.type === "bot" ? "1px solid green" : "none",
+                color: message.type === "bot" ? "black" : "inherit",
+                fontSize: "14px", // Apply text-lg (larger font size)
+                fontWeight: "500", // Apply medium weight
                 boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
                 wordWrap: "break-word",
-                animation: "fadeInUp 0.4s ease-in-out", // Smooth fade-in animation
+                animation: "fadeInUp 0.4s ease-in-out",
               }}
             >
               <div>{message.content}</div>
@@ -164,10 +250,10 @@ const ChatMessages = () => {
                         alignItems: "center",
                         justifyContent: "space-between",
                         borderRadius: "8px",
-                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Modern shadow
+                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
                         overflow: "hidden",
                         backgroundColor: "#fff",
-                        transition: "transform 0.3s, box-shadow 0.3s", // Hover effect
+                        transition: "transform 0.3s, box-shadow 0.3s",
                       }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.transform = "scale(1.05)")
@@ -185,13 +271,11 @@ const ChatMessages = () => {
                           objectFit: "cover",
                         }}
                       />
-
                       {/* Action buttons below each image */}
                       {message.actions && (
                         <div
                           style={{
                             display: "flex",
-                            // flexDirection: "column",
                             gap: "8px",
                             marginTop: "10px",
                             marginBottom: "10px",
@@ -202,7 +286,6 @@ const ChatMessages = () => {
                               key={index}
                               onClick={action.onClick}
                               style={{
-                                display:"flex",
                                 fontSize: "10px",
                                 padding: "8px",
                                 border: "none",

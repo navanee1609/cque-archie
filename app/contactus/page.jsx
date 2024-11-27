@@ -75,10 +75,10 @@ const Contactus = () => {
           style={{ background: "url(images/roi-banner.webp)" }}
         >
           <div className="lg:w-3/4 pr-4 pl-4 text-center">
-            <h1 className="fs-48 txt-blk fw-600" style={{ fontSize: 80 }}>
+            <h1 className="fw-600 text-6xl md:text-8xl">
               Get in touch!
             </h1>
-            <p className="text-center my-2">
+            <p className="text-center my-2 text-lg font-medium">
               Drop us a message and sit back for the magic to happen
             </p>
             <div className="flex items-center justify-center">
@@ -125,11 +125,11 @@ const Contactus = () => {
             <form onSubmit={handleSubmit}>
               <div className="flex flex-wrap justify-between mb-3 space-y-4 lg:space-y-0">
                 <div className="w-full lg:w-2/5">
-                  <label htmlFor="FirstName" className="mb-2 block">
+                  <label htmlFor="FirstName" className="mb-2 block text-md font-medium">
                     First Name *
                   </label>
                   <input
-                    className="rounded-lg border w-full p-2"
+                    className="rounded-lg border w-full p-2 text-md font-medium"
                     style={{ borderColor: "lightgrey" }}
                     type="text"
                     id="FirstName"
@@ -141,11 +141,11 @@ const Contactus = () => {
                   <p className="text-red-500 text-xs mt-1" id="FirstNameErr">{errors.firstName}</p>
                 </div>
                 <div className="w-full lg:w-2/5">
-                  <label htmlFor="LastName" className="mb-2 block">
+                  <label htmlFor="LastName" className="mb-2 block text-md font-medium">
                     Last Name
                   </label>
                   <input
-                    className="rounded-lg border w-full p-2"
+                    className="rounded-lg border w-full p-2 text-md font-medium"
                     style={{ borderColor: "lightgrey" }}
                     type="text"
                     id="LastName"
@@ -159,11 +159,11 @@ const Contactus = () => {
 
               <div className="flex flex-wrap justify-between mb-4 space-y-4 lg:space-y-0">
                 <div className="w-full lg:w-2/5">
-                  <label htmlFor="Email" className="mb-2 block">
+                  <label htmlFor="Email" className="mb-2 block text-md font-medium">
                     Email*
                   </label>
                   <input
-                    className="rounded-lg border w-full p-2 block"
+                    className="rounded-lg border w-full p-2 block text-md font-medium"
                     style={{ borderColor: "lightgrey" }}
                     type="email"
                     id="Email"
@@ -175,11 +175,11 @@ const Contactus = () => {
                   <p className="text-red-500 text-xs mt-1" id="EmailErr">{errors.email}</p>
                 </div>
                 <div className="w-full lg:w-2/5">
-                  <label htmlFor="PhoneNumber" className="mb-2 block">
+                  <label htmlFor="PhoneNumber" className="mb-2 block text-md font-medium">
                     Phone Number
                   </label>
                   <input
-                    className="rounded-lg border w-full p-2"
+                    className="rounded-lg border w-full p-2 text-md font-medium"
                     style={{ borderColor: "lightgrey" }}
                     type="tel"
                     id="PhoneNumber"
@@ -192,11 +192,11 @@ const Contactus = () => {
               </div>
 
               <div className="mb-4">
-                <label htmlFor="text-area" className="mb-2 block">
+                <label htmlFor="text-area" className="mb-2 block text-md font-medium">
                   Tell us a little about your site*
                 </label>
                 <textarea
-                  className="rounded-lg border border-gray-300 w-full p-2 block resize-y"
+                  className="rounded-lg border border-gray-300 w-full p-2 block text-md font-medium resize-y"
                   id="text-area"
                   placeholder="Write your message"
                   style={{ height: "170px", borderColor: 'lightgrey' }}
@@ -206,13 +206,15 @@ const Contactus = () => {
                 <p className="text-red-500 text-xs mt-1" id="TextAreaErr">{errors.textArea}</p>
               </div>
 
+              <div className="flex justify-center items-center text-md font-medium">
               <button
-                className="text-white font-bold py-3 px-4 rounded-3xl w-full"
+                className="text-white font-bold py-3 px-4 rounded-3xl w-80"
                 id="submit"
-                style={{ background: '#286955' }}
+                style={{ background: '#286955', margin: "0 auto" }}
               >
                 Submit
               </button>
+              </div>
             </form>
           </div>
         </div>
@@ -222,15 +224,15 @@ const Contactus = () => {
       <h6 className="font-bold">Want to get on a quick call? Ring us at</h6>
       <div className="py-1">
       <div className="py-3" style={{paddingLeft:"5%"}}>
-        <p className="flex items-center mb-2">
+        <p className="flex items-center mb-2 font-medium text-md">
           <i className="fas fa-phone mr-2" style={{color:'#286955'}}></i>
           <span className="font-bold">Ohio, USA:</span>&nbsp;+1 614 664 7677
         </p>
-        <p className="flex items-center mb-2">
+        <p className="flex items-center mb-2 font-medium text-md">
           <i className="fas fa-phone mr-2" style={{color:'#286955'}}></i>
           <span className="font-bold" mb-1>Singapore:</span>&nbsp;+65 6652 5475
         </p>
-        <p className="flex items-center mb-0">
+        <p className="flex items-center mb-0 text-md font-medium">
           <i className="fas fa-phone mr-2" style={{color:'#286955'}}></i>
           <span className="font-bold mb-1">Chennai, India:</span>&nbsp;+91 44 4784 3003
         </p>
@@ -270,13 +272,13 @@ const Contactus = () => {
     </div>
 
     <div className="py-1">
-      <h6 className="flex items-center">
+      <h6 className="flex items-center text-md font-medium">
         <i className="fas fa-suitcase mr-2" style={{color:'#286955'}}></i>
-        For Jobs enquiries, email us at&nbsp;<a href="mailto:jobs@spritle.com">jobs@spritle.com</a>
+        For Jobs enquiries, email us at&nbsp;<a href="mailto:jobs@spritle.com"><span style={{color:"rgb(40, 105, 85"}}>jobs@spritle.com</span></a>
       </h6>
-      <h6 className="flex items-center mt-2">
+      <h6 className="flex items-center mt-2 text-md font-medium">
         <i className="fas fa-circle-info mr-2" style={{color:'#286955'}}></i>
-        <span>For General enquiries, email us at <a href="mailto:info@spritle.com">info@spritle.com</a></span>
+        <span>For General enquiries, email us at <a href="mailto:info@spritle.com"><span style={{color:"rgb(40, 105, 85)"}}>info@spritle.com</span> </a></span>
       </h6>
     </div>
   </div>
@@ -292,11 +294,11 @@ const Contactus = () => {
             <h3 className="mb-3 txt-blk fs-40 fw-600 text-center">
               Still Not Sure?
             </h3>
-            <p className="txt-blk fs-18 text-center">
+            <p className="txt-blk fs-18 text-center text-md font-medium mb-5">
               Let us show you a quick DEMO tailored to your store. You’ll be
               impressed.
             </p>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center mt-4">
             <button
                 className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
                 onClick={handleButtonClicks}

@@ -67,7 +67,7 @@ const Banner = () => {
 
           <div className="flex items-center justify-center p-2 lg:justify-start">
       <button
-        className="inline-block p-2 my-3 text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
+        className="inline-block p-2 my-3 text-center select-none border font-bold whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
         onClick={handleButtonClicks}
       >
          Try CQUE AI
@@ -128,12 +128,12 @@ const Banner = () => {
           <div className="notch-container" tabIndex={0}>
             <div className="notch">
               <div className="content">
-                <div className="left" style={{ margin: "auto 0" }}>
+                <div className="left">
                   <img
-                    src="/images/logo-white.jpg"
+                    src="/images/notch-logo.png"
                     style={{
-                      height: 20,
-                      width: "20px",
+                      height: 40,
+                      width: "150px",
                       marginLeft: "1.2rem",
                     }}
                   />

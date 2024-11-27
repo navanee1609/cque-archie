@@ -85,9 +85,9 @@ const handleCloseCalendly = () => {
             <div className="lg:w-3/4 pr-4 pl-4 text-center ">
               <h1 className=" fs-48 txt-blk fw-600 py-5">
                 Beyond Bots:
-                <span className="fw-300">
+                <span className=" font-medium">
                   {" "}
-                  How CQUE AI is Making Your Store Smarter
+                  How CQUE AI is Making Your Store Smarter ?
                 </span>
               </h1>
               {/* <button
@@ -130,17 +130,17 @@ const handleCloseCalendly = () => {
         </div>
         <div className="container mx-auto sm:px-4 flex lg:flex-row flex-wrap justify-between w-full">
           <div className="lg:w-3/5 pr-4 pl-4">
-            <h2 style={{ textAlign: "left" , fontWeight: 500}} className="fw-bold text-5xl fs-36">
+            <h2 style={{ textAlign: "left" , fontWeight: 500}} className="fw-bold text-5xl my-4">
               Your AI partner
             </h2>
-            <p style={{ textAlign: "left" , fontSize:"1.15rem"}} className="py-3">
+            <p style={{ textAlign: "left" , fontSize:"1.15rem"}} className="py-3 font-medium">
               Imagine a world where conversation isn't confined to screens and
               buttons. Where you can chat, ask questions, and get things done
               with an AI as natural and engaging as a real person. That's the
               world Smartle AI is building.
               <br />
               <br /> Our team consists of enthusiastic inventors with a single
-              objective in mind: creating an AI assistant that understands&nbsp;
+              objective in mind : creating an AI assistant that understands&nbsp;
               you like a friend. Forget the days of robotic responses and
               frustrating misunderstandings.
             </p>
@@ -167,12 +167,12 @@ const handleCloseCalendly = () => {
             className="lg:w-2/5 pr-4 pl-4 py-5 flex flex-col justify-center"
             style={{ marginLeft: "2%" }}
           >
-            <h2 className="container fw-bold text-5xl fs-36 mb-2" style={{ fontWeight: 500}}>CQUE AI</h2>
-            <h6 className="font-medium text-lg" style={{ fontWeight: 400 , fontSize:"1rem" }}>
+            <h2 className="container fw-bold text-5xl fs-36 my-4" style={{ fontWeight: 500}}>CQUE AI</h2>
+            <h6 className="font-medium text-lg" style={{  fontSize:"1.15rem" }}>
               Continuously learning, it adopts new strategies, while
               <br />
               personalizing its interactions to cater to your unique style and
-              <br />
+              
               needs, ensuring a seamless and tailored experience.
             </h6>
           </div>
@@ -196,7 +196,7 @@ const handleCloseCalendly = () => {
               <h3 className="mb-3 txt-blk fs-40 fw-600 text-center">
                 Still Not Sure?
               </h3>
-              <p className="txt-blk fs-18 text-center">
+              <p className="text-black font-medium text-center text-md" style={{fontSize:"large"}}>
                 Let us show you a quick DEMO tailored to your store. You’ll be
                 impressed.
               </p>
