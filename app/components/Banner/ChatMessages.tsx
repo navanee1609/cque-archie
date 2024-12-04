@@ -69,7 +69,7 @@ const ChatMessages = () => {
         msOverflowStyle: "none",
       }}
     >
-      <style>
+      {/* <style>
         {`
           ::-webkit-scrollbar {
             display: none;
@@ -84,7 +84,7 @@ const ChatMessages = () => {
             animation: shimmer 1.5s infinite linear;
           }
         `}
-      </style>
+      </style> */}
 
       {isLoading ? (
         <><div>
