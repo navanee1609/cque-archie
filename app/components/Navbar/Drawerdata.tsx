@@ -1,88 +1,157 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { InlineWidget } from "react-calendly";
+import { ChevronDownIcon } from "@heroicons/react/24/outline"; // Chevron Icon for dropdown
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTshirt, faTv, faHeartbeat, faMagic, faFootballBall, faHome, faCar, faGem, faBalanceScale, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
 interface NavigationItem {
-    name: string;
-    href: string;
+  name: string;
+  href: string;
 }
 
 const navigation: NavigationItem[] = [
-    // { name: 'ROI', href: '/roi' },
-    { name: 'About Us', href: '/aboutus' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '' },
-    { name: 'Contact Us', href: '/contactus' },
+  { name: "About Us", href: "/aboutus" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Blog", href: "" },
+  { name: "Contact Us", href: "/contactus" },
+];
+
+const useCases = [
+    { name: "Fashion / Apparel", href: "/fashion", icon: faTshirt },
+    { name: "Electronics", href: "/electronics", icon: faTv },
+    { name: "Health", href: "/health", icon: faHeartbeat },
+    { name: "Beauty & Cosmetics", href: "/beauty", icon: faMagic },
+    { name: "Sports & Life Style", href: "/sports", icon: faFootballBall },
+    { name: "House & Garden", href: "/house-garden", icon: faHome },
+    { name: "Automotive", href: "/automotive", icon: faCar },
+    { name: "Jewelry", href: "/jewelry", icon: faGem },
+    { name: "Legal", href: "/legal", icon: faBalanceScale },
+    { name: "Education", href: "/education", icon: faBookOpen },
 ];
 
 function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
+
 interface DrawerDataProps {
-    setShowsCalendly: (showsCalendly : boolean) => void;
-    setOverlayVisible: (overlayVisible: boolean) => void;
+  setShowsCalendly: (showsCalendly: boolean) => void;
+  setOverlayVisible: (overlayVisible: boolean) => void;
 }
 
-const Data = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
-    const [activeLink, setActiveLink] = useState('/roi');
-    const [menuVisible, setMenuVisible] = useState(true);
- console.log()
-    const handleButtonClicks = () => {
-        setMenuVisible(true);
-        setShowsCalendly(true);
-        setOverlayVisible(true);
-        // setTimeout(() => {
-        //    console.log("RUNNING")
-        // }, 500); // Adjust the delay to match your transition duration
+const Data = ({ setShowsCalendly, setOverlayVisible }: DrawerDataProps) => {
+  const [activeLink, setActiveLink] = useState("/roi");
+  const [menuVisible, setMenuVisible] = useState(true);
+  const [dropdownVisible, setDropdownVisible] = useState(false); // Track dropdown visibility
+  const dropdownRef = useRef<HTMLDivElement>(null); // Reference for dropdown container
+
+  const handleButtonClicks = () => {
+    setMenuVisible(true);
+    setShowsCalendly(true);
+    setOverlayVisible(true);
+  };
+
+  const handleLinkClick = (href: string) => {
+    setActiveLink(href);
+    setDropdownVisible(false); // Close dropdown when a link is clicked
+  };
+
+  // Close dropdown when clicking outside of it
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownVisible(false); // Close dropdown
+      }
     };
 
-    // const handleCalendlyClose = () => {
-    //     setShowsCalendly(false);
-    //     setOverlayVisible(false);
-    //     setTimeout(() => {
-    //         setMenuVisible(true);
-    //     }, 500); 
-    // };
-
-    const handleLinkClick = (href: string) => {
-        setActiveLink(href);
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside); // Clean up the listener
     };
+  }, []);
 
-    return (
-        <div className="relative">
-            <div className={`rounded-md max-w-sm w-full mx-auto ${menuVisible ? 'opacity-100 transition-opacity duration-500 ease-in' : 'opacity-0'}`}>
-                <div className="flex-1 space-y-4 py-1">
-                    <div className="sm:block">
-                        <div className="space-y-1 px-5 pt-2 pb-3">
-                            {navigation.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className={classNames(
-                                        item.href === activeLink ? 'text-navyblue' : 'text-black hover:text-purple',
-                                        'block py-2 rounded-md text-base font-medium'
-                                    )}
-                                    aria-current={item.href === activeLink ? 'page' : undefined}
-                                    onClick={() => handleLinkClick(item.href)}
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
-                            <div className="mt-4"></div>
-                            <div className="flex items-center justify-center">
-                                <button
-                                    className="btn-dark-blue w-full hover:text-white text-white border border-purple font-medium py-2 px-4 rounded-3xl"
-                                    onClick={handleButtonClicks}
-                                >
-                                    Start for Free
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <div className="relative">
+      <div
+        className={`rounded-md max-w-sm w-full mx-auto ${menuVisible ? "opacity-100 transition-opacity duration-500 ease-in" : "opacity-0"}`}
+      >
+        <div className="flex-1 space-y-4 py-1">
+          <div className="sm:block">
+            <div className="space-y-1 px-5 pt-2 pb-3">
+              {/* Order updated to reflect the correct order */}
+              <Link
+                href="/aboutus"
+                className={classNames("/aboutus" === activeLink ? "text-navyblue" : "text-black hover:text-purple", "block py-2 rounded-md text-base font-medium")}
+                onClick={() => handleLinkClick("/aboutus")}
+              >
+                About Us
+              </Link>
+
+              {/* Dropdown for Use Cases, now opens on click */}
+              <div
+                className="relative"
+                ref={dropdownRef} // Reference for this section
+              >
+                <button
+                  className="py-2 w-full text-black font-medium text-base flex items-center justify-between"
+                  aria-haspopup="true"
+                  onClick={() => setDropdownVisible((prev) => !prev)} // Toggle dropdown visibility on click
+                >
+                  <span>Use Cases</span>
+                  <ChevronDownIcon className="h-4 w-4 text-black" />
+                </button>
+                {dropdownVisible && (
+                  <div className="absolute left-0 mt-2 w-56 bg-white shadow-md rounded-md border-2 border-green-500 transition-all duration-500 ease-in-out">
+                    <ul className="py-2">
+                      {useCases.map((useCase) => (
+                        <li key={useCase.name} className="px-4 py-2 hover:bg-green-100">
+                          <Link
+                            href={useCase.href}
+                            className="block text-black hover:text-green-800"
+                            onClick={() => handleLinkClick(useCase.href)} // Close dropdown on link click
+                          >
+                            <FontAwesomeIcon icon={useCase.icon} className="mr-2 text-green-500 h-4 w-4" />
+                            {useCase.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              <Link
+                href="/pricing"
+                className={classNames("/pricing" === activeLink ? "text-navyblue" : "text-black hover:text-purple", "block py-2 rounded-md text-base font-medium")}
+                onClick={() => handleLinkClick("/pricing")}
+              >
+                Pricing
+              </Link>
+
+              <Link
+                href=""
+                className={classNames("" === activeLink ? "text-navyblue" : "text-black hover:text-purple", "block py-2 rounded-md text-base font-medium")}
+                onClick={() => handleLinkClick("")}
+              >
+                Blog
+              </Link>
+
+              {/* Start for Free button */}
+              <div className={`${dropdownVisible ? "mt-10" : "mt-4"} transition-all duration-500`}>
+                <div className="flex items-center justify-center">
+                  <button
+                    className="btn-dark-blue w-full hover:text-white text-white border border-purple font-medium py-2 px-4 rounded-3xl"
+                    onClick={handleButtonClicks}
+                  >
+                    Start for Free
+                  </button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default Data;

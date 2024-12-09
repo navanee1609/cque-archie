@@ -6,21 +6,23 @@ type Message = {
   content: string;
   images?: string[];
   actions?: { label: string; onClick: () => void }[];
+  listItems?: string[]; // Added this to handle list items (fabric details)
 };
 
 const ChatMessages = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(true); // State to control skeleton loading
+  const [isLoading, setIsLoading] = useState(true);
+  const [showInitialText, setShowInitialText] = useState(true);
 
   const chatData: Message[] = [
     { id: 1, type: "bot", content: "Welcome! How can I help you today?" },
-    { id: 2, type: "user", content: "Hello, please recommend a men's casual crew neck sweater for me?" },
+    { id: 2, type: "user", content: "Hello, please recommend a men’s casual crew neck sweater for me" },
     {
       id: 3,
       type: "bot",
       content: "Sure, here are suitable options found for you:",
-      images: ["/images/sweater1.jpg", "/images/sweater1.jpg"],
+      images: ["/images/crew-neck-pic-1.png"],
       actions: [
         { label: "Ask about it", onClick: () => alert("You clicked 'Ask about it'") },
         { label: "See more like it", onClick: () => alert("You clicked 'See more like it'") },
@@ -30,9 +32,8 @@ const ChatMessages = () => {
     {
       id: 5,
       type: "bot",
-      content:
-        "The Phoenix Crewneck Sweater is available in various sizes and colors, perfect for autumn and winter.",
-      images: ["/images/sweater1.jpg", "/images/sweater1.jpg"],
+      content: "The Phoenix Crewneck Sweater is available in various colors, perfect for autumn and winter.",
+      images: ["/images/phoenix.png",],
       actions: [
         { label: "Ask about it", onClick: () => alert("You clicked 'Ask about it'") },
         { label: "See more like it", onClick: () => alert("You clicked 'See more like it'") },
@@ -40,12 +41,45 @@ const ChatMessages = () => {
     },
     { id: 6, type: "bot", content: "What size and color would you like?" },
     { id: 7, type: "user", content: "I'm an XL and would like it in dark blue or camel, please." },
+    {
+      id: 8,
+      type: "bot",
+      content: "Certainly, here you are dark blue and camel Phoenix Crewneck sweater.",
+      images: ["/images/Blue-Crewneck.png"],
+    },
+    { id: 9, type: "user", content: "What fabric is this sweater made of?" },
+    {
+      id: 10,
+      type: "bot",
+      content: "Your selection of sweaters are elegantly designed and made of either silk cashmere, pure cashmere",
+      listItems: [
+        "Jumper with classic crew neckline",
+        "100% A-grade two-ply cashmere",
+        "Ribbed neckline, cuffs and hem",
+        "Circa 250 grams",
+        "Gauge 12 knit",
+      ],
+    },
+    { id: 11, type: "user", content: "Amazing, thanks." },
+    { id: 12, type: "bot", content: "You're welcome!" },
+    {
+      id: 13,
+      type: "bot",
+      content: "Phoenix camel cashmere sweaters can be styled with:",
+      images: ["/images/phoenix-style.png",],
+    },
+    { id: 14, type: "user", content: "Thank you, that really helps a lot" },
+    { id: 15, type: "bot", content: "You’re welcome. If you have any more questions, feel free to ask!" },
   ];
 
   useEffect(() => {
     setTimeout(() => {
-      setIsLoading(false); // Hide skeleton loader after 1 second
-    }, 800);
+      setShowInitialText(false);
+    }, 1500);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -53,7 +87,7 @@ const ChatMessages = () => {
       const timer = setTimeout(() => {
         setMessages((prevMessages) => [...prevMessages, chatData[currentIndex]]);
         setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, 2000); // 1.5s delay for each chat bubble
+      }, 1400);
       return () => clearTimeout(timer);
     }
   }, [currentIndex, chatData]);
@@ -69,120 +103,34 @@ const ChatMessages = () => {
         msOverflowStyle: "none",
       }}
     >
-      {/* <style>
-        {`
-          ::-webkit-scrollbar {
-            display: none;
-          }
-          @keyframes shimmer {
-            0% { background-position: -200px 0; }
-            100% { background-position: 200px 0; }
-          }
-          .skeleton {
-            background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.5s infinite linear;
-          }
-        `}
-      </style> */}
+      {showInitialText && (
+        <div
+          style={{
+            padding: "20px",
+            background: "#f3f3f3",
+            borderRadius: "12px",
+            fontSize: "16px",
+            textAlign: "center",
+            fontWeight: "500",
+            marginBottom: "15px",
+          }}
+        >
+          CQUE AI: AI Shopping Assistant that answers 97% of queries, personalises shopping, and drives conversions!
+        </div>
+      )}
 
       {isLoading ? (
-        <><div>
-          {/* Bot Skeleton */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "flex-start",
-              marginBottom: "15px",
-            }}
-          >
-            <div
-              className="skeleton"
-              style={{
-                marginRight: "10px",
-                borderRadius: "50%",
-                width: "50px",
-                height: "50px",
-              }} />
-            <div
-              className="skeleton"
-              style={{
-                borderRadius: "12px",
-                width: "80%",
-                height: "40px",
-                padding: "10px",
-              }} />
-          </div>
-
-          {/* User Skeleton */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row-reverse",
-              alignItems: "flex-start",
-              marginBottom: "15px",
-            }}
-          >
-            <div
-              className="skeleton"
-              style={{
-                borderRadius: "12px",
-                width: "60%",
-                height: "40px",
-                padding: "10px",
-              }} />
-          </div>
-        </div><div>
-            {/* Bot Skeleton */}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "flex-start",
-                marginTop: "10px",
-                marginBottom: "15px",
-              }}
-            >
-              <div
-                className="skeleton"
-                style={{
-                  
-                  marginRight: "10px",
-                  borderRadius: "50%",
-                  width: "50px",
-                  height: "50px",
-                }} />
-              <div
-                className="skeleton"
-                style={{
-                  borderRadius: "12px",
-                  width: "80%",
-                  height: "40px",
-                  padding: "10px",
-                }} />
-            </div>
-
-            {/* User Skeleton */}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row-reverse",
-                alignItems: "flex-start",
-                marginBottom: "15px",
-              }}
-            >
-              <div
-                className="skeleton"
-                style={{
-                  borderRadius: "12px",
-                  width: "60%",
-                  height: "40px",
-                  padding: "10px",
-                }} />
-            </div>
-          </div></>
-      ) :(
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100px",
+          }}
+        >
+          <div className="loader"></div>
+        </div>
+      ) : (
         messages.map((message) => (
           <div
             key={message.id}
@@ -191,7 +139,6 @@ const ChatMessages = () => {
               flexDirection: message.type === "bot" ? "row" : "row-reverse",
               alignItems: "flex-start",
               margin: "10px 0",
-              animation: "fadeInUp 0.6s ease-in-out",
             }}
           >
             {message.type === "bot" && (
@@ -217,21 +164,33 @@ const ChatMessages = () => {
             )}
             <div
               style={{
-                maxWidth: "90%",
+                maxWidth: "80%",
                 padding: "12px",
                 borderRadius: "12px",
                 fontFamily: "Urbanist, sans-serif",
                 background: message.type === "bot" ? "transparent" : "linear-gradient(to right, #e6f7ff, #cce7ff)",
                 border: message.type === "bot" ? "1px solid green" : "none",
                 color: message.type === "bot" ? "black" : "inherit",
-                fontSize: "14px", // Apply text-lg (larger font size)
-                fontWeight: "500", // Apply medium weight
-                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
+                fontSize: "14px",
+                fontWeight: "500",
+                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
                 wordWrap: "break-word",
-                animation: "fadeInUp 0.4s ease-in-out",
+                display: "flex",
+                flexDirection:"column",
+                alignItems: "center",
+                justifyContent: "space-between",
               }}
             >
               <div>{message.content}</div>
+              {message.listItems && (
+                <ul style={{ marginTop: "10px", paddingLeft: "20px" }}>
+                  {message.listItems.map((item, idx) => (
+                    <li key={idx} style={{ fontSize: "14px", fontWeight: "400" }}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
               {message.images && (
                 <div
                   style={{
@@ -271,45 +230,30 @@ const ChatMessages = () => {
                           objectFit: "cover",
                         }}
                       />
-                      {/* Action buttons below each image */}
-                      {message.actions && (
-                        <div
-                          style={{
-                            display: "flex",
-                            gap: "8px",
-                            marginTop: "10px",
-                            marginBottom: "10px",
-                          }}
-                        >
-                          {message.actions.map((action, index) => (
-                            <button
-                              key={index}
-                              onClick={action.onClick}
-                              style={{
-                                fontSize: "10px",
-                                padding: "8px",
-                                border: "none",
-                                borderRadius: "20px",
-                                background: "#286955",
-                                color: "#fff",
-                                cursor: "pointer",
-                                transition: "transform 0.3s, background-color 0.3s",
-                                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-                              }}
-                              onMouseEnter={(e) =>
-                                (e.currentTarget.style.background = "linear-gradient(to left, #286955, #234238);")
-                              }
-                              onMouseLeave={(e) =>
-                                (e.currentTarget.style.background =
-                                  "linear-gradient(to left, #286955, #234238);")
-                              }
-                            >
-                              {action.label}
-                            </button>
-                          ))}
-                        </div>
-                      )}
                     </div>
+                  ))}
+                </div>
+              )}
+              {message.actions && (
+                <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+                  {message.actions.map((action, idx) => (
+                    <button
+                      key={idx}
+                      onClick={action.onClick}
+                      style={{
+                        fontSize: "10px",
+                        padding: "8px",
+                        border: "none",
+                        borderRadius: "20px",
+                        background: "#286955",
+                        color: "#fff",
+                        cursor: "pointer",
+                        transition: "transform 0.3s, background-color 0.3s",
+                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+                      }}
+                    >
+                      {action.label}
+                    </button>
                   ))}
                 </div>
               )}
