@@ -1507,3 +1507,8 @@ input[type="number"] {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Smooth scrolling for chat container */
+.chat-container {
+  scroll-behavior: smooth; /* This makes scrolling within the container smooth */
+}

@@ -104,6 +104,7 @@ const ChatMessages = () => {
   return (
     <div
       ref={chatContainerRef}
+      className="chat-container"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -183,7 +184,7 @@ const ChatMessages = () => {
                 }}
               >
                <img
-                  src="/images/user.png"
+                  src="/images/profile.png"
                   alt="Chatbot"
                   style={{
                     width: "100%",
