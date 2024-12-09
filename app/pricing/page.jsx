@@ -12,7 +12,7 @@ const Pricing = () => {
   const [showWidget, setShowWidget] = useState(false);
 
   const [overlayVisible, setOverlayVisible] = useState(false);
-  const [activeCard, setActiveCard] = useState(3);
+  const [activeCard, setActiveCard] = useState(2);
   const [errors, setErrors] = useState({
     visitPM: '',
     orderPM: '',
@@ -161,167 +161,181 @@ const Pricing = () => {
         </div>
       </div>
       <div className="container mx-auto sm:px-4 pb-20">
-        <h2 className="text-center text-3xl md:text-5xl" style={{ paddingBottom: '6%' }}>
+        <h2 className="text-center text-3xl md:text-5xl" style={{ paddingBottom: '5%' }}>
           Pricing that propels your success
         </h2>
-        <div className="flex flex-wrap lg:w-5/6 pr-4 pl-4 mx-auto justify-center cursor-pointer">
-          {[
-            {
-              id: 1,
-              price: '$39',
-              plan: 'Starter',
-              replies: '500 replies/month',
-              webpages: '1,000 webpages stored',
-              support: 'Standard Support',
-              trainAI: 'Train your AI',
-              proActiveSales: 'Pro-Active AI Sales',
-              embedAnywhere: 'Embed Anywhere'
-            },
-            {
-              id: 2,
-              price: '$99',
-              plan: 'Growth',
-              replies: '1,500 replies/month',
-              webpages: '5,000 webpages stored',
-              support: 'Standard Support',
-              trainAI: 'Train your AI',
-              proActiveSales: 'Pro-Active AI Sales',
-              embedAnywhere: 'Embed Anywhere'
-            },
-            {
-              id: 3,
-              price: '$199',
-              plan: 'Pro',
-              replies: '3,000 replies/month',
-              webpages: '15,000 webpages stored',
-              support: 'Priority Support',
-              trainAI: 'Train your AI',
-              upSelling: 'Up Selling',
-              mediaIntegration: 'Media Channel Integration',
-              crmIntegration: 'CRM tool Integration',
-              proActiveSales: 'Pro-Active AI Sales',
-              embedAnywhere: 'Embed Anywhere'
-            },
-            {
-              id: 4,
-              price: '$499',
-              plan: 'Scale',
-              replies: '7,000 replies/month',
-              webpages: '30,000 webpages stored',
-              support: 'Priority Support',
-              trainAI: 'Train your AI',
-              upSelling: 'Up Selling',
-              crossSelling: 'Cross Selling',
-              mediaIntegration: 'Media Channel Integration',
-              crmIntegration: 'CRM tool integration',
-              aiImageSearch: 'AI Image Search*',
-              proActiveSales: 'Pro-Active AI Sales',
-              embedAnywhere: 'Embed Anywhere'
-            }
-          ].map(card => (
-            <div
-              key={card.id}
-              className={`w-full sm:w-1/2 lg:w-1/3 p-4 ${getCardClasses(card.id)} `}
-              onClick={() => handleCardClick(card.id)}
-              style={{ alignSelf: 'flex-start' }}
-            >
-              {card.id === 3 && (
-                <div
-                  className={`inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded-full py-2 px-4 fs-15 fw-500 float-end mb-3 ${activeCard === 3 ? 'bg-white text-black' : 'bg-blue text-white'
-                    }`}
-                >
-                  Most Popular
-                </div>
-              )}
-              <h2 className={`my-3 pt-2 font-medium text-lg fw-300 ${getTextColor(card.id)}`}>
-                {card.price}<span className="fs-18 font-medium text-lg">/month</span>
-              </h2>
-              <h3 className={`mb-2 text-4xl font-bold  ${getTextColor(card.id)}`}>{card.plan}</h3>
-              <p className={`mb-4 fs-15 ${getTextColor(card.id)}`}>5 days free trial</p>
-              <ul className="p-0" style={{ listStyle: 'none' }}>
-                <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(card.id)}`}>
-                  <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
-                  {card.replies}
-                </li>
-                <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(card.id)}`}>
-                  <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
-                  {card.webpages}
-                </li>
-                {card.support && (
-                  <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(card.id)}`}>
-                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
-                    {card.support}
-                  </li>
-                )}
-                {card.trainAI && (
-                  <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(card.id)}`}>
-                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
-                    {card.trainAI}
-                  </li>
-                )}
-                {card.upSelling && (
-                  <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(card.id)}`}>
-                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
-                    {card.upSelling}
-                  </li>
-                )}
-                {card.crossSelling && (
-                  <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(card.id)}`}>
-                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
-                    {card.crossSelling}
-                  </li>
-                )}
-                {card.mediaIntegration && (
-                  <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(card.id)}`}>
-                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
-                    {card.mediaIntegration}
-                  </li>
-                )}
-                {card.crmIntegration && (
-                  <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(card.id)}`}>
-                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
-                    {card.crmIntegration}
-                  </li>
-                )}
-                {card.aiImageSearch && (
-                  <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(card.id)}`}>
-                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
-                    {card.aiImageSearch}
-                  </li>
-                )}
-                {card.embedAnywhere && (
-                  <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(card.id)}`}>
-                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
-                    {card.embedAnywhere}
-                  </li>
-                )}
-              </ul>
-              <div className="text-center">
-                <button
-                  className={`py-1 px-5 rounded-full font-medium text-lg transition-colors duration-500 ${activeCard === card.id ? 'bg-white text-blue' : 'bg-blue text-white'
-                    }`}
-                  onClick={() => setShowCalendly(true)}
-                >
-                  Start FREE Trial
-                </button>
-              </div>
-            </div>
-          ))}
-          {/* Overlay for Calendly */}
-          {showCalendly && (
-            <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-              <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
-                <InlineWidget url="https://calendly.com/prabhu-m-spritle/CQUE-ai-demo?month=2024-03" />
-                <button
-                  className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                  onClick={() => setShowCalendly(false)}
-                >
-                  &#10005; {/* X button */}
-                </button>
-              </div>
-            </div>
-          )}
+        <div className="flex flex-wrap pr-4 pl-4 mx-auto justify-center cursor-pointer">
+  {[
+    {
+      price: '$99 / month',
+      plan: 'Essential',
+      replies: '1,500 replies/month',
+      webpages: '5,000 webpages stored',
+      support: 'Standard Support',
+      trainAI: 'Train your AI',
+      proActiveSales: 'Pro-Active AI Sales',
+      embedAnywhere: 'Embed Anywhere',
+    },
+    {
+      price: '$199 / month',
+      plan: 'Growth',
+      replies: '3,000 replies/month',
+      webpages: '15,000 webpages stored',
+      support: 'Priority Support',
+      trainAI: 'Train your AI',
+      upSelling: 'Up Selling',
+      mediaIntegration: 'Media Channel Integration',
+      crmIntegration: 'CRM tool Integration',
+      proActiveSales: 'Pro-Active AI Sales',
+      embedAnywhere: 'Embed Anywhere',
+    },
+    {
+      price: '$499 / month',
+      plan: 'Premium',
+      replies: '7,000 replies/month',
+      webpages: '30,000 webpages stored',
+      support: 'Priority Support',
+      trainAI: 'Train your AI',
+      upSelling: 'Up Selling',
+      crossSelling: 'Cross Selling',
+      mediaIntegration: 'Media Channel Integration',
+      crmIntegration: 'CRM tool Integration',
+      aiImageSearch: 'AI Image Search*',
+      proActiveSales: 'Pro-Active AI Sales',
+      embedAnywhere: 'Embed Anywhere',
+    },
+  ].map((card, index) => (
+    <div
+      key={index}
+      className={`w-full sm:w-1/2 lg:w-1/3 p-4 ${getCardClasses(index + 1)} `}
+      onClick={() => handleCardClick(index + 1)}
+      style={{ alignSelf: 'flex-start' }}
+    >
+      {index === 1 && (
+        <div
+          className={`inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded-full py-2 px-4 fs-15 fw-500 float-end mb-3 ${
+            activeCard === index + 1 ? 'bg-white text-black' : 'bg-blue text-white'
+          }`}
+        >
+          Most Popular
         </div>
+      )}
+      <h3 className={`mb-2 text-4xl font-bold ${getTextColor(index + 1)}`}>
+        {card.plan}
+      </h3>
+      <p className={`mb-4 fs-15 ${getTextColor(index + 1)}`}>5 days free trial</p>
+      <ul className="p-0" style={{ listStyle: 'none' }}>
+        <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)}`}>
+          <i
+            className={`fa-solid fa-circle-check pe-2 ${
+              activeCard === index + 1 ? 'text-white' : 'text-blue'
+            }`}
+          />
+          {card.replies}
+        </li>
+        <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)}`}>
+          <i
+            className={`fa-solid fa-circle-check pe-2 ${
+              activeCard === index + 1 ? 'text-white' : 'text-blue'
+            }`}
+          />
+          {card.webpages}
+        </li>
+        {card.support && (
+          <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)}`}>
+            <i
+              className={`fa-solid fa-circle-check pe-2 ${
+                activeCard === index + 1 ? 'text-white' : 'text-blue'
+              }`}
+            />
+            {card.support}
+          </li>
+        )}
+        {card.trainAI && (
+          <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)}`}>
+            <i
+              className={`fa-solid fa-circle-check pe-2 ${
+                activeCard === index + 1 ? 'text-white' : 'text-blue'
+              }`}
+            />
+            {card.trainAI}
+          </li>
+        )}
+        {card.upSelling && (
+          <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)}`}>
+            <i
+              className={`fa-solid fa-circle-check pe-2 ${
+                activeCard === index + 1 ? 'text-white' : 'text-blue'
+              }`}
+            />
+            {card.upSelling}
+          </li>
+        )}
+        {card.crossSelling && (
+          <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)}`}>
+            <i
+              className={`fa-solid fa-circle-check pe-2 ${
+                activeCard === index + 1 ? 'text-white' : 'text-blue'
+              }`}
+            />
+            {card.crossSelling}
+          </li>
+        )}
+        {card.mediaIntegration && (
+          <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)}`}>
+            <i
+              className={`fa-solid fa-circle-check pe-2 ${
+                activeCard === index + 1 ? 'text-white' : 'text-blue'
+              }`}
+            />
+            {card.mediaIntegration}
+          </li>
+        )}
+        {card.crmIntegration && (
+          <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)}`}>
+            <i
+              className={`fa-solid fa-circle-check pe-2 ${
+                activeCard === index + 1 ? 'text-white' : 'text-blue'
+              }`}
+            />
+            {card.crmIntegration}
+          </li>
+        )}
+        {card.aiImageSearch && (
+          <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)}`}>
+            <i
+              className={`fa-solid fa-circle-check pe-2 ${
+                activeCard === index + 1 ? 'text-white' : 'text-blue'
+              }`}
+            />
+            {card.aiImageSearch}
+          </li>
+        )}
+        {card.embedAnywhere && (
+          <li className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)}`}>
+            <i
+              className={`fa-solid fa-circle-check pe-2 ${
+                activeCard === index + 1 ? 'text-white' : 'text-blue'
+              }`}
+            />
+            {card.embedAnywhere}
+          </li>
+        )}
+      </ul>
+      <div className="text-center">
+        <button
+          className={`py-1 px-5 rounded-full font-medium text-lg transition-colors duration-500 ${
+            activeCard === index + 1 ? 'bg-white text-blue' : 'bg-blue text-white'
+          }`}
+          onClick={() => setShowCalendly(true)}
+        >
+          {card.price}
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
 
       <div className="container mx-auto sm:px-4 ptb-60">
