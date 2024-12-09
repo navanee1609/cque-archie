@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
 
 type Message = {
   id: number;
@@ -34,7 +33,7 @@ const ChatMessages = () => {
       id: 5,
       type: "bot",
       content: "The Phoenix Crewneck Sweater is available in various colors, perfect for autumn and winter.",
-      images: ["/images/phoenix.png",],
+      images: ["/images/phoenix.png"],
       actions: [
         { label: "Ask about it", onClick: () => alert("You clicked 'Ask about it'") },
         { label: "See more like it", onClick: () => alert("You clicked 'See more like it'") },
@@ -67,11 +66,13 @@ const ChatMessages = () => {
       id: 13,
       type: "bot",
       content: "Phoenix camel cashmere sweaters can be styled with:",
-      images: ["/images/phoenix-style.png",],
+      images: ["/images/phoenix-style.png"],
     },
     { id: 14, type: "user", content: "Thank you, that really helps a lot" },
     { id: 15, type: "bot", content: "You’re welcome. If you have any more questions, feel free to ask!" },
   ];
+
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -93,8 +94,16 @@ const ChatMessages = () => {
     }
   }, [currentIndex, chatData]);
 
+  // Scroll to bottom whenever new messages are added
+  useEffect(() => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
+
   return (
     <div
+      ref={chatContainerRef}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -163,6 +172,28 @@ const ChatMessages = () => {
                 />
               </div>
             )}
+
+            {message.type === "user" && (
+              <div
+                style={{
+                  marginLeft: "10px",
+                  borderRadius: "50%",
+                  width: "30px",
+                  height: "30px",
+                }}
+              >
+               <img
+                  src="/images/user.png"
+                  alt="Chatbot"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                /> 
+              </div>
+            )}
+
             <div
               style={{
                 maxWidth: "80%",
@@ -177,7 +208,7 @@ const ChatMessages = () => {
                 boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
                 wordWrap: "break-word",
                 display: "flex",
-                flexDirection:"column",
+                flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "space-between",
               }}
@@ -186,8 +217,7 @@ const ChatMessages = () => {
               {message.listItems && (
                 <ul style={{ marginTop: "10px", paddingLeft: "10px" }}>
                   {message.listItems.map((item, idx) => (
-                    <li key={idx} style={{ fontSize: "14px", fontWeight: "400", listStyle:"inside" }}>
-
+                    <li key={idx} style={{ fontSize: "14px", fontWeight: "400", listStyle: "inside" }}>
                       {item}
                     </li>
                   ))}
