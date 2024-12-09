@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+
 type Message = {
   id: number;
   type: "bot" | "user";
@@ -183,9 +184,10 @@ const ChatMessages = () => {
             >
               <div>{message.content}</div>
               {message.listItems && (
-                <ul style={{ marginTop: "10px", paddingLeft: "20px" }}>
+                <ul style={{ marginTop: "10px", paddingLeft: "10px" }}>
                   {message.listItems.map((item, idx) => (
-                    <li key={idx} style={{ fontSize: "14px", fontWeight: "400" }}>
+                    <li key={idx} style={{ fontSize: "14px", fontWeight: "400", listStyle:"inside" }}>
+
                       {item}
                     </li>
                   ))}
