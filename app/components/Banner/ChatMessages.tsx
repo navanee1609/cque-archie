@@ -14,7 +14,7 @@ type Message = {
 const ChatMessages = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(false);
+  const [isTyping, setIsTyping] = useState(false)
   const [showInitialText, setShowInitialText] = useState(true);
 
   const chatData: Message[] = [
@@ -75,7 +75,7 @@ const ChatMessages = () => {
       images: ["/images/phoenix-style.png"],
       delay: 2500,
     },
-    { id: 14, type: "user", content: "Thank you, that really helps a lot", delay: 2000 },
+    { id: 14, type: "user", content: "Thank you, that really helps a lot.", delay: 2000 },
     { id: 15, type: "bot", content: "You’re welcome. If you have any more questions, feel free to ask!", delay: 2000 },
   ];
 
