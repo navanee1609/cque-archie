@@ -242,8 +242,6 @@ const Fashion = () => {
             </div>
           </section>
 
-          <FeaturedSolutions />
-
           {/* cta */}
           <div className="container mx-auto sm:px-4 ptb-60">
             <div
