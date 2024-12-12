@@ -46,7 +46,7 @@ const handleCloseCalendly = () => {
      
       <>
       
-        <div className="container mx-auto sm:px-4  ptb-120 mb-14">
+        <div className="container mx-auto sm:px-4  pt-120 mb-14">
         {overlayVisible && <div className="overlay"></div>}
           <div
             className="flex flex-wrap  justify-center ptb-120 bg-cover items-center"

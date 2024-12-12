@@ -37,7 +37,7 @@ const footer = () => {
     <div
       className="mt-8"
       id="first-section"
-      style={{ backgroundColor: "#286955" }}
+      style={{ backgroundColor: "#3f559e" }}
     >
       <div className="mx-auto max-w-2xl pt-28 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">

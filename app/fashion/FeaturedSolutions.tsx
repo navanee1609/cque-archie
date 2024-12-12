@@ -5,7 +5,6 @@ interface FeatureCardProps {
   iconClass: string;
   title: string;
   features: string[];
-  bgColor: string;
 }
 
 // Reusable Feature Component
@@ -13,18 +12,17 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   iconClass,
   title,
   features,
-  bgColor,
 }) => (
-  <div className="flex flex-col items-start justify-center p-6 border border-white rounded-lg h-full transform transition-transform duration-300 hover:scale-105">
+  <div className="flex flex-col items-start justify-center p-6 border border-gray-300 rounded-lg h-full transform transition-transform duration-300 hover:scale-105">
     <div
-      className={`flex items-center justify-center flex-shrink-0 w-6 h-6 ${bgColor} rounded-full animate-pulse`}
+      className={`flex items-center justify-center flex-shrink-0 w-6 h-6 rounded-full animate-pulse bg-gray-200`}
       aria-label={title}
     >
-      <i className={`${iconClass} text-lg bg-white p-3 rounded-full`}></i>
+      <i className={`${iconClass} text-lg bg-[#3f559e]  text-white p-3 rounded-full`}></i>
     </div>
     <div className="mt-4">
-      <p className="text-xl font-medium text-white">{title}</p>
-      <ul className="mt-4 text-base text-white font-medium list-disc list-inside space-y-2">
+      <p className="text-xl font-medium text-gray-800">{title}</p>
+      <ul className="mt-4 text-base text-gray-700 font-medium list-disc list-inside space-y-2">
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
         ))}
@@ -39,7 +37,6 @@ const FeaturedSolutions: React.FC = () => {
     {
       iconClass: "fas fa-lightbulb",
       title: "AI Agent",
-      bgColor: "bg-yellow-500",
       features: [
         "Accurate Response",
         "AI Recommendation",
@@ -50,7 +47,6 @@ const FeaturedSolutions: React.FC = () => {
     {
       iconClass: "fas fa-cogs",
       title: "Sales Conversion",
-      bgColor: "bg-green-500",
       features: [
         "Proactive Sales Assistance",
         "Business Insights",
@@ -61,7 +57,6 @@ const FeaturedSolutions: React.FC = () => {
     {
       iconClass: "fas fa-comments",
       title: "Customer Support",
-      bgColor: "bg-blue-500",
       features: [
         "After-Sales Support",
         "Order Tracking",
@@ -72,51 +67,45 @@ const FeaturedSolutions: React.FC = () => {
     {
       iconClass: "fas fa-paint-brush",
       title: "Brand Consistency",
-      bgColor: "bg-red-500",
       features: ["AI Agent Behavior", "AI Agent Avatar Appearance"],
     },
   ];
 
   return (
-    <section
-      className="py-4 sm:py-12 lg:py-20 mt-12 rounded-lg"
-      style={{ background: "#111827" }}
-    >
-      <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center animate-fade-in">
-          <h2 className="text-3xl font-medium leading-tight text-white sm:text-4xl lg:text-5xl">
+    <section className="py-6 mt-16 bg-lightgrey rounded-3xl">
+      <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl">
             Featured Solutions
           </h2>
-          <p className="max-w-xl mx-auto mt-4 text-xl leading-relaxed text-white font-medium">
+          <p className="max-w-xl mx-auto mt-4 text-xl font-medium leading-relaxed text-gray-600">
             Explore the powerful features we offer to enhance your experience
-            with our platform
+            with our platform.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-y-8 mt-8 md:mt-16 md:grid-cols-2 lg:grid-cols-2 gap-x-16 justify-center items-center">
+        <div className="grid grid-cols-1 gap-y-8 mt-8 md:mt-12 md:grid-cols-2 lg:grid-cols-2 gap-x-12 justify-center items-center">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}
         </div>
 
-        <div className="flex items-center justify-center mt-16 md:mt-20 animate-fade-in-up">
+        {/* <div className="flex items-center justify-center mt-12">
           <div
-            className="px-8 py-4 text-center bg-gray-800 rounded-full font-medium text-xl leading-relaxed"
-            style={{ background: "#1F2937" }}
+            className="px-6 py-3 text-center bg-gray-100 rounded-full font-medium text-lg"
           >
-            <p className="text-white font-medium text-xl leading-relaxed">
-              Want to learn more about our solutions?{" "}
+            <p className="text-gray-700 font-medium">
+              Want to learn more about our solutions?{' '}
               <a
                 href="/contactus"
                 title="Support"
-                className="text-yellow-300 transition-all duration-200 hover:text-yellow-400 focus:text-yellow-400 hover:underline"
-                style={{ color: "#FCD34D" }}
+                className="text-yellow-500 transition-all duration-200 hover:text-yellow-600 focus:text-yellow-600 hover:underline"
               >
                 Join CQUE.AI
               </a>
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

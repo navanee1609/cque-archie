@@ -224,8 +224,8 @@ const Banner = () => {
 
               {/* Vertical 3-Dot Icon */}
               <div style={{ fontSize: "1rem", color: "#286955" }}>
-              <i className="fa-solid fa-phone pr-3 cursor-pointer"></i>
-                <i className="fa fa-ellipsis-v cursor-pointer"></i> {/* Font Awesome 3-dot icon */}
+              {/* <i className="fa-solid fa-phone pr-3 cursor-pointer"></i>
+                <i className="fa fa-ellipsis-v cursor-pointer"></i> */}
               </div>
             </div>
 
@@ -236,7 +236,7 @@ const Banner = () => {
                 fontSize: "0.6rem",
                 color: "#286955",
                 marginTop: "-30px", 
-                marginLeft:"-4.5rem",
+                // marginLeft:"-4.5rem",
                 fontFamily: "Urbanist, sans-serif",
               }}
             >

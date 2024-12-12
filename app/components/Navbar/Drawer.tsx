@@ -35,7 +35,7 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
       <Link href="/">
         <div className='flex items-center'>
           <Image
-            src="/images/new_logo.png"
+            src="/images/cque-logo.png"
             alt="Cque.ai Logo"
             width={120} 
             height={40}  

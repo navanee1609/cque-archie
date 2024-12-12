@@ -54,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ setShowsCalendly, setOverlayVisible }) 
             <div className="flex flex-shrink-0 items-center">
               <Link href="/" className="text-2xl sm:text-4xl font-semibold text-black">
                 <img
-                  src="/images/new_logo.png"
+                  src="/images/cque-logo.png"
                   alt="logo"
                   className="max-w-full h-auto logo-color mt-1"
                   style={{ width: 180, height: 50 }}

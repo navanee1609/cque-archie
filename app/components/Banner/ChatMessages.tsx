@@ -134,7 +134,7 @@ const ChatMessages = () => {
             marginBottom: "15px",
           }}
         >
-          CQUE AI: AI Shopping Assistant that answers 97% of queries, personalizes shopping, and drives conversions!
+          Welcome to CQUE.AI: Your Personalized AI Shopping Assistant, designed to elevate your shopping experience!
         </div>
       )}
 
@@ -198,11 +198,14 @@ const ChatMessages = () => {
               borderRadius: "12px",
               fontFamily: "Urbanist, sans-serif",
               background: message.type === "bot" ? "rgb(232, 245, 233)" : "rgb(243, 229, 245)",
-              border: message.type === "bot" ? "1px solid rgb(76, 175, 80)" : "1px solid rgb(142, 36, 170)",
+              boxShadow: message.type === "bot" 
+    ? "0px 4px 6px rgba(76, 175, 80, 0.4)" 
+    : "0px 4px 6px rgba(142, 36, 170, 0.4)",
+
               color: message.type === "bot" ? "black" : "inherit",
               fontSize: "14px",
               fontWeight: "500",
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+              // boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
               wordWrap: "break-word",
               display: "flex",
               flexDirection: "column",
@@ -309,7 +312,7 @@ const ChatMessages = () => {
           }}
         >
           <img
-            src="/images/chatbot.jpg" // Bot profile image
+            src="/images/profile.png" // Bot profile image
             alt="Chatbot"
             style={{
               width: "100%",
@@ -322,7 +325,7 @@ const ChatMessages = () => {
           style={{
             borderRadius: "15px",
             background:"rgb(243, 229, 245)",
-            border:"1px solid rgb(142, 36, 170)",
+            // border:"1px solid rgb(142, 36, 170)",
             padding: "8px 12px",
             color: "#555",
             fontSize: "12px",
@@ -359,7 +362,7 @@ const ChatMessages = () => {
         <div
           style={{
             background:"rgb(232, 245, 233)",
-            border:"1px solid rgb(76, 175, 80)",
+            // border:"1px solid rgb(76, 175, 80)",
             borderRadius: "15px",
             padding: "8px 12px",
             color: "#555",
