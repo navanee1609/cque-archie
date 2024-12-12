@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import TextDemo from "../magicui/TextDemo"
-import userImg from "../../../public/images/Profile.png"
-import Image from "next/image";
+
 
 type Message = {
   id: number;
@@ -181,22 +180,14 @@ const ChatMessages = () => {
                 height: "30px",
               }}
             >
-              {/* <img
-                src="/images/profile.png"
+              <img
+                src="/images/Avatar.png"
                 alt="User"
                 style={{
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
                 }}
-              /> */}
-              <Image
-              src={userImg}
-              alt="User"
-              
-              style={{
-                objectFit: "cover",
-              }}
               />
             </div>
           )}
@@ -322,8 +313,8 @@ const ChatMessages = () => {
           }}
         >
           <img
-            src="/images/profile.png" // Bot profile image
-            alt="Chatbot"
+            src="/images/Avatar.png" // Bot profile image
+            alt="user"
             style={{
               width: "100%",
               height: "100%",
