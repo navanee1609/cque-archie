@@ -309,7 +309,7 @@ const ChatMessages = () => {
           }}
         >
           <img
-            src="/images/profile.png" // Bot profile image
+            src="/images/chatbot.jpg" // Bot profile image
             alt="Chatbot"
             style={{
               width: "100%",
