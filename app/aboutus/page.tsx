@@ -1,45 +1,15 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
 import { InlineWidget } from 'react-calendly';
 import CarouselSection from "./CarouselSection";
+import FeaturedSolutions from "../fashion/FeaturedSolutions";
 
-interface datatype {
-  heading: string;
-  imgSrc: string;
-  paragraph: string;
-  link: string;
-}
 
-const Aboutdata: datatype[] = [
-  {
-    heading: "83%",
-    imgSrc: "/images/aboutus/imgOne.svg",
-    paragraph: "Increased in customer satisfaction ratings",
-    link: "Learn more",
-  },
-  {
-    heading: "67%",
-    imgSrc: "/images/aboutus/imgTwo.svg",
-    paragraph: "Increase in Average order value",
-    link: "Learn more",
-  },
-  {
-    heading: "79%",
-    imgSrc: "/images/aboutus/imgThree.svg",
-    paragraph: "Reduction in customer support tickets",
-    link: "Learn more",
-  },
-];
 
 const Aboutus = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -76,7 +46,7 @@ const handleCloseCalendly = () => {
      
       <>
       
-        <div className="container mx-auto sm:px-4  ptb-120">
+        <div className="container mx-auto sm:px-4  ptb-120 mb-14">
         {overlayVisible && <div className="overlay"></div>}
           <div
             className="flex flex-wrap  justify-center ptb-120 bg-cover items-center"
@@ -127,6 +97,7 @@ const handleCloseCalendly = () => {
              
             </div>
           </div>
+          <FeaturedSolutions/>
         </div>
         <div className="container mx-auto sm:px-4 flex lg:flex-row flex-wrap justify-between w-full">
           <div className="lg:w-3/5 pr-4 pl-4">

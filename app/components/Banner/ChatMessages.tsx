@@ -325,7 +325,10 @@ const ChatMessages = () => {
             border:"1px solid rgb(142, 36, 170)",
             padding: "8px 12px",
             color: "#555",
-            fontSize: "16px",
+            fontSize: "12px",
+            fontWeight:"bold",
+            fontFamily: "Urbanist, sans-serif",
+            textAlign:"right"
           }}
         >
            <TextDemo text={"Typing..."}/>
@@ -360,7 +363,9 @@ const ChatMessages = () => {
             borderRadius: "15px",
             padding: "8px 12px",
             color: "#555",
-            fontSize: "16px",
+            fontSize: "12px",
+            fontWeight:"bold",
+            fontFamily: "Urbanist, sans-serif",
           }}
         >
           <TextDemo text={"Typing..."}/>

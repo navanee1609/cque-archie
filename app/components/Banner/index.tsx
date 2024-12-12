@@ -157,6 +157,7 @@ const Banner = () => {
               padding: "1rem",
               overflowY: "auto",
               scrollbarWidth: "none",
+              marginTop: "20px",
             }}
           >
             {/* Assistant Title */}
@@ -164,20 +165,82 @@ const Banner = () => {
               style={{
                 flexShrink: 0, // Prevent collapsing
                 marginBottom: "1rem",
-                textAlign: "center",
+                display: "flex",
+                alignItems: "center", // Align horizontally
+                justifyContent: "space-between",
+                gap: "0.5rem",
               }}
             >
+              {/* Left Arrow Icon */}
+              <div style={{ fontSize: "1.3rem", color: "#286955" }}>
+                <i className="fa-solid fa-arrow-left mt-1 cursor-pointer"></i>
+              </div>
+              
+              {/* Profile Image */}
+              <div
+  style={{
+    position: "relative", // To position the green dot relative to the profile image
+    display: "inline-block", // Ensures the profile picture is treated as inline-block
+  }}
+>
+  <img
+    src="/images/chatbot.jpg" // Add the correct path to the profile picture
+    alt="Profile"
+    style={{
+      height: "30px",
+      width: "30px",
+      borderRadius: "50%",
+      objectFit: "cover",
+      border: "2px solid green",
+    }}
+  />
+
+  {/* Online Green Dot */}
+  <div
+    style={{
+      position: "absolute",
+      bottom: 0,
+      right: 0,
+      width: "12px", // Size of the green dot
+      height: "12px",
+      borderRadius: "50%",
+      backgroundColor: "#28a745", // Green color
+      border: "2px solid white", // Optional: gives the dot a white border for visibility
+    }}
+  />
+</div>
+
               <h3
                 style={{
                   fontSize: "1.1rem",
                   fontWeight: "bold",
-                  marginTop: "1.7rem",
                   textAlign: "center",
                   fontFamily: "Urbanist, sans-serif",
+                  flexGrow: 1,
                 }}
               >
                 CQUE AI Assistant
               </h3>
+
+              {/* Vertical 3-Dot Icon */}
+              <div style={{ fontSize: "1rem", color: "#286955" }}>
+              <i className="fa-solid fa-phone pr-3 cursor-pointer"></i>
+                <i className="fa fa-ellipsis-v cursor-pointer"></i> {/* Font Awesome 3-dot icon */}
+              </div>
+            </div>
+
+            {/* Online Text Below Title */}
+            <div
+              style={{
+                textAlign: "center",
+                fontSize: "0.6rem",
+                color: "#286955",
+                marginTop: "-30px", 
+                marginLeft:"-4.5rem",
+                fontFamily: "Urbanist, sans-serif",
+              }}
+            >
+              Active now 
             </div>
 
             {/* Chat Container */}
@@ -238,6 +301,8 @@ const Banner = () => {
     </div>
   </div>
 </div>
+
+
 
 
 

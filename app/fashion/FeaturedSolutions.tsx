@@ -17,7 +17,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 }) => (
   <div className="flex flex-col items-start justify-center p-6 border border-white rounded-lg h-full transform transition-transform duration-300 hover:scale-105">
     <div
-      className={`flex items-center justify-center flex-shrink-0 w-8 h-8 ${bgColor} rounded-full animate-pulse`}
+      className={`flex items-center justify-center flex-shrink-0 w-6 h-6 ${bgColor} rounded-full animate-pulse`}
       aria-label={title}
     >
       <i className={`${iconClass} text-lg bg-white p-3 rounded-full`}></i>
@@ -79,7 +79,7 @@ const FeaturedSolutions: React.FC = () => {
 
   return (
     <section
-      className="py-4 sm:py-12 lg:py-20 rounded-lg"
+      className="py-4 sm:py-12 lg:py-20 mt-12 rounded-lg"
       style={{ background: "#111827" }}
     >
       <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
@@ -99,7 +99,7 @@ const FeaturedSolutions: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex items-center justify-center mt-12 md:mt-20 animate-fade-in-up">
+        <div className="flex items-center justify-center mt-16 md:mt-20 animate-fade-in-up">
           <div
             className="px-8 py-4 text-center bg-gray-800 rounded-full font-medium text-xl leading-relaxed"
             style={{ background: "#1F2937" }}
@@ -112,7 +112,7 @@ const FeaturedSolutions: React.FC = () => {
                 className="text-yellow-300 transition-all duration-200 hover:text-yellow-400 focus:text-yellow-400 hover:underline"
                 style={{ color: "#FCD34D" }}
               >
-                Contact our support team
+                Join CQUE.AI
               </a>
             </p>
           </div>
