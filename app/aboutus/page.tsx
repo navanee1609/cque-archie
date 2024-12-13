@@ -53,9 +53,9 @@ const handleCloseCalendly = () => {
             style={{ background: "url(https://smartle-ai.s3.amazonaws.com/assets/img/roi-banner.webp)" }}
           >
             <div className="lg:w-3/4 pr-4 pl-4 text-center ">
-              <h1 className=" fs-48 txt-blk fw-600 py-5">
-                Beyond Bots:
-                <span className=" font-medium">
+              <h1 className=" fs-48 fw-600 py-5 text-[#3f559e]">
+                Beyond Bots :
+                <span className=" font-medium text-black">
                   {" "}
                   How CQUE AI is Making Your Store Smarter ?
                 </span>

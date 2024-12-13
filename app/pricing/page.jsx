@@ -143,7 +143,7 @@ const Pricing = () => {
             style={{ background: "url(/images/pricing-banner.webp)" }}
           >
             <h1 className=" fs-48 txt-blk px-3 mb-4">
-              <span className="fw-600" style={{color:"#286955"}}>Conversation to Conversion : </span>
+              <span className="fw-600" style={{color:"#3f559e"}}>Conversation to Conversion : </span>
               Mastering the Art of Sales-Driven AI Chat
             </h1>
             <h2 className=" text-xl font-medium mt-4 lg:block hidden max-w-5xl" style={{ margin: "0 auto" }}>
@@ -214,7 +214,7 @@ const Pricing = () => {
   ].map((card, index) => (
     <div
       key={index}
-      className={`w-full sm:w-1/2 lg:w-1/3 p-4 ${getCardClasses(index + 1)}`}
+      className={`w-full sm:w-1/2 lg:w-1/3 p-6 ${getCardClasses(index + 1)}`}
       onClick={() => handleCardClick(index + 1)}
       style={{ alignSelf: 'flex-start' }}
     >
@@ -277,6 +277,38 @@ const Pricing = () => {
 
 
       </div>
+      <div class="flex items-center justify-center p-6">
+  <div class="container p-8 max-w-2xl w-full rounded-xl border-l-4 border-[#3f559e] bg-gradient-to-r from-teal-100/50 to-white shadow-lg hover:shadow-2xl hover:border-[#1d3c6a] transition-all duration-300 ease-in-out">
+    
+
+    {/* <!-- Heading --> */}
+    <h4 class="text-2xl font-semibold text-gray-800 text-center text-shadow-md fade-in">
+      Start Your Journey with a 5-Day Free Trial!
+    </h4>
+    
+    {/* <!-- Text --> */}
+    <p class="mt-4 text-black font-medium text-lg sm:text-md text-center">
+      Try our Essential, Growth, and Premium plans with a 5-day free trial. Whether you're starting or scaling, our plans have all you need. Start your free trial today.
+    </p>
+    {/* <!-- Main CTA --> */}
+    <div class="mt-6 text-center">
+      <a href="/"
+        class="inline-block px-8 py-3 font-medium text-white transition-all duration-300 rounded-lg bg-[#3f559e] hover:bg-[#1d3c6a] transform hover:scale-105 ease-in-out">
+        5 Days Free Trial
+        <svg class="inline-block w-6 h-6 ml-2 transform transition-transform duration-300 hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+
+    {/* <!-- Follow-up CTA --> */}
+    <p class="text-gray-600 mt-2 text-md font-medium text-center">Already started your free trial? <a href="/" class="text-[#3f559e] font-semibold">Upgrade to Premium</a></p>
+  </div>
+</div>
+
+
+
+
 
 
       {/* pricing matrix */}
@@ -305,7 +337,7 @@ const Pricing = () => {
             border: '1px solid #ddd',
             borderRadius: '12px 0 0 0',
             textAlign: 'center',
-          }}>Compare Our Plans</th>
+          }}>Compare our plans</th>
           <th style={{
             padding: '20px 30px',
             fontWeight: 'bold',
@@ -418,8 +450,8 @@ const Pricing = () => {
     padding: '15px 30px',
     border: '1px solid #ddd',
     textAlign: 'center',
-    backgroundColor: '#3f559e',  // Blue background for Growth column
-    color: '#fff',  // White text color
+    backgroundColor: '#3f559e',  // Blue background for each growth column
+    color: '#fff',  // white text color
     fontSize: '16px',
     fontWeight: '500',
   }}
@@ -460,36 +492,52 @@ const Pricing = () => {
 
 
 
-      <div className="container mx-auto sm:px-4 ptb-60" style={{ width: '100%', maxWidth: '1250px', overflowX: 'auto' }}>
-        <div
-          className="flex flex-wrap  p-6"
-          style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
-        >
-          <div className="pr-4 pl-4 max-lg-7xl">
-            <h3 className="text-4xl font-bold ">Enterprise</h3>
-            <p className="mb-2 mt-4 w-full md:w-5/6" style={{fontWeight:'500', fontSize:"16px"}}>
-              Experience all the premium features of our platform with no obligations. Start your 5-day free trial and see how we can help streamline your operations!
-            </p>
-            <div className="flex justify-center">
-              <button
-                className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-w btn-rounded mt-3 justify-center items-center"
-                onClick={handleButtonClick}
-              >
-                5 days free trial
-                <i className="fa-solid fa-arrow-right float-end ps-4 mt-1" />
-              </button>
+<section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="grid items-stretch gap-y-10 md:grid-cols-2 md:gap-x-20">
+            <div class="relative grid grid-cols-2 gap-6 mt-10 md:mt-0">
+                <div class="overflow-hidden aspect-w-3 aspect-h-4">
+                    <img class="object-cover object-top origin-top scale-150" src="https://cdn.rareblocks.xyz/collection/celebration/images/features/2/team-work.jpg" alt="" />
+                </div>
 
+                <div class="relative">
+                    <div class="h-full overflow-hidden aspect-w-3 aspect-h-4">
+                        <img class="object-cover scale-150 lg:origin-bottom-right" src="https://cdn.rareblocks.xyz/collection/celebration/images/features/2/woman-working-on-laptop.jpg" alt="" />
+                    </div>
+
+                    <div class="absolute inset-0 grid w-full h-full place-items-center">
+                        <button type="button" class="inline-flex items-center justify-center w-12 h-12 text-blue-600 bg-white rounded-full shadow-md lg:w-20 lg:h-20">
+                            <svg class="w-6 h-6 lg:w-8 lg:h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="absolute -translate-x-1/2 left-1/2 -top-16">
+                    <img class="w-32 h-32" src="https://cdn.rareblocks.xyz/collection/celebration/images/features/2/round-text.png" alt="" />
+                </div>
             </div>
-            {/* <button
-      type="button"
-      class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue mt-3 btn-w flex justify-center items-center"
-    >
-      Schedule a Call
-      <i class="fa-solid fa-arrow-right float-end ps-4"></i>
-    </button> */}
-          </div>
+
+            <div class="flex flex-col items-start xl:px-16">
+            <h2 class="text-3xl font-bold text-black">
+  Try Our Essential, Growth, and Premium Plans for Free for 5 Days!
+</h2>
+<p class="mt-4 font-medium text-lg fs-18">
+  Experience the full benefits of our <span className="text-style-gradient">Essential</span>, <span className="text-style-gradient font-bold">Growth</span>, and <span className="text-style-gradient">Premium</span> plans with a 5-day free trial. Whether you're a small business just starting out or an enterprise ready to scale, our flexible plans provide all the tools you need. No credit card required—get started today!
+</p>
+
+                <a href="#" title="" class="inline-flex items-center justify-center px-5 py-4 mt-8 text-base font-semibold text-white transition-all duration-200 rounded-md hover:opacity-90 focus:opacity-90 bg-blue" role="button">
+                    Get started now
+                    <svg class="w-5 h-5 ml-8 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
         </div>
-      </div>
+    </div>
+</section>
+
     
       
       <div className="container mx-auto sm:px-4 ptb-60 max-w-7xl">

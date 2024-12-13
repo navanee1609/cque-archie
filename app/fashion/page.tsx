@@ -9,7 +9,6 @@ import {
   faClock,
   faHeadset,
 } from "@fortawesome/free-solid-svg-icons";
-import FeaturedSolutions from "./FeaturedSolutions";
 
 const Fashion = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -49,9 +48,9 @@ const Fashion = () => {
           }}
         >
           <div className="lg:w-3/4 pr-4 pl-4 text-center">
-            <h1 className="fs-48 txt-blk fw-600 py-5 text-green-500">
+            <h1 className="fs-48 fw-600 py-5 text-[#3f559e]">
               Fashion / Apparel :{" "}
-              <span className="font-medium">
+              <span className="font-medium text-black">
                 {" "}
                 Experience Effortless Fashion with AI-Powered Styling
               </span>

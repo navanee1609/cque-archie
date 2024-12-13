@@ -1330,8 +1330,9 @@ input[type="number"] {
          
 .btn-dark-blue {
   background: #3f559e;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3f559e,#234238 );  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #3f559e, #234238); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #3f559e;
+
+  /* background: linear-gradient(to left, #3f559e, #234238);  */
   color: #fff;
   border: 0px solid #3f559e;
   padding:10px 25px 10px 25px;
@@ -1618,3 +1619,7 @@ input[type="number"] {
   .btn-container button:hover {
     transform: scale(1.05);
   }
+/* Add this to your CSS file or in a <style> block */
+.custom-border {
+  border-bottom: 8px solid #3f559e;
+}
