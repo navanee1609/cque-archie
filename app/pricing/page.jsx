@@ -277,39 +277,6 @@ const Pricing = () => {
 
 
       </div>
-      <div class="flex items-center justify-center p-6">
-  <div class="container p-8 max-w-2xl w-full rounded-xl border-l-4 border-[#3f559e] bg-gradient-to-r from-teal-100/50 to-white shadow-lg hover:shadow-2xl hover:border-[#1d3c6a] transition-all duration-300 ease-in-out">
-    
-
-    {/* <!-- Heading --> */}
-    <h4 class="text-2xl font-semibold text-gray-800 text-center text-shadow-md fade-in">
-      Start Your Journey with a 5-Day Free Trial!
-    </h4>
-    
-    {/* <!-- Text --> */}
-    <p class="mt-4 text-black font-medium text-lg sm:text-md text-center">
-      Try our Essential, Growth, and Premium plans with a 5-day free trial. Whether you're starting or scaling, our plans have all you need. Start your free trial today.
-    </p>
-    {/* <!-- Main CTA --> */}
-    <div class="mt-6 text-center">
-      <a href="/"
-        class="inline-block px-8 py-3 font-medium text-white transition-all duration-300 rounded-lg bg-[#3f559e] hover:bg-[#1d3c6a] transform hover:scale-105 ease-in-out">
-        5 Days Free Trial
-        <svg class="inline-block w-6 h-6 ml-2 transform transition-transform duration-300 hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg>
-      </a>
-    </div>
-
-    {/* <!-- Follow-up CTA --> */}
-    <p class="text-gray-600 mt-2 text-md font-medium text-center">Already started your free trial? <a href="/" class="text-[#3f559e] font-semibold">Upgrade to Premium</a></p>
-  </div>
-</div>
-
-
-
-
-
 
       {/* pricing matrix */}
 
@@ -338,6 +305,44 @@ const Pricing = () => {
             borderRadius: '12px 0 0 0',
             textAlign: 'center',
           }}>Compare our plans</th>
+          <th
+  style={{
+    padding: '20px 30px',
+    fontWeight: 'bold',
+    fontSize: '18px',
+    backgroundColor: '#F4F7FB',
+    border: '1px solid #ddd',
+    textAlign: 'center',
+    borderRadius: '0 12px 0 0',
+  }}
+>
+  <div>Essential</div>
+  <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '10px' }}>
+    <button
+      className="py-1 px-3 rounded-full font-medium text-sm bg-blue text-white"
+      onClick={() => (window.location.href = '/essential')}
+    >
+      $199/month
+    </button>
+  </div>
+  <div style={{ marginTop: '10px' }}>
+    <a
+      href="/free-trial"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: '#4CAF50',
+        textDecoration: 'none', // Remove underline
+        fontSize: '14px',
+        whiteSpace: 'nowrap', // Prevent text breaking
+        fontWeight: '500', // Slightly bolder for emphasis
+      }}
+    >
+      5 Days Free Trial
+    </a>
+  </div>
+</th>
+
           <th style={{
             padding: '20px 30px',
             fontWeight: 'bold',
@@ -345,36 +350,32 @@ const Pricing = () => {
             backgroundColor: '#F4F7FB',
             border: '1px solid #ddd',
             textAlign: 'center',
-            borderRadius: '0 12px 0 0',
-          }}>
-            <div>Essential</div>
-            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '10px' }}>
-              <button
-                className="py-1 px-3 rounded-full font-medium text-sm bg-blue text-white"
-                onClick={() => window.location.href='/essential'}
-              >
-                $199/month
-              </button>
-            </div>
-          </th>
-          <th style={{
-            padding: '20px 30px',
-            fontWeight: 'bold',
-            fontSize: '18px',
-            backgroundColor: '#3f559e',
-            color: '#fff',
-            border: '1px solid #ddd',
-            textAlign: 'center',
           }}>
             Growth
             <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '10px' }}>
               <button
-                className="py-1 px-3 rounded-full font-medium text-sm bg-white text-blue"
+                className="py-1 px-3 rounded-full font-medium text-sm bg-blue text-white"
                 onClick={() => window.location.href='/growth'}
               >
                 $299/month
               </button>
             </div>
+            <div style={{ marginTop: '10px' }}>
+    <a
+      href="/free-trial"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: '#4CAF50',
+        textDecoration: 'none', // Remove underline
+        fontSize: '14px',
+        whiteSpace: 'nowrap', // Prevent text breaking
+        fontWeight: '500', // Slightly bolder for emphasis
+      }}
+    >
+      5 Days Free Trial
+    </a>
+  </div>
           </th>
           <th style={{
             padding: '20px 30px',
@@ -394,6 +395,22 @@ const Pricing = () => {
                 $599/month
               </button>
             </div>
+            <div style={{ marginTop: '10px' }}>
+    <a
+      href="/free-trial"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: '#4CAF50', 
+        textDecoration: 'none', // Remove underline
+        fontSize: '14px',
+        whiteSpace: 'nowrap', // Prevent text breaking
+        fontWeight: '500', // Slightly bolder for emphasis
+      }}
+    >
+      5 Days Free Trial
+    </a>
+  </div>
           </th>
         </tr>
       </thead>
@@ -450,16 +467,17 @@ const Pricing = () => {
     padding: '15px 30px',
     border: '1px solid #ddd',
     textAlign: 'center',
-    backgroundColor: '#3f559e',  // Blue background for each growth column
-    color: '#fff',  // white text color
+    // backgroundColor: '#3f559e',  // Blue background for each growth column
+    // color: '#fff',  // white text color
     fontSize: '16px',
     fontWeight: '500',
   }}
 >
   {row.growth === "✓" ? (
-    <i className="fa-solid fa-check" style={{ color: '#fff', fontSize: '18px' }} />
-  ) : row.growth === "x" ? (
-    <i className="fa-solid fa-xmark" style={{ color: '#F44336', fontSize: '18px' }} />
+                <i className="fa-solid fa-check" style={{ color: '#4CAF50', fontSize: '18px' }} />
+              ) : row.growth === "x" ? (
+                <i className="fa-solid fa-xmark" style={{ color: '#F44336', fontSize: '18px' }} />
+
   ) : (
     <div>{row.growth}</div>
   )}
@@ -490,7 +508,35 @@ const Pricing = () => {
 
 
 
+{/* Enterprise section */}
 
+<div class="flex items-center justify-center p-6">
+  <div class="container p-8 max-w-2xl w-full rounded-xl border-l-4 border-[#3f559e] bg-gradient-to-r from-teal-100/50 to-white shadow-lg hover:shadow-2xl hover:border-[#1d3c6a] transition-all duration-300 ease-in-out">
+    
+
+    {/* <!-- Heading --> */}
+    <h4 class="text-2xl font-semibold text-gray-800 text-center text-shadow-md fade-in">
+    Enterprise Solutions
+    </h4>
+    
+    {/* <!-- Text --> */}
+    <p class="mt-4 text-black font-medium text-lg sm:text-md text-center">
+    Unlock the full potential of your business with customized solutions
+        designed to meet your unique needs. Get tailored support to scale your
+        operations effectively and seamlessly.
+    </p>
+    {/* <!-- Main CTA --> */}
+    <div class="mt-6 text-center">
+      <a href="/"
+        class="inline-block px-8 py-3 font-bold text-lg text-white transition-all duration-300 rounded-lg bg-[#3f559e] hover:bg-[#1d3c6a] transform hover:scale-105 ease-in-out">
+        Schedule a Call
+        <svg class="inline-block w-6 h-6 ml-2 transform transition-transform duration-300 hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
 
 
     
