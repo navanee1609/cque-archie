@@ -510,7 +510,7 @@ const Pricing = () => {
 
 {/* Enterprise section */}
 
-<div class="flex items-center justify-center p-6">
+<div class="flex items-center justify-center p-6 max-w-7xl mx-auto">
   <div class="container p-8 max-w-2xl w-full rounded-xl border-l-4 border-[#3f559e] bg-gradient-to-r from-teal-100/50 to-white shadow-lg hover:shadow-2xl hover:border-[#1d3c6a] transition-all duration-300 ease-in-out">
     
 
