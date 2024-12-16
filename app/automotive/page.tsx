@@ -1,6 +1,4 @@
 'use client'
-import { faCarAlt, faSearchDollar, faChartLine, faClock, faUserTie } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import { InlineWidget } from 'react-calendly';
 
