@@ -296,7 +296,7 @@ const Fashion = () => {
     </div>
 </section>
 
- <div className="container mx-auto sm:px-4 ptb-60 max-w-7xl">
+ <div className="container mx-auto sm:px-4 ptb-60 max-w-6xl">
         <div
           className="flex flex-wrap justify-center"
           style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}

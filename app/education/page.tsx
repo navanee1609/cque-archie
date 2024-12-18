@@ -258,7 +258,7 @@ const FeatureSection: React.FC = () => {
     {/* CTA */}
 
     <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">
-        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-6xl">
             <div className="max-w-2xl mx-auto text-left sm:text-center">
                 <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
                 Transform how you manage teacher absences with AI-powered efficiency!

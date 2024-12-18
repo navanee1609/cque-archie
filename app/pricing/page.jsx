@@ -281,7 +281,7 @@ const Pricing = () => {
       {/* pricing matrix */}
 
     <div className="pricing-table-container" style={{ display: 'flex', justifyContent: 'center', padding: '32px 0' }}>
-  <div className="pricing-table" style={{ width: '100%', maxWidth: '1200px', overflowX: 'auto' }}>
+  <div className="pricing-table" style={{ width: '100%', maxWidth: '1000px', overflowX: 'auto' }}>
   <h2 style={{ textAlign: 'center', fontSize: '24px', fontWeight: 'bold', marginBottom: '30px' }}>
     Compare Our Pricing Plans
   </h2>
@@ -506,7 +506,7 @@ const Pricing = () => {
 </div>
 {/* CTA */}
       
-      <div className="container mx-auto sm:px-4 ptb-60 max-w-7xl">
+      <div className="container mx-auto sm:px-4 ptb-60 max-w-6xl">
         <div
           className="flex flex-wrap justify-center"
           style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
