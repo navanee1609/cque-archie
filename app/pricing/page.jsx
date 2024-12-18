@@ -504,42 +504,7 @@ const Pricing = () => {
     </table>
   </div>
 </div>
-
-
-
-
-{/* Enterprise section */}
-
-<div className="flex items-center justify-center p-6 max-w-7xl mx-auto">
-  <div className="container p-8 max-w-2xl w-full rounded-xl border-l-4 border-[#3f559e] bg-gradient-to-r from-teal-100/50 to-white shadow-lg hover:shadow-2xl hover:border-[#1d3c6a] transition-all duration-300 ease-in-out">
-    
-
-    {/* <!-- Heading --> */}
-    <h4 className="text-2xl font-semibold text-gray-800 text-center text-shadow-md fade-in">
-    Enterprise Solutions
-    </h4>
-    
-    {/* <!-- Text --> */}
-    <p className="mt-4 text-black font-medium text-lg sm:text-md text-center">
-    Unlock the full potential of your business with customized solutions
-        designed to meet your unique needs. Get tailored support to scale your
-        operations effectively and seamlessly.
-    </p>
-    {/* <!-- Main CTA --> */}
-    <div className="mt-6 text-center">
-      <a href="/"
-        className="inline-block px-8 py-3 font-bold text-lg text-white transition-all duration-300 rounded-lg bg-[#3f559e] hover:bg-[#1d3c6a] transform hover:scale-105 ease-in-out">
-        Schedule a Call
-        <svg className="inline-block w-6 h-6 ml-2 transform transition-transform duration-300 hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>
-
-
-    
+{/* CTA */}
       
       <div className="container mx-auto sm:px-4 ptb-60 max-w-7xl">
         <div
