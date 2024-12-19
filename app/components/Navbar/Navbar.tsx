@@ -3,7 +3,7 @@ import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid"; // Import both icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTshirt, faTv, faHeartbeat, faMagic, faFootballBall, faHome, faCar, faGem, faBalanceScale, faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import Drawer from "./Drawer";
@@ -108,7 +108,12 @@ const Navbar: React.FC<NavbarProps> = ({ setShowsCalendly, setOverlayVisible }) 
                     onClick={toggleDropdown}
                   >
                     <span>Use Case</span>
-                    <ChevronDownIcon className="w-5 h-5" />
+                    {/* Conditionally Render Icons */}
+                    {isDropdownOpen ? (
+                      <ChevronUpIcon className="w-5 h-5" />
+                    ) : (
+                      <ChevronDownIcon className="w-5 h-5" />
+                    )}
                   </div>
 
                   {/* Dropdown */}
