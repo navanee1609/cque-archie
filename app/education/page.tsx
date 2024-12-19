@@ -113,95 +113,7 @@ const FeatureSection: React.FC = () => {
         </div>
       </div>
 
-     
-      <section className="py-10 bg-gray-50 sm:py-16 lg:py-18">
-  <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div className="text-center">
-      <h2 className="text-2xl font-bold leading-tight text-black sm:text-3xl lg:text-3xl animate__animated animate__fadeIn">
-        Join Thousands of Educators Enhancing Their Classroom Experience with Cque AI
-      </h2>
-    </div>
-
-    <div className="px-5 py-8 mt-12 bg-white lg:mt-20 lg:p-16">
-      <div className="grid grid-cols-1 gap-12 lg:gap-16 sm:grid-cols-2">
-        <div className="flex items-start transition-all duration-500 ease-in-out transform hover:scale-105">
-          <FontAwesomeIcon
-            icon={faCheckCircle}
-            className="flex-shrink-0 w-16 h-16 text-green-500"
-          />
-          <div className="ml-5">
-            <h3 className="text-lg font-semibold text-green-500">
-              Effortless Teacher Substitute Management
-            </h3>
-            <p className="mt-4 text-base font-medium text-black">
-              Managing teacher absences is simple with Cque AI, which streamlines substitute management to keep classrooms productive and students thriving.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-start transition-all duration-500 ease-in-out transform hover:scale-105">
-          <FontAwesomeIcon
-            icon={faUsers}
-            className="flex-shrink-0 w-16 h-16 text-green-500"
-          />
-          <div className="ml-5">
-            <h3 className="text-lg font-semibold text-green-500">
-              Seamless Substitute Matching
-            </h3>
-            <p className="mt-4 text-base font-medium text-black">
-              Say goodbye to last-minute scrambles—our AI swiftly matches the best substitutes based on expertise, location, and availability, ensuring every classroom runs smoothly.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-start transition-all duration-500 ease-in-out transform hover:scale-105">
-          <FontAwesomeIcon
-            icon={faChartLine}
-            className="flex-shrink-0 w-16 h-16 text-green-500"
-          />
-          <div className="ml-5">
-            <h3 className="text-lg font-semibold text-green-500">
-              Proactive Planning for Better Outcomes
-            </h3>
-            <p className="mt-4 text-base font-medium text-black">
-              Anticipate staffing gaps before they occur. Cque AI analyzes historical trends and schedules to forecast potential needs, empowering you to stay ahead with proactive substitute planning.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-start transition-all duration-500 ease-in-out transform hover:scale-105">
-          <FontAwesomeIcon
-            icon={faClock}
-            className="flex-shrink-0 w-16 h-16 text-green-500"
-          />
-          <div className="ml-5">
-            <h3 className="text-lg font-semibold text-green-500">
-              Effortless Communication and Coordination
-            </h3>
-            <p className="mt-4 text-base font-medium text-black">
-              From notifying substitutes to confirming assignments, Cque AI automates the communication process, reducing administrative burdens and ensuring a seamless connection between schools and teachers.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-start transition-all duration-500 ease-in-out transform hover:scale-105">
-          <FontAwesomeIcon
-            icon={faTasks}
-            className="flex-shrink-0 w-16 h-16 text-green-500"
-          />
-          <div className="ml-5">
-            <h3 className="text-lg font-semibold text-green-500">
-              Streamlined Operations, Maximum Impact
-            </h3>
-            <p className="mt-4 text-base font-medium text-black">
-              Let Cque AI take care of the complexities of substitute management, so your focus remains on what matters most—ensuring students receive uninterrupted education.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section className="py-10 bg-gradient-to-r from-gray-200 via-white to-gray-100 sm:py-16 lg:py-24">
+      <section className="py-10 bg-gradient-to-r from-gray-200 via-white to-gray-100">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-16 xl:gap-x-24">
           <div className="relative mb-12">
@@ -210,41 +122,10 @@ const FeatureSection: React.FC = () => {
               src="https://cdn.rareblocks.xyz/collection/celebration/images/content/1/team-work.jpg"
               alt=""
             />
-
-            <div className="absolute w-full max-w-xs px-4 -translate-x-1/2 sm:px-0 sm:max-w-sm left-1/2 -bottom-12">
-              <div className="overflow-hidden bg-white rounded-xl shadow-lg p-6 transform transition-all duration-500 hover:scale-105">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-xl font-semibold text-blue-600">
-                      AI-Driven Insights Boost Classroom Engagement
-                    </p>
-                    <p className="mt-2 text-sm font-medium text-gray-800 sm:text-lg">
-                      Transform Your School's Operations with AI Recommendations
-                    </p>
-                  </div>
-                  <div className="w-10 h-10 flex justify-center items-center bg-blue-600 text-white rounded-full">
-                    <svg
-                      className="w-6 h-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="space-y-6 lg:space-y-8">
-            <h2 className="text-3xl font-bold text-black sm:text-4xl lg:text-5xl leading-tight text-center lg:text-left animate__animated animate__fadeIn animate__delay-1s">
+            <h2 className="text-3xl font-bold text-black leading-tight text-center lg:text-left animate__animated animate__fadeIn animate__delay-1s">
               Discover Seamless Classroom Management with AI
             </h2>
             <p className="text-lg text-gray-600 font-medium text-center lg:text-left">
@@ -255,9 +136,100 @@ const FeatureSection: React.FC = () => {
         </div>
       </div>
     </section>
+
+     
+      <section className="py-10 bg-gray-50">
+  <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div className="text-center">
+      <h2 className="text-2xl font-bold leading-tight text-black sm:text-3xl lg:text-3xl animate__animated animate__fadeIn">
+        Join Thousands of Educators Enhancing Their Classroom Experience with Cque AI
+      </h2>
+    </div>
+
+    <div className="px-5 py-8 mt-6 bg-white">
+  <div className="grid grid-cols-1 gap-12 lg:gap-16 sm:grid-cols-2">
+    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+      <FontAwesomeIcon
+        icon={faCheckCircle}
+        className="flex-shrink-0 w-16 h-16 text-green-500"
+      />
+      <div className="ml-5">
+        <h3 className="text-lg font-semibold text-green-500">
+          Effortless Teacher Substitute Management
+        </h3>
+        <p className="mt-4 text-base font-medium text-black">
+          Managing teacher absences is simple with Cque AI, which streamlines substitute management to keep classrooms productive and students thriving.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+      <FontAwesomeIcon
+        icon={faUsers}
+        className="flex-shrink-0 w-16 h-16 text-green-500"
+      />
+      <div className="ml-5">
+        <h3 className="text-lg font-semibold text-green-500">
+          Seamless Substitute Matching
+        </h3>
+        <p className="mt-4 text-base font-medium text-black">
+          Say goodbye to last-minute scrambles—our AI swiftly matches the best substitutes based on expertise, location, and availability, ensuring every classroom runs smoothly.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+      <FontAwesomeIcon
+        icon={faChartLine}
+        className="flex-shrink-0 w-16 h-16 text-green-500"
+      />
+      <div className="ml-5">
+        <h3 className="text-lg font-semibold text-green-500">
+          Proactive Planning for Better Outcomes
+        </h3>
+        <p className="mt-4 text-base font-medium text-black">
+          Anticipate staffing gaps before they occur. Cque AI analyzes historical trends and schedules to forecast potential needs, empowering you to stay ahead with proactive substitute planning.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+      <FontAwesomeIcon
+        icon={faClock}
+        className="flex-shrink-0 w-16 h-16 text-green-500"
+      />
+      <div className="ml-5">
+        <h3 className="text-lg font-semibold text-green-500">
+          Effortless Communication and Coordination
+        </h3>
+        <p className="mt-4 text-base font-medium text-black">
+          From notifying substitutes to confirming assignments, Cque AI automates the communication process, reducing administrative burdens and ensuring a seamless connection between schools and teachers.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+      <FontAwesomeIcon
+        icon={faTasks}
+        className="flex-shrink-0 w-16 h-16 text-green-500"
+      />
+      <div className="ml-5">
+        <h3 className="text-lg font-semibold text-green-500">
+          Streamlined Operations, Maximum Impact
+        </h3>
+        <p className="mt-4 text-base font-medium text-black">
+          Let Cque AI take care of the complexities of substitute management, so your focus remains on what matters most—ensuring students receive uninterrupted education.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
     {/* CTA */}
 
-    <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">
+    <section className="py-10 bg-gray-100 sm:py-12 lg:py-16">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-6xl">
             <div className="max-w-2xl mx-auto text-left sm:text-center">
                 <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">

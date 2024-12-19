@@ -80,97 +80,8 @@ const page = () => {
         </div>
       </div>
 
-      
 
-
-      <section className="py-10 bg-gray-50 sm:py-16 lg:py-18">
-  <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div className="text-center">
-      <h2 className="text-2xl font-bold leading-tight text-black sm:text-3xl lg:text-3xl animate__animated animate__fadeIn">
-        Join Thousands of Satisfied Customers Revolutionizing Their Car Buying Experience
-      </h2>
-    </div>
-
-    <div className="px-5 py-8 mt-12 bg-white lg:mt-20 lg:p-16">
-      <div className="grid grid-cols-1 gap-12 lg:gap-16 sm:grid-cols-2">
-        <div className="flex items-start transition-all duration-500 ease-in-out transform hover:scale-105">
-          <FontAwesomeIcon
-            icon={faCarSide}
-            className="flex-shrink-0 w-16 h-16 text-blue-500"
-          />
-          <div className="ml-5">
-            <h3 className="text-lg font-semibold text-blue-500">
-              Personalized Car Recommendations
-            </h3>
-            <p className="mt-4 text-base font-medium text-black">
-              Let AI recommend the best cars based on your preferences, ensuring a tailored experience every time.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-start transition-all duration-500 ease-in-out transform hover:scale-105">
-          <FontAwesomeIcon
-            icon={faShieldAlt}
-            className="flex-shrink-0 w-16 h-16 text-blue-500"
-          />
-          <div className="ml-5">
-            <h3 className="text-lg font-semibold text-blue-500">
-              Secure Transactions and Expert Advice
-            </h3>
-            <p className="mt-4 text-base font-medium text-black">
-              Shop with peace of mind as we ensure secure payments and provide expert guidance every step of the way.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-start transition-all duration-500 ease-in-out transform hover:scale-105">
-          <FontAwesomeIcon
-            icon={faTachometerAlt}
-            className="flex-shrink-0 w-16 h-16 text-blue-500"
-          />
-          <div className="ml-5">
-            <h3 className="text-lg font-semibold text-blue-500">
-              Speedy & Efficient Car Buying Process
-            </h3>
-            <p className="mt-4 text-base font-medium text-black">
-              Enjoy a fast and efficient car buying journey, with no more endless browsing and wasted time.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-start transition-all duration-500 ease-in-out transform hover:scale-105">
-          <FontAwesomeIcon
-            icon={faCogs}
-            className="flex-shrink-0 w-16 h-16 text-blue-500"
-          />
-          <div className="ml-5">
-            <h3 className="text-lg font-semibold text-blue-500">
-              AI-Powered Search and Filters
-            </h3>
-            <p className="mt-4 text-base font-medium text-black">
-              Narrow down your search with advanced filters and recommendations powered by cutting-edge AI technology.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-start transition-all duration-500 ease-in-out transform hover:scale-105">
-          <FontAwesomeIcon
-            icon={faPhoneAlt}
-            className="flex-shrink-0 w-16 h-16 text-blue-500"
-          />
-          <div className="ml-5">
-            <h3 className="text-lg font-semibold text-blue-500">
-              24/7 Support and Assistance
-            </h3>
-            <p className="mt-4 text-base font-medium text-black">
-              Get instant support via phone or chat, and have your questions answered by experts who care.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section className="py-10 bg-gradient-to-r from-gray-200 via-white to-gray-100 sm:py-16 lg:py-24">
+      <section className="py-10 bg-gradient-to-r from-gray-200 via-white to-gray-100">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-16 xl:gap-x-24">
           <div className="relative mb-12">
@@ -179,41 +90,10 @@ const page = () => {
               src="https://cdn.rareblocks.xyz/collection/celebration/images/content/1/team-work.jpg"
               alt="Car buying experience"
             />
-
-            <div className="absolute w-full max-w-xs px-4 -translate-x-1/2 sm:px-0 sm:max-w-sm left-1/2 -bottom-12">
-              <div className="overflow-hidden bg-white rounded-xl shadow-lg p-6 transform transition-all duration-500 hover:scale-105">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-xl font-semibold text-blue-600">
-                      AI-Enhanced Car Buying
-                    </p>
-                    <p className="mt-2 text-sm font-medium text-gray-800 sm:text-lg">
-                      Revolutionizing your car buying experience with intelligent recommendations and insights.
-                    </p>
-                  </div>
-                  <div className="w-10 h-10 flex justify-center items-center bg-blue-600 text-white rounded-full">
-                    <svg
-                      className="w-6 h-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="space-y-6 lg:space-y-8">
-            <h2 className="text-3xl font-bold text-black sm:text-4xl lg:text-5xl leading-tight text-center lg:text-left animate__animated animate__fadeIn animate__delay-1s">
+            <h2 className="text-3xl font-bold text-black leading-tight text-center lg:text-left animate__animated animate__fadeIn animate__delay-1s">
               Discover Effortless Car Buying with AI
             </h2>
             <p className="text-lg text-gray-600 font-medium text-center lg:text-left">
@@ -225,10 +105,102 @@ const page = () => {
         </div>
       </div>
     </section>
+      
+
+
+      <section className="py-10 bg-gray-50">
+  <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div className="text-center">
+      <h2 className="text-2xl font-bold leading-tight text-black sm:text-3xl lg:text-3xl animate__animated animate__fadeIn">
+        Join Thousands of Satisfied Customers Revolutionizing Their Car Buying Experience
+      </h2>
+    </div>
+
+    <div className="px-5 py-8 mt-6 bg-white">
+  <div className="grid grid-cols-1 gap-12 lg:gap-16 sm:grid-cols-2">
+    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+      <FontAwesomeIcon
+        icon={faCarSide}
+        className="flex-shrink-0 w-16 h-16 text-blue-500"
+      />
+      <div className="ml-5">
+        <h3 className="text-lg font-semibold text-blue-500">
+          Personalized Car Recommendations
+        </h3>
+        <p className="mt-4 text-base font-medium text-black">
+          Let AI recommend the best cars based on your preferences, ensuring a tailored experience every time.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+      <FontAwesomeIcon
+        icon={faShieldAlt}
+        className="flex-shrink-0 w-16 h-16 text-blue-500"
+      />
+      <div className="ml-5">
+        <h3 className="text-lg font-semibold text-blue-500">
+          Secure Transactions and Expert Advice
+        </h3>
+        <p className="mt-4 text-base font-medium text-black">
+          Shop with peace of mind as we ensure secure payments and provide expert guidance every step of the way.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+      <FontAwesomeIcon
+        icon={faTachometerAlt}
+        className="flex-shrink-0 w-16 h-16 text-blue-500"
+      />
+      <div className="ml-5">
+        <h3 className="text-lg font-semibold text-blue-500">
+          Speedy & Efficient Car Buying Process
+        </h3>
+        <p className="mt-4 text-base font-medium text-black">
+          Enjoy a fast and efficient car buying journey, with no more endless browsing and wasted time.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+      <FontAwesomeIcon
+        icon={faCogs}
+        className="flex-shrink-0 w-16 h-16 text-blue-500"
+      />
+      <div className="ml-5">
+        <h3 className="text-lg font-semibold text-blue-500">
+          AI-Powered Search and Filters
+        </h3>
+        <p className="mt-4 text-base font-medium text-black">
+          Narrow down your search with advanced filters and recommendations powered by cutting-edge AI technology.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+      <FontAwesomeIcon
+        icon={faPhoneAlt}
+        className="flex-shrink-0 w-16 h-16 text-blue-500"
+      />
+      <div className="ml-5">
+        <h3 className="text-lg font-semibold text-blue-500">
+          24/7 Support and Assistance
+        </h3>
+        <p className="mt-4 text-base font-medium text-black">
+          Get instant support via phone or chat, and have your questions answered by experts who care.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+   
 
     {/* cta */}
 
- <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">
+ <section className="py-10 bg-gray-100 lg:py-16">
     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-left sm:text-center">
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
