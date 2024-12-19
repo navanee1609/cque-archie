@@ -121,7 +121,7 @@ const page = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faGlobe}
-        className="flex-shrink-0 w-16 h-16 text-blue-500"
+        className="flex-shrink-0 w-12 h-12 text-blue-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-blue-500">
@@ -136,7 +136,7 @@ const page = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faLightbulb}
-        className="flex-shrink-0 w-16 h-16 text-blue-500"
+        className="flex-shrink-0 w-12 h-12 text-blue-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-blue-500">
@@ -151,7 +151,7 @@ const page = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faCommentDots}
-        className="flex-shrink-0 w-16 h-16 text-blue-500"
+        className="flex-shrink-0 w-12 h-12 text-blue-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-blue-500">
@@ -166,7 +166,7 @@ const page = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faClock}
-        className="flex-shrink-0 w-16 h-16 text-blue-500"
+        className="flex-shrink-0 w-12 h-12 text-blue-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-blue-500">
@@ -181,7 +181,7 @@ const page = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faCheckCircle}
-        className="flex-shrink-0 w-16 h-16 text-blue-500"
+        className="flex-shrink-0 w-12 h-12 text-blue-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-blue-500">

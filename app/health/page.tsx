@@ -129,7 +129,7 @@ const Fashion = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faUserNurse}
-        className="flex-shrink-0 w-16 h-16 text-green-500"
+        className="flex-shrink-0 w-12 h-12 text-green-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-green-500">
@@ -144,7 +144,7 @@ const Fashion = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faCalendarAlt}
-        className="flex-shrink-0 w-16 h-16 text-green-500"
+        className="flex-shrink-0 w-12 h-12 text-green-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-green-500">
@@ -159,7 +159,7 @@ const Fashion = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faInfoCircle}
-        className="flex-shrink-0 w-16 h-16 text-green-500"
+        className="flex-shrink-0 w-12 h-12 text-green-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-green-500">
@@ -174,7 +174,7 @@ const Fashion = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faBell}
-        className="flex-shrink-0 w-16 h-16 text-green-500"
+        className="flex-shrink-0 w-12 h-12 text-green-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-green-500">
@@ -189,7 +189,7 @@ const Fashion = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faComments}
-        className="flex-shrink-0 w-16 h-16 text-green-500"
+        className="flex-shrink-0 w-12 h-12 text-green-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-green-500">

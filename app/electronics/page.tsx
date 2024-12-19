@@ -115,7 +115,7 @@ const FeatureSection: React.FC = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faCheckCircle}
-        className="flex-shrink-0 w-16 h-16 text-green-500"
+        className="flex-shrink-0 w-12 h-12 text-green-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-green-500">
@@ -130,7 +130,7 @@ const FeatureSection: React.FC = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faUsers}
-        className="flex-shrink-0 w-16 h-16 text-green-500"
+        className="flex-shrink-0 w-12 h-12 text-green-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-green-500">
@@ -145,7 +145,7 @@ const FeatureSection: React.FC = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faChartLine}
-        className="flex-shrink-0 w-16 h-16 text-green-500"
+        className="flex-shrink-0 w-12 h-12 text-green-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-green-500">
@@ -160,7 +160,7 @@ const FeatureSection: React.FC = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faClock}
-        className="flex-shrink-0 w-16 h-16 text-green-500"
+        className="flex-shrink-0 w-12 h-12 text-green-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-green-500">
@@ -175,7 +175,7 @@ const FeatureSection: React.FC = () => {
     <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
       <FontAwesomeIcon
         icon={faTasks}
-        className="flex-shrink-0 w-16 h-16 text-green-500"
+        className="flex-shrink-0 w-12 h-12 text-green-500"
       />
       <div className="ml-5">
         <h3 className="text-lg font-semibold text-green-500">
