@@ -34,7 +34,7 @@ const SocialIntegrations = () => {
                 />
                 <div className="ml-5 mr-auto">
                   <p className="text-xl font-semibold text-black">Facebook</p>
-                  <p className="mt-px text-sm">Direct Integration</p>
+                  <p className="text-md font-medium">Direct Integration</p>
                 </div>
               </div>
               <p className="text-black leading-relaxed font-medium mt-7 text-lg">
@@ -56,7 +56,7 @@ const SocialIntegrations = () => {
                 />
                 <div className="ml-5 mr-auto">
                   <p className="text-xl font-semibold text-black">Instagram</p>
-                  <p className="mt-px text-sm">Direct Integration</p>
+                  <p className="text-md font-medium">Direct Integration</p>
                 </div>
               </div>
               <p className="text-black leading-relaxed mt-7 font-medium text-lg">
@@ -78,7 +78,7 @@ const SocialIntegrations = () => {
                 />
                 <div className="ml-5 mr-auto">
                   <p className="text-xl font-semibold text-black">Twitter/X</p>
-                  <p className="mt-px text-sm">Direct Integration</p>
+                  <p className="text-md font-medium">Direct Integration</p>
                 </div>
               </div>
               <p className="text-black leading-relaxed mt-7 font-medium text-lg">
