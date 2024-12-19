@@ -1,7 +1,7 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -39,10 +39,37 @@ function classNames(...classes: string[]) {
 
 const Navbar: React.FC<NavbarProps> = ({ setShowsCalendly, setOverlayVisible }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);  // Manage dropdown visibility
 
   const handleButtonClicks = () => {
     setShowsCalendly(true);
     setOverlayVisible(true);
+  };
+
+  // Toggle dropdown visibility on click
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  // Close the dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (event.target instanceof HTMLElement) {
+        const dropdown = document.getElementById("dropdown-menu");
+        if (dropdown && !dropdown.contains(event.target)) {
+          setIsDropdownOpen(false);
+        }
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  // Close dropdown when a link is clicked
+  const handleLinkClick = () => {
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -74,36 +101,41 @@ const Navbar: React.FC<NavbarProps> = ({ setShowsCalendly, setOverlayVisible }) 
                 </Link>
 
                 {/* Use Cases Dropdown */}
-                <div className="relative group">
+                <div className="relative">
                   {/* Trigger */}
                   <div
-                    className="flex items-center space-x-1 px-6 py-2 rounded-md text-lg font-medium navlinks hover:text-green group-hover:text-green cursor-pointer"
+                    className="flex items-center space-x-1 px-6 py-2 rounded-md text-lg font-medium navlinks hover:text-green cursor-pointer"
+                    onClick={toggleDropdown}
                   >
                     <span>Use Case</span>
                     <ChevronDownIcon className="w-5 h-5" />
                   </div>
 
                   {/* Dropdown */}
-                  <div
-                    className="absolute hidden group-hover:flex flex-wrap bg-white shadow-md rounded-md mt-3 z-10 border border-gray-200"
-                  >
-                    <ul className="py-2 grid grid-cols-2 gap-x-6 gap-y-2 w-max px-4">
-                      {useCases.map((useCase) => (
-                        <li
-                          key={useCase.name}
-                          className="flex items-center px-2 py-2 hover:text-green bg-white transition-all duration-200 whitespace-nowrap"
-                        >
-                          <FontAwesomeIcon icon={useCase.icon} className="mr-2 text-gray-600 h-4 w-4" />
-                          <Link
-                            href={useCase.href}
-                            className="block text-black hover:text-gray-900 font-medium"
+                  {isDropdownOpen && (
+                    <div
+                      id="dropdown-menu"
+                      className="absolute flex-wrap bg-white shadow-md rounded-md mt-3 z-10 border border-gray-200"
+                    >
+                      <ul className="py-2 grid grid-cols-2 gap-x-6 gap-y-2 w-max px-4">
+                        {useCases.map((useCase) => (
+                          <li
+                            key={useCase.name}
+                            className="flex items-center px-2 py-2 hover:text-green bg-white transition-all duration-200 whitespace-nowrap hover:bg-[#EFEFF0]"
                           >
-                            {useCase.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                            <FontAwesomeIcon icon={useCase.icon} className="mr-2 text-gray-600 h-4 w-4" />
+                            <Link
+                              href={useCase.href}
+                              className="block text-black hover:text-gray-900 font-medium"
+                              onClick={handleLinkClick}  // Close dropdown on link click
+                            >
+                              {useCase.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
 
                 {/* Pricing */}

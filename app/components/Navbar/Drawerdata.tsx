@@ -4,34 +4,18 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline"; // Chevron Icon f
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTshirt, faTv, faHeartbeat, faMagic, faFootballBall, faHome, faCar, faGem, faBalanceScale, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
-interface NavigationItem {
-  name: string;
-  href: string;
-}
-
-const navigation: NavigationItem[] = [
-  { name: "About Us", href: "/aboutus" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "Blog", href: "" },
-  { name: "Contact Us", href: "/contactus" },
-];
-
 const useCases = [
-    { name: "Fashion / Apparel", href: "/fashion", icon: faTshirt },
-    { name: "Electronics", href: "/electronics", icon: faTv },
-    { name: "Health", href: "/health", icon: faHeartbeat },
-    { name: "Beauty & Cosmetics", href: "/beauty", icon: faMagic },
-    { name: "Sports & Life Style", href: "/sports", icon: faFootballBall },
-    { name: "House & Garden", href: "/house-garden", icon: faHome },
-    { name: "Automotive", href: "/automotive", icon: faCar },
-    { name: "Jewelry", href: "/jewelry", icon: faGem },
-    { name: "Legal", href: "/legal", icon: faBalanceScale },
-    { name: "Education", href: "/education", icon: faBookOpen },
+  { name: "Fashion / Apparel", href: "/fashion", icon: faTshirt },
+  { name: "Electronics", href: "/electronics", icon: faTv },
+  { name: "Health", href: "/health", icon: faHeartbeat },
+  { name: "Beauty & Cosmetics", href: "/beauty", icon: faMagic },
+  { name: "Sports & Life Style", href: "/sports", icon: faFootballBall },
+  { name: "House & Garden", href: "/house-garden", icon: faHome },
+  { name: "Automotive", href: "/automotive", icon: faCar },
+  { name: "Jewelry", href: "/jewelry", icon: faGem },
+  { name: "Legal", href: "/legal", icon: faBalanceScale },
+  { name: "Education", href: "/education", icon: faBookOpen },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 
 interface DrawerDataProps {
   setShowsCalendly: (showsCalendly: boolean) => void;
@@ -77,16 +61,16 @@ const Data = ({ setShowsCalendly, setOverlayVisible }: DrawerDataProps) => {
         <div className="flex-1 space-y-4 py-1">
           <div className="sm:block">
             <div className="space-y-1 px-5 pt-2 pb-3">
-              {/* Order updated to reflect the correct order */}
+              {/* About Us Link */}
               <Link
                 href="/aboutus"
-                className={classNames("/aboutus" === activeLink ? "text-navyblue" : "text-black hover:text-purple", "block py-2 rounded-md text-base font-medium")}
+                className={`block py-2 rounded-md text-base font-medium ${activeLink === "/aboutus" ? "text-navyblue" : "text-black hover:text-purple"}`}
                 onClick={() => handleLinkClick("/aboutus")}
               >
                 About Us
               </Link>
 
-              {/* Dropdown for Use Cases, now opens on click */}
+              {/* Dropdown for Use Cases */}
               <div
                 className="relative"
                 ref={dropdownRef} // Reference for this section
@@ -119,17 +103,19 @@ const Data = ({ setShowsCalendly, setOverlayVisible }: DrawerDataProps) => {
                 )}
               </div>
 
+              {/* Pricing Link */}
               <Link
                 href="/pricing"
-                className={classNames("/pricing" === activeLink ? "text-navyblue" : "text-black hover:text-purple", "block py-2 rounded-md text-base font-medium")}
+                className={`block py-2 rounded-md text-base font-medium ${activeLink === "/pricing" ? "text-navyblue" : "text-black hover:text-purple"}`}
                 onClick={() => handleLinkClick("/pricing")}
               >
                 Pricing
               </Link>
 
+              {/* Blog Link */}
               <Link
                 href=""
-                className={classNames("" === activeLink ? "text-navyblue" : "text-black hover:text-purple", "block py-2 rounded-md text-base font-medium")}
+                className={`block py-2 rounded-md text-base font-medium ${activeLink === "" ? "text-navyblue" : "text-black hover:text-purple"}`}
                 onClick={() => handleLinkClick("")}
               >
                 Blog
