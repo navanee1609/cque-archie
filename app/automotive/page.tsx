@@ -1,38 +1,43 @@
-'use client'
-import { faCarSide, faShieldAlt, faTachometerAlt, faCogs, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react'
-import { InlineWidget } from 'react-calendly';
+"use client";
+import {
+  faCarSide,
+  faShieldAlt,
+  faTachometerAlt,
+  faCogs,
+  faPhoneAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from "react";
+import { InlineWidget } from "react-calendly";
 
 const page = () => {
   const [showCalendly, setShowCalendly] = useState(false);
-    const [overlayVisible, setOverlayVisible] = useState(false);
-  
-    const [showsCalendly, setShowsCalendly] = useState(false);
-  
-    const handleButtonClicks = () => {
-      setShowsCalendly(true);
-      setOverlayVisible(true);
-    };
-  
-    const handleCalendlyClose = () => {
-      setShowsCalendly(false);
-      setOverlayVisible(false);
-    };
-  
-    const handleButtonClick = () => {
-      setShowCalendly(true);
-      setOverlayVisible(true);
-    };
-  
-    const handleCloseCalendly = () => {
-      setShowCalendly(false);
-      setOverlayVisible(false);
-    };
+  const [overlayVisible, setOverlayVisible] = useState(false);
+
+  const [showsCalendly, setShowsCalendly] = useState(false);
+
+  const handleButtonClicks = () => {
+    setShowsCalendly(true);
+    setOverlayVisible(true);
+  };
+
+  const handleCalendlyClose = () => {
+    setShowsCalendly(false);
+    setOverlayVisible(false);
+  };
+
+  const handleButtonClick = () => {
+    setShowCalendly(true);
+    setOverlayVisible(true);
+  };
+
+  const handleCloseCalendly = () => {
+    setShowCalendly(false);
+    setOverlayVisible(false);
+  };
   return (
     <>
-
-<div className="container mx-auto sm:px-4 ptb-120">
+      <div className="container mx-auto sm:px-4 ptb-120">
         {overlayVisible && <div className="overlay"></div>}
         <div
           className="flex flex-wrap justify-center ptb-120 bg-cover items-center"
@@ -57,313 +62,532 @@ const page = () => {
                 Try CQUE AI For FREE
               </button>
               {showCalendly && (
-            <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-md">
-              <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
-                <InlineWidget url="https://calendly.com/smartle/30min" />
-                <button
-                  className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl text-white"
-                  onClick={handleCloseCalendly}
-                >
-                  &#10005;
-                </button>
-              </div>
-            </div>
-          )}
+                <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-md">
+                  <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                    <InlineWidget url="https://calendly.com/smartle/30min" />
+                    <button
+                      className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl text-white"
+                      onClick={handleCloseCalendly}
+                    >
+                      &#10005;
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
-
 
       <section className="py-10 bg-gradient-to-r from-gray-200 via-white to-gray-100">
-      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-16 xl:gap-x-24">
-          <div className="relative mb-12">
-            <img
-              className="w-full rounded-md transform transition-all duration-300 hover:scale-105"
-              src="https://cdn.rareblocks.xyz/collection/celebration/images/content/1/team-work.jpg"
-              alt="Car buying experience"
-            />
-          </div>
+        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+          <div className="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-16 xl:gap-x-24">
+            <div className="relative mb-12">
+              <img
+                className="w-full rounded-md transform transition-all duration-300 hover:scale-105"
+                src="https://cdn.rareblocks.xyz/collection/celebration/images/content/1/team-work.jpg"
+                alt="Car buying experience"
+              />
+            </div>
 
-          <div className="space-y-6 lg:space-y-8">
-            <h2 className="text-3xl font-bold text-black leading-tight text-center lg:text-left animate__animated animate__fadeIn animate__delay-1s">
-              Discover Effortless Car Buying with AI
-            </h2>
-            <p className="text-lg text-gray-600 font-medium text-center lg:text-left">
-              Simplify your car buying experience with AI-powered insights and recommendations.
-              <br />
-              Start your journey today and find the car of your dreams!
-            </p>
+            <div className="space-y-6 lg:space-y-8">
+              <h2 className="text-3xl font-bold text-black leading-tight text-center lg:text-left animate__animated animate__fadeIn animate__delay-1s">
+                Discover Effortless Car Buying with AI
+              </h2>
+              <p className="text-lg text-gray-600 font-medium text-center lg:text-left">
+                Simplify your car buying experience with AI-powered insights and
+                recommendations.
+                <br />
+                Start your journey today and find the car of your dreams!
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-      
-
+      </section>
 
       <section className="py-10 bg-gray-50">
-  <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div className="text-center">
-      <h2 className="text-2xl font-bold leading-tight text-black sm:text-3xl lg:text-3xl animate__animated animate__fadeIn">
-        Join Thousands of Satisfied Customers Revolutionizing Their Car Buying Experience
-      </h2>
-    </div>
-
-    <div className="px-5 py-8 mt-6 bg-white">
-  <div className="grid grid-cols-1 gap-12 lg:gap-16 sm:grid-cols-2">
-    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
-      <FontAwesomeIcon
-        icon={faCarSide}
-        className="flex-shrink-0 w-12 h-12 text-blue-500"
-      />
-      <div className="ml-5">
-        <h3 className="text-lg font-semibold text-blue-500">
-          Personalized Car Recommendations
-        </h3>
-        <p className="mt-4 text-base font-medium text-black">
-          Let AI recommend the best cars based on your preferences, ensuring a tailored experience every time.
-        </p>
-      </div>
-    </div>
-
-    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
-      <FontAwesomeIcon
-        icon={faShieldAlt}
-        className="flex-shrink-0 w-12 h-12 text-blue-500"
-      />
-      <div className="ml-5">
-        <h3 className="text-lg font-semibold text-blue-500">
-          Secure Transactions and Expert Advice
-        </h3>
-        <p className="mt-4 text-base font-medium text-black">
-          Shop with peace of mind as we ensure secure payments and provide expert guidance every step of the way.
-        </p>
-      </div>
-    </div>
-
-    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
-      <FontAwesomeIcon
-        icon={faTachometerAlt}
-        className="flex-shrink-0 w-12 h-12 text-blue-500"
-      />
-      <div className="ml-5">
-        <h3 className="text-lg font-semibold text-blue-500">
-          Speedy & Efficient Car Buying Process
-        </h3>
-        <p className="mt-4 text-base font-medium text-black">
-          Enjoy a fast and efficient car buying journey, with no more endless browsing and wasted time.
-        </p>
-      </div>
-    </div>
-
-    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
-      <FontAwesomeIcon
-        icon={faCogs}
-        className="flex-shrink-0 w-12 h-12 text-blue-500"
-      />
-      <div className="ml-5">
-        <h3 className="text-lg font-semibold text-blue-500">
-          AI-Powered Search and Filters
-        </h3>
-        <p className="mt-4 text-base font-medium text-black">
-          Narrow down your search with advanced filters and recommendations powered by cutting-edge AI technology.
-        </p>
-      </div>
-    </div>
-
-    <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
-      <FontAwesomeIcon
-        icon={faPhoneAlt}
-        className="flex-shrink-0 w-12 h-12 text-blue-500"
-      />
-      <div className="ml-5">
-        <h3 className="text-lg font-semibold text-blue-500">
-          24/7 Support and Assistance
-        </h3>
-        <p className="mt-4 text-base font-medium text-black">
-          Get instant support via phone or chat, and have your questions answered by experts who care.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-   
-
-    {/* cta */}
-
- <section className="py-10 bg-gray-100 lg:py-16">
-    <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div className="max-w-2xl mx-auto text-left sm:text-center">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
-                Discover the ease and joy of buying cars with AI support!
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold leading-tight text-black sm:text-3xl lg:text-3xl animate__animated animate__fadeIn">
+              Join Thousands of Satisfied Customers Revolutionizing Their Car
+              Buying Experience
             </h2>
-            <p className="max-w-xl mx-auto mt-4 text-lg font-medium leading-relaxed text-gray-600">
-                Start your free consultation today for a smooth and premium car-buying experience!
-            </p>
-        </div>
+          </div>
 
-        <form action="#" method="POST" className="max-w-xl mx-auto mt-12">
-            <div className="sm:p-2 sm:bg-white sm:border-2 sm:border-blue-600 sm:rounded-full">
-                <div className="flex flex-col items-start sm:flex-row sm:justify-center">
-                    <div className="flex-1 w-full min-w-0">
-                        <div className="relative text-gray-400 focus-within:text-gray-600">
-                            <label htmlFor="email" className="sr-only"></label>
-                            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
-                                </svg>
-                            </div>
-                            <input
-                                type="email"
-                                name="email"
-                                id="email"
-                                placeholder="Enter email address"
-                                className="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-transparent rounded-full focus:outline-none focus:border-none"
-                                
-                            />
-                        </div>
-                    </div>
-
-                    <button type="submit" className="inline-flex items-center justify-center w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-blue border border-transparent rounded-full sm:ml-4 sm:mt-0 sm:w-auto hover:bg-blue-700 focus:bg-blue-700">
-                        Join us
-                        <svg className="w-5 h-5 ml-3 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                    </button>
+          <div className="px-5 py-8 mt-6 bg-white">
+            <div className="grid grid-cols-1 gap-12 lg:gap-16 sm:grid-cols-2">
+              <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+                <FontAwesomeIcon
+                  icon={faCarSide}
+                  className="flex-shrink-0 w-12 h-12 text-blue-500"
+                />
+                <div className="ml-5">
+                  <h3 className="text-lg font-semibold text-blue-500">
+                    Personalized Car Recommendations
+                  </h3>
+                  <p className="mt-4 text-base font-medium text-black">
+                    Let AI recommend the best cars based on your preferences,
+                    ensuring a tailored experience every time.
+                  </p>
                 </div>
+              </div>
+
+              <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+                <FontAwesomeIcon
+                  icon={faShieldAlt}
+                  className="flex-shrink-0 w-12 h-12 text-blue-500"
+                />
+                <div className="ml-5">
+                  <h3 className="text-lg font-semibold text-blue-500">
+                    Secure Transactions and Expert Advice
+                  </h3>
+                  <p className="mt-4 text-base font-medium text-black">
+                    Shop with peace of mind as we ensure secure payments and
+                    provide expert guidance every step of the way.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+                <FontAwesomeIcon
+                  icon={faTachometerAlt}
+                  className="flex-shrink-0 w-12 h-12 text-blue-500"
+                />
+                <div className="ml-5">
+                  <h3 className="text-lg font-semibold text-blue-500">
+                    Speedy & Efficient Car Buying Process
+                  </h3>
+                  <p className="mt-4 text-base font-medium text-black">
+                    Enjoy a fast and efficient car buying journey, with no more
+                    endless browsing and wasted time.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+                <FontAwesomeIcon
+                  icon={faCogs}
+                  className="flex-shrink-0 w-12 h-12 text-blue-500"
+                />
+                <div className="ml-5">
+                  <h3 className="text-lg font-semibold text-blue-500">
+                    AI-Powered Search and Filters
+                  </h3>
+                  <p className="mt-4 text-base font-medium text-black">
+                    Narrow down your search with advanced filters and
+                    recommendations powered by cutting-edge AI technology.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start p-6 transition-all duration-500 ease-in-out transform bg-white rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:border">
+                <FontAwesomeIcon
+                  icon={faPhoneAlt}
+                  className="flex-shrink-0 w-12 h-12 text-blue-500"
+                />
+                <div className="ml-5">
+                  <h3 className="text-lg font-semibold text-blue-500">
+                    24/7 Support and Assistance
+                  </h3>
+                  <p className="mt-4 text-base font-medium text-black">
+                    Get instant support via phone or chat, and have your
+                    questions answered by experts who care.
+                  </p>
+                </div>
+              </div>
             </div>
-        </form>
+          </div>
 
-        <div className="flex items-center justify-start mt-8 sm:justify-center sm:px-0">
-            <svg className="flex-shrink-0 w-5 h-5 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-            </svg>
-            <span className="ml-2 text-md font-medium text-gray-600">Your data is completely secured with us. We don’t share with anyone.</span>
-        </div>
-    </div>
-</section>
+          {/* cta */}
 
-  {/*cta  */}
+          <section className="py-10 bg-gray-100 lg:py-16">
+            <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+              <div className="max-w-2xl mx-auto text-left sm:text-center">
+                <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
+                  Discover the ease and joy of buying cars with AI support!
+                </h2>
+                {/* <p className="max-w-xl mx-auto mt-4 text-lg font-medium leading-relaxed text-gray-600">
+                Start your free consultation today for a smooth and premium car-buying experience!
+            </p> */}
+              </div>
 
-  <div className="relative overflow-hidden bg-gray-900 rounded-2xl my-16 mx-auto" style={{backgroundColor: "#1f2937",width: "90%", maxWidth:"1200px"}}>
-            <div className="px-16 py-8 sm:px-8 lg:px-16 lg:py-14">
-                <div className="md:flex md:items-center md:space-x-12 lg:space-x-24">
-                    <div className="text-center md:text-left">
-                        <h2 className="text-2xl font-bold text-white font-pj">
-                            Still Not Sure?
-                        </h2>
-                        <p className="mt-3 text-base text-white font-medium">
-                            Let us show you a quick DEMO tailored to your store. You’ll be impressed.
-                        </p>
-                    </div>
-                    <div className="block md:hidden lg:block">
-                        <div className="hidden lg:block">
-                            <svg className="w-4 h-auto text-white" viewBox="0 0 16 123" fill="none" stroke="currentColor"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 11)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 46)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 81)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 116)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 18)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 53)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 88)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 123)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 25)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 60)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 95)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 32)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 67)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 102)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 39)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 74)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5"
-                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 109)"></line>
-                            </svg>
+              <form action="#" method="POST" className="max-w-xl mx-auto mt-12">
+                <div className="sm:p-2 sm:bg-white sm:border-2 sm:border-blue-600 sm:rounded-full">
+                  <div className="flex flex-col items-start sm:flex-row sm:justify-center">
+                    <div className="flex-1 w-full min-w-0">
+                      <div className="relative text-gray-400 focus-within:text-gray-600">
+                        <label htmlFor="email" className="sr-only"></label>
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                          <svg
+                            className="w-5 h-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="1.5"
+                              d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                            ></path>
+                          </svg>
                         </div>
-                        <div className="mt-4 md:hidden flex justify-center items-center">
-                            <svg className="w-auto h-4 text-white" viewBox="0 0 172 16" fill="none" stroke="currentColor"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)">
-                                </line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)">
-                                </line>
-                            </svg>
-                        </div>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          placeholder="Enter email address"
+                          className="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-transparent rounded-full focus:outline-none focus:border-none"
+                        />
+                      </div>
                     </div>
-                    <div className="mt-10 md:mt-0">
-          <button
-            title="Schedule Demo"
-            className="flex items-center justify-center px-9 py-3.5 mt-5 text-base font-bold text-gray-900 transition-all duration-200 bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white font-pj hover:bg-opacity-90 rounded-xl"
-            onClick={handleButtonClick}
-            style={{ borderRadius: "28px" }}
+
+                    <button
+                      type="submit"
+                      className="inline-flex items-center justify-center w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-blue border border-transparent rounded-full sm:ml-4 sm:mt-0 sm:w-auto hover:bg-blue-700 focus:bg-blue-700"
+                    >
+                      Join us
+                      <svg
+                        className="w-5 h-5 ml-3 -mr-1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <div className="flex items-center justify-start mt-8 sm:justify-center sm:px-0">
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-gray-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  ></path>
+                </svg>
+                <span className="ml-2 text-md font-medium text-gray-600">
+                  Your data is completely secured with us. We don’t share with
+                  anyone.
+                </span>
+              </div>
+            </div>
+          </section>
+
+          {/*cta  */}
+
+          <div
+            className="relative overflow-hidden bg-gray-900 rounded-2xl my-16 mx-auto"
+            style={{
+              backgroundColor: "#1f2937",
+              width: "90%",
+              maxWidth: "1200px",
+            }}
           >
-            Schedule Demo
-          </button>
-        
-          {/* {showCalendly && (
+            <div className="px-16 py-8 sm:px-8 lg:px-16 lg:py-14">
+              <div className="md:flex md:items-center md:space-x-12 lg:space-x-24">
+                <div className="text-center md:text-left">
+                  <h2 className="text-2xl font-bold text-white font-pj">
+                    Still Not Sure?
+                  </h2>
+                  <p className="mt-3 text-base text-white font-medium">
+                    Let us show you a quick DEMO tailored to your store. You’ll
+                    be impressed.
+                  </p>
+                </div>
+                <div className="block md:hidden lg:block">
+                  <div className="hidden lg:block">
+                    <svg
+                      className="w-4 h-auto text-white"
+                      viewBox="0 0 16 123"
+                      fill="none"
+                      stroke="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 11)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 46)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 81)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 116)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 18)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 53)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 88)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 123)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 25)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 60)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 95)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 32)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 67)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 102)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 39)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 74)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 109)"
+                      ></line>
+                    </svg>
+                  </div>
+                  <div className="mt-4 md:hidden flex justify-center items-center">
+                    <svg
+                      className="w-auto h-4 text-white"
+                      viewBox="0 0 172 16"
+                      fill="none"
+                      stroke="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)"
+                      ></line>
+                      <line
+                        y1="-0.5"
+                        x2="18.0278"
+                        y2="-0.5"
+                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)"
+                      ></line>
+                    </svg>
+                  </div>
+                </div>
+                <div className="mt-10 md:mt-0">
+                  <button
+                    title="Schedule Demo"
+                    className="flex items-center justify-center px-9 py-3.5 mt-5 text-base font-bold text-gray-900 transition-all duration-200 bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white font-pj hover:bg-opacity-90 rounded-xl"
+                    onClick={handleButtonClick}
+                    style={{ borderRadius: "28px" }}
+                  >
+                    Schedule Demo
+                  </button>
+
+                  {/* {showCalendly && (
             <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-md">
               <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
                 <InlineWidget url="https://calendly.com/smartle/30min" />
@@ -376,23 +600,14 @@ const page = () => {
               </div>
             </div>
           )} */}
-        </div>
-        
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;
