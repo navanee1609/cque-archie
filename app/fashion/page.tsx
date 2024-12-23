@@ -252,7 +252,7 @@ const Fashion = () => {
                       type="submit"
                       className="inline-flex items-center justify-center w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-blue border border-transparent rounded-full sm:ml-4 sm:mt-0 sm:w-auto hover:bg-blue-700 focus:bg-blue-700"
                     >
-                      Get instant access
+                      Join us
                       <svg
                         className="w-5 h-5 ml-3 -mr-1"
                         xmlns="http://www.w3.org/2000/svg"

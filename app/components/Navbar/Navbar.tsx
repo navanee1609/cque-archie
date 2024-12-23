@@ -126,7 +126,7 @@ const Navbar: React.FC<NavbarProps> = ({ setShowsCalendly, setOverlayVisible }) 
                         {useCases.map((useCase) => (
                           <li
                             key={useCase.name}
-                            className="flex items-center px-2 py-2 hover:text-green bg-white transition-all duration-200 whitespace-nowrap hover:bg-[#EFEFF0]"
+                            className="flex items-center px-2 py-2 hover:text-green bg-white transition-all duration-200 whitespace-nowrap hover:bg-[#EFEFF0] hover:rounded-xl"
                           >
                             <FontAwesomeIcon icon={useCase.icon} className="mr-2 text-gray-600 h-4 w-4" />
                             <Link
