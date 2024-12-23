@@ -4,6 +4,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline"; // Chevron Icon f
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTshirt, faTv, faHeartbeat, faMagic, faFootballBall, faHome, faCar, faGem, faBalanceScale, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
+// Use Cases Data
 const useCases = [
   { name: "Fashion / Apparel", href: "/fashion", icon: faTshirt },
   { name: "Electronics", href: "/electronics", icon: faTv },
@@ -47,16 +48,18 @@ const Data = ({ setShowsCalendly, setOverlayVisible }: DrawerDataProps) => {
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("click", handleClickOutside); // Clean up the listener
+      document.removeEventListener("mousedown", handleClickOutside); // Clean up the listener
     };
   }, []);
 
   return (
     <div className="relative">
       <div
-        className={`rounded-md max-w-sm w-full mx-auto ${menuVisible ? "opacity-100 transition-opacity duration-500 ease-in" : "opacity-0"}`}
+        className={`rounded-md max-w-sm w-full mx-auto ${
+          menuVisible ? "opacity-100 transition-opacity duration-500 ease-in" : "opacity-0"
+        }`}
       >
         <div className="flex-1 space-y-4 py-1">
           <div className="sm:block">
@@ -64,36 +67,44 @@ const Data = ({ setShowsCalendly, setOverlayVisible }: DrawerDataProps) => {
               {/* About Us Link */}
               <Link
                 href="/aboutus"
-                className={`block py-2 rounded-md text-base font-medium ${activeLink === "/aboutus" ? "text-navyblue" : "text-black hover:text-purple"}`}
+                className={`block py-2 rounded-md text-base font-medium ${
+                  activeLink === "/aboutus" ? "text-navyblue" : "text-black hover:text-purple"
+                }`}
                 onClick={() => handleLinkClick("/aboutus")}
               >
                 About Us
               </Link>
 
               {/* Dropdown for Use Cases */}
-              <div
-                className="relative"
-                ref={dropdownRef} // Reference for this section
-              >
+              <div className="relative" ref={dropdownRef}>
                 <button
                   className="py-2 w-full text-black font-medium text-base flex items-center justify-between"
                   aria-haspopup="true"
-                  onClick={() => setDropdownVisible((prev) => !prev)} // Toggle dropdown visibility on click
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent event propagation
+                    setDropdownVisible((prev) => !prev); // Toggle dropdown visibility
+                  }}
                 >
                   <span>Use Cases</span>
                   <ChevronDownIcon className="h-4 w-4 text-black" />
                 </button>
                 {dropdownVisible && (
-                  <div className="absolute left-0 mt-2 w-56 bg-white shadow-md rounded-md border-2 border-green-500 transition-all duration-500 ease-in-out">
+                  <div
+                    className="absolute left-0 mt-2 w-56 bg-white shadow-md rounded-md border-2 border-green-500 transition-all duration-300 ease-in-out"
+                    style={{ maxWidth: "90vw", zIndex: 50 }}
+                  >
                     <ul className="py-2">
                       {useCases.map((useCase) => (
                         <li key={useCase.name} className="px-4 py-2 hover:bg-green-100">
                           <Link
                             href={useCase.href}
                             className="block text-black hover:text-green-800"
-                            onClick={() => handleLinkClick(useCase.href)} // Close dropdown on link click
+                            onClick={() => handleLinkClick(useCase.href)}
                           >
-                            <FontAwesomeIcon icon={useCase.icon} className="mr-2 text-green-500 h-4 w-4" />
+                            <FontAwesomeIcon
+                              icon={useCase.icon}
+                              className="mr-2 text-green-500 h-4 w-4"
+                            />
                             {useCase.name}
                           </Link>
                         </li>
@@ -106,7 +117,9 @@ const Data = ({ setShowsCalendly, setOverlayVisible }: DrawerDataProps) => {
               {/* Pricing Link */}
               <Link
                 href="/pricing"
-                className={`block py-2 rounded-md text-base font-medium ${activeLink === "/pricing" ? "text-navyblue" : "text-black hover:text-purple"}`}
+                className={`block py-2 rounded-md text-base font-medium ${
+                  activeLink === "/pricing" ? "text-navyblue" : "text-black hover:text-purple"
+                }`}
                 onClick={() => handleLinkClick("/pricing")}
               >
                 Pricing
@@ -115,7 +128,9 @@ const Data = ({ setShowsCalendly, setOverlayVisible }: DrawerDataProps) => {
               {/* Blog Link */}
               <Link
                 href=""
-                className={`block py-2 rounded-md text-base font-medium ${activeLink === "" ? "text-navyblue" : "text-black hover:text-purple"}`}
+                className={`block py-2 rounded-md text-base font-medium ${
+                  activeLink === "" ? "text-navyblue" : "text-black hover:text-purple"
+                }`}
                 onClick={() => handleLinkClick("")}
               >
                 Blog
