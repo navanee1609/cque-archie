@@ -303,7 +303,7 @@ const Fashion = () => {
           <div
             className="relative overflow-hidden bg-gray-900 rounded-2xl my-16 mx-auto"
             style={{
-              backgroundColor: "#1f2937",
+              background: "linear-gradient(135deg, #3F559E, #2D4177, #6A86B6, #8A99D8)",
               width: "90%",
               maxWidth: "1200px",
             }}
