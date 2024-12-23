@@ -9,7 +9,7 @@ const Pricing = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isVisibleCal, setIsVisibleCal] = useState(false);
   const [isVisibleTrial, setIsVisibleTrial] = useState(false);
-  const [showWidget, setShowWidget] = useState(false);
+  const [] = useState(false);
 
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [activeCard, setActiveCard] = useState(2);
@@ -22,7 +22,11 @@ const Pricing = () => {
   const handleButtonClick = () => {
     setOverlayVisible(!overlayVisible);
     setShowCalendly(true);
-    setCalendlyVisibility(true);
+  };
+
+  const closeCalendly = () => {
+    setOverlayVisible(false);
+    setShowCalendly(false);
   };
 
   const handleCardClick = (cardId) => {
@@ -39,99 +43,29 @@ const Pricing = () => {
     return cardId === activeCard ? 'text-white' : 'text-gray';
   };
 
-  const getButtonClasses = () => {
-    return 'relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-white text-gray-800 btn-rounded mt-3 w-90';
-  };
 
   const handleCloseCalendly = () => {
-    setOverlayVisible(false);
+    setOverlayVisible(true);
     setShowCalendly(false);
     setShowsCalendly(false);
     setCalendlyVisibility(false);
   };
 
 
-  const handleClicks = () => {
-    setShowWidget(true);
-  };
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  const handleTrialButtonClick = () => {
-    setIsVisibleTrial(true);
-  };
-
-  const handlesClick = () => {
-    setIsVisibleCal(true);
-  };
-
-
-
-
-  const handleButtonClicks = () => {
-    setOverlayVisible(!overlayVisible);
-    setShowsCalendly(true);
-  };
-
-  const handlesButtonClick = () => {
-    setCalendlyVisibility(true);
-  };
-
-  const handleClick = () => {
-    setIsVisible(true);
-  };
   useEffect(() => {
-    function btnClick(e) {
-      e.preventDefault();
-
-      const visitPM = document.getElementById("visitors-pm").value;
-      const orderPM = document.getElementById("order-pm").value;
-      const aOV = document.getElementById("aov").value;
-
-      let newErrors = {
-        visitPM: '',
-        orderPM: '',
-        aOV: '',
-      };
-
-      if (!visitPM) {
-        newErrors.visitPM = 'Please enter the number of store visitors per month.';
-      }
-      if (!orderPM) {
-        newErrors.orderPM = 'Please enter the number of orders you generate per month.';
-      }
-      if (!aOV) {
-        newErrors.aOV = 'Please enter the Average Order Value (AOV).';
-      }
-
-      setErrors(newErrors);
-
-      if (newErrors.visitPM || newErrors.orderPM || newErrors.aOV) {
-        return; // Stop processing if there are errors
-      }
-
-      var conversationsPerMonth = parseFloat((visitPM * 0.015).toFixed(0));
-      var potentialAdditionalSales = parseFloat((orderPM * 0.16).toFixed(0));
-      var potentialAOV = parseFloat((aOV * 1.1).toFixed(0));
-      var addUnlockSales = parseFloat(
-        (potentialAdditionalSales * potentialAOV).toFixed(0)
-      );
-      var monthlyROI = parseFloat(
-        (((addUnlockSales - 15) / 15) * 100).toFixed(0)
-      );
-
-      document.getElementById("con-pm").textContent = conversationsPerMonth;
-      document.getElementById("addSales").textContent = potentialAdditionalSales;
-      document.getElementById("potAV").textContent = "$ " + potentialAOV;
-      document.getElementById("addSalesFromSpritle").textContent = "$ " + addUnlockSales;
-      document.getElementById("subsCost").textContent = "$ 15";
-      document.getElementById("mon-ROI").textContent = monthlyROI + " %";
-      document.getElementById("ROI").classList.remove("hidden");
+    if (showCalendly) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
     }
 
-    // document.getElementById("myButton").addEventListener("click", btnClick);
-  }, []);
+    // Cleanup when the component is unmounted or modal is closed
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showCalendly]);
+
+
 
 
   return (
@@ -167,7 +101,7 @@ const Pricing = () => {
         <div className="flex flex-wrap pr-4 pl-4 mx-auto justify-center cursor-pointer">
   {[
     {
-      price: '$99 / month',
+      price: '$199 / month',
       plan: 'Essential',
       replies: '1,500 replies/month',
       webpages: '5,000 webpages stored',
@@ -179,10 +113,10 @@ const Pricing = () => {
       crossSelling: 'Cross Selling',
       mediaIntegration: 'Media Channel Integration',
       crmIntegration: 'CRM tool Integration',
-      aiImageSearch: 'AI Image Search*',  // Missing
+      aiImageSearch: 'AI Image Search*',
     },
     {
-      price: '$199 / month',
+      price: '$299 / month',
       plan: 'Growth',
       replies: '3,000 replies/month',
       webpages: '15,000 webpages stored',
@@ -194,10 +128,10 @@ const Pricing = () => {
       crossSelling: 'Cross Selling',
       mediaIntegration: 'Media Channel Integration',
       crmIntegration: 'CRM tool Integration',
-      aiImageSearch: 'AI Image Search*',  // Missing
+      aiImageSearch: 'AI Image Search*',
     },
     {
-      price: '$499 / month',
+      price: '$599 / month',
       plan: 'Premium',
       replies: '7,000 replies/month',
       webpages: '30,000 webpages stored',
@@ -243,20 +177,21 @@ const Pricing = () => {
           card.crmIntegration,
           card.aiImageSearch,
         ].map((item, idx) => {
-          // If the item is missing (null), we'll use the text from the other plans
-          const fallbackItem = (index === 0 && card.webpages) || (index === 1 && card.webpages) || (index === 2 && card.replies);
-          const itemToDisplay = item || fallbackItem; // Fallback if item is null
+          const shouldStrike =
+            (index === 0 && idx >= 6) || // Strike from "Up Selling" onwards in Essential
+            (index === 1 && (idx === 7 || idx === 10)) || // Strike "Cross Selling" and "AI Image Search*" in Growth
+            (index === 2 && false); // Do not strike anything in Premium
           return (
             <li
               key={idx}
               className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)} ${
-                ((index === 0 && idx >= 5) || (index === 1 && idx >= 8)) ? 'line-through' : ''
+                shouldStrike ? 'line-through' : ''
               }`}
             >
               <i
                 className={`fa-solid fa-circle-check pe-2 ${activeCard === index + 1 ? 'text-white' : 'text-blue'}`}
               />
-              {itemToDisplay}
+              {item}
             </li>
           );
         })}
@@ -266,14 +201,15 @@ const Pricing = () => {
           className={`py-1 px-5 rounded-full font-medium text-lg transition-colors duration-500 ${
             activeCard === index + 1 ? 'bg-white text-blue' : 'bg-blue text-white'
           }`}
-          onClick={() => setShowCalendly(true)}
+          onClick={handleButtonClick}
         >
           {card.price}
         </button>
       </div>
     </div>
   ))}
-</div>
+</div>;
+
 
 
       </div>
@@ -506,7 +442,7 @@ const Pricing = () => {
 </div>
 {/* CTA */}
       
-      <div className="container mx-auto sm:px-4 ptb-60 max-w-6xl">
+      {/* <div className="container mx-auto sm:px-4 ptb-60 max-w-6xl">
         <div
           className="flex flex-wrap justify-center"
           style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
@@ -534,7 +470,7 @@ const Pricing = () => {
                       className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
                       onClick={handleCloseCalendly}
                     >
-                      &#10005; {/* X button */}
+                      &#10005;
                     </button>
                   </div>
                 </div>
@@ -551,7 +487,145 @@ const Pricing = () => {
             }}
           />
         </div>
+      </div> */}
+
+
+{/* CTA */}
+<div className="relative overflow-hidden bg-gray-900 rounded-2xl my-16 mx-auto" style={{backgroundColor: "#1f2937",width: "90%", maxWidth:"1200px"}}>
+    <div className="px-16 py-8 sm:px-8 lg:px-16 lg:py-14">
+        <div className="md:flex md:items-center md:space-x-12 lg:space-x-24">
+            <div className="text-center md:text-left">
+                <h2 className="text-2xl font-bold text-white font-pj">
+                    Still Not Sure?
+                </h2>
+                <p className="mt-3 text-base text-white font-medium">
+                    Let us show you a quick DEMO tailored to your store. You’ll be impressed.
+                </p>
+            </div>
+            <div className="block md:hidden lg:block">
+                <div className="hidden lg:block">
+                    <svg className="w-4 h-auto text-white" viewBox="0 0 16 123" fill="none" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 11)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 46)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 81)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 116)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 18)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 53)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 88)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 123)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 25)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 60)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 95)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 32)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 67)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 102)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 39)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 74)"></line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5"
+                            transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 109)"></line>
+                    </svg>
+                </div>
+                <div className="mt-4 md:hidden flex justify-center items-center">
+                    <svg className="w-auto h-4 text-white" viewBox="0 0 172 16" fill="none" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)">
+                        </line>
+                        <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)">
+                        </line>
+                    </svg>
+                </div>
+            </div>
+            <div className="mt-10 md:mt-0">
+  <button
+    title="Schedule Demo"
+    className="flex items-center justify-center px-9 py-3.5 mt-5 text-base font-bold text-gray-900 transition-all duration-200 bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white font-pj hover:bg-opacity-90 rounded-xl"
+    onClick={handleButtonClick}
+    style={{ borderRadius: "28px" }}
+  >
+    Schedule Demo
+  </button>
+
+  {showCalendly && (
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-md">
+      <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+        <InlineWidget url="https://calendly.com/smartle/30min" />
+        <button
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl text-white"
+          onClick={handleCloseCalendly}
+        >
+          &#10005;
+        </button>
       </div>
+    </div>
+  )}
+</div>
+
+        </div>
+    </div>
+</div>
+
+     
     </>
   );
 };

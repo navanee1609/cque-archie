@@ -51,24 +51,18 @@ const FeatureSection: React.FC = () => {
                 Try CQUE AI For FREE
               </button>
               {showCalendly && (
-                <div className="fixed inset-0 flex items-center justify-center z-50">
-                  <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
-                    <button
-                      className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-black"
-                      onClick={handleCloseCalendly}
-                    >
-                      &#10005; {/* X button */}
-                    </button>
-                    <InlineWidget url="https://calendly.com/" />
-                  </div>
-                </div>
-              )}
-              {overlayVisible && (
-                <div
-                  className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40"
+            <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-md">
+              <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                <InlineWidget url="https://calendly.com/smartle/30min" />
+                <button
+                  className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl text-white"
                   onClick={handleCloseCalendly}
-                />
-              )}
+                >
+                  &#10005;
+                </button>
+              </div>
+            </div>
+          )}
             </div>
           </div>
         </div>
@@ -246,52 +240,139 @@ const FeatureSection: React.FC = () => {
         </div>
     </section>
     
-     <div className="container mx-auto sm:px-4 ptb-60 max-w-7xl">
-            <div
-              className="flex flex-wrap justify-center"
-              style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
-            >
-              <div className="lg:w-1/2 pr-4 pl-4 p-12">
-                <h3 className="mb-3 txt-blk fs-40 fw-600 text-center">
-                  Still Not Sure?
-                </h3>
-                <p className="txt-blk fs-18 text-center text-md font-medium">
-                  Let us show you a quick DEMO tailored to your store. You’ll be
-                  impressed.
-                </p>
-                <div className="flex justify-center">
-                  <button
-                    className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
-                    onClick={handleButtonClick}
-                  >
-                    Schedule Demo
-                  </button>
-                  {showCalendly && (
-                    <div className="fixed inset-0 flex items-center justify-center z-50">
-                      <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
-                        <InlineWidget url="https://calendly.com/prabhu-m-spritle/CQUE-ai-demo?month=2024-03" />
-                        <button
-                          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                          onClick={handleCloseCalendly}
-                        >
-                          &#10005; 
-                        </button>
-                      </div>
+    <div className="relative overflow-hidden bg-gray-900 rounded-2xl my-16 mx-auto" style={{backgroundColor: "#1f2937",width: "90%", maxWidth:"1200px"}}>
+            <div className="px-16 py-8 sm:px-8 lg:px-16 lg:py-14">
+                <div className="md:flex md:items-center md:space-x-12 lg:space-x-24">
+                    <div className="text-center md:text-left">
+                        <h2 className="text-2xl font-bold text-white font-pj">
+                            Still Not Sure?
+                        </h2>
+                        <p className="mt-3 text-base text-white font-medium">
+                            Let us show you a quick DEMO tailored to your store. You’ll be impressed.
+                        </p>
                     </div>
-                  )}
-                </div>
+                    <div className="block md:hidden lg:block">
+                        <div className="hidden lg:block">
+                            <svg className="w-4 h-auto text-white" viewBox="0 0 16 123" fill="none" stroke="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 11)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 46)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 81)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 116)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 18)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 53)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 88)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 123)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 25)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 60)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 95)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 32)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 67)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 102)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 39)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 74)"></line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 109)"></line>
+                            </svg>
+                        </div>
+                        <div className="mt-4 md:hidden flex justify-center items-center">
+                            <svg className="w-auto h-4 text-white" viewBox="0 0 172 16" fill="none" stroke="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)">
+                                </line>
+                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)">
+                                </line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div className="mt-10 md:mt-0">
+          <button
+            title="Schedule Demo"
+            className="flex items-center justify-center px-9 py-3.5 mt-5 text-base font-bold text-gray-900 transition-all duration-200 bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white font-pj hover:bg-opacity-90 rounded-xl"
+            onClick={handleButtonClick}
+            style={{ borderRadius: "28px" }}
+          >
+            Schedule Demo
+          </button>
+        
+          {/* {showCalendly && (
+            <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-md">
+              <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                <InlineWidget url="https://calendly.com/smartle/30min" />
+                <button
+                  className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl text-white"
+                  onClick={handleCloseCalendly}
+                >
+                  &#10005;
+                </button>
               </div>
-              <div
-                className="lg:w-1/2 pr-4 pl-4 hidden lg:block"
-                style={{
-                  background:
-                    "url(https://smartle-ai.s3.amazonaws.com/assets/img/still-not-sure.webp)",
-                  borderRadius: 10,
-                  backgroundSize: "cover",
-                }}
-              />
             </div>
-          </div>
+          )} */}
+        </div>
+        
+                </div>
+            </div>
+        </div>
    
   </div>
 </section>

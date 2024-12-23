@@ -6,14 +6,19 @@ import { FaCog, FaBrain, FaBullhorn } from "react-icons/fa";
 const InsightfulResponse = () => {
   const [showsCalendly, setShowsCalendly] = useState(false);
   const [overlayVisible, setOverlayVisible] = useState(false);
+  const [showCalendly, setShowCalendly] = useState(false);
 
   const handleButtonClicks = () => {
-    setShowsCalendly(true);
+    setShowCalendly(true);
     setOverlayVisible(true);
   };
 
   const handleCalendlyClose = () => {
     setShowsCalendly(false);
+    setOverlayVisible(false);
+  };
+  const handleCloseCalendly = () => {
+    setShowCalendly(false);
     setOverlayVisible(false);
   };
 
@@ -74,29 +79,19 @@ const InsightfulResponse = () => {
       Try CQUE AI
     </button>
 
-    {showsCalendly && (
-      <div className="fixed inset-0 flex items-center justify-center z-50">
-        <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
-          <button
-            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-            onClick={handleCalendlyClose}
-          >
-            &#10005; {/* X button */}
-          </button>
-          {/* Include your InlineWidget component here */}
-          <InlineWidget url="https://calendly.com/" />
-        </div>
-      </div>
-    )}
-    {overlayVisible && (
-      <div
-        className="fixed inset-0 z-40"
-        style={{
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-        }}
-        onClick={handleCalendlyClose}
-      />
-    )}
+    {showCalendly && (
+                <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-md">
+                  <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                    <InlineWidget url="https://calendly.com/smartle/30min" />
+                    <button
+                      className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl text-white"
+                      onClick={handleCloseCalendly}
+                    >
+                      &#10005;
+                    </button>
+                  </div>
+                </div>
+              )}
   </div>
 </div>
 
