@@ -9,7 +9,7 @@ const Integration = () => {
           {/* Left Image Section */}
           <div className="lg:justify-start flex justify-center">
             <Image
-              src="/images/crm-integration.png" // Replace with your image
+              src="/images/aboutus/crm-integration.png" // Replace with your image
               alt="How CQUE AI Works"
               width={400}
               height={400}

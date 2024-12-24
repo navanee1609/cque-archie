@@ -124,7 +124,7 @@ const handleCloseCalendly = () => {
         >
           <div className="lg:w-1/3 pr-4 pl-4 py-5">
             <img
-              src="/images/aboutus/cque-about.png"
+              src="/images/cque-about.png"
               className="max-w-full h-auto"
             />
           </div>

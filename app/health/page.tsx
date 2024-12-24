@@ -217,7 +217,7 @@ const Fashion = () => {
                 <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
                   Transform Patient Care with AI-Driven Solutions!
                 </h2>
-                a
+                
                 {/* <p className="max-w-xl mx-auto mt-4 text-lg font-medium leading-relaxed text-gray-600">
         Experience seamless patient management and enhanced care delivery today.
       </p> */}
