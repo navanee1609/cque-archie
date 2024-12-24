@@ -152,7 +152,11 @@ const handleCloseCalendly = () => {
 
 
 {/* CTA */}
-        <div className="relative overflow-hidden bg-gray-900 rounded-2xl my-16 mx-auto" style={{backgroundColor: "#1f2937",width: "90%", maxWidth:"1200px"}}>
+        <div className="relative overflow-hidden bg-gray-900 rounded-2xl my-16 mx-auto" style={{
+              background: "linear-gradient(135deg, #3F559E, #2D4177, #6A86B6, #8A99D8)",
+              width: "90%",
+              maxWidth: "1200px",
+            }}>
             <div className="px-16 py-8 sm:px-8 lg:px-16 lg:py-14">
                 <div className="md:flex md:items-center md:space-x-12 lg:space-x-24">
                     <div className="text-center md:text-left">

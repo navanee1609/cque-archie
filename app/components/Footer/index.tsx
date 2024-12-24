@@ -42,7 +42,7 @@ const footer = () => {
                 style={{ width: "auto", height: 60, marginTop: "-2rem" }}
               />
             </Link>
-            <h5 className="text-white text-left lg:ml-5 lg:mt-0 text-lg font-medium m-2 mt-6 mb-5 sm:mb-0 sm:text-left">
+            <h5 className="text-white text-left lg:mt-0 text-lg font-medium m-2 mt-8 mb-5 sm:mb-0 sm:text-left">
               Transform your shopping experience with Cque's revolutionary conversational AI chatbot for E-commerce crafted to boost sales by converting potential chats into revenue.
             </h5>
           </div>

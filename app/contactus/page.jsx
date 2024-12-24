@@ -89,27 +89,18 @@ const Contactus = () => {
                 Try CQUE AI
               </button>
               {showsCalendly && (
-                <div className="fixed inset-0 flex items-center justify-center z-50">
-                  <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
-                    <button
-                      className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                      onClick={handleCalendlyClose}
-                    >
-                      &#10005; {/* X button */}
-                    </button>
-                    <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
-                  </div>
-                </div>
-              )}
-              {overlayVisible && (
-                <div
-                  className="fixed inset-0 z-40"
-                  style={{
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                  }}
-                  onClick={handleCalendlyClose}
-                />
-              )}
+          <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-md">
+            <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+              <InlineWidget url="https://calendly.com/smartle/30min" />
+              <button
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl text-white"
+                onClick={handleCalendlyClose}
+              >
+                &#10005;
+              </button>
+            </div>
+          </div>
+        )}
             </div>
           </div>
         </div>
@@ -210,7 +201,7 @@ const Contactus = () => {
               <button
                 className="text-white font-bold py-3 px-4 rounded-3xl w-80"
                 id="submit"
-                style={{ background: '#286955', margin: "0 auto" }}
+                style={{ background: '#3f559e', margin: "0 auto" }}
               >
                 Submit
               </button>
@@ -225,15 +216,15 @@ const Contactus = () => {
       <div className="py-1">
       <div className="py-3" style={{paddingLeft:"5%"}}>
         <p className="flex items-center mb-2 font-medium text-md">
-          <i className="fas fa-phone mr-2" style={{color:'#286955'}}></i>
+          <i className="fas fa-phone mr-2" style={{color:'#3f559e'}}></i>
           <span className="font-bold">Ohio, USA:</span>&nbsp;+1 614 664 7677
         </p>
         <p className="flex items-center mb-2 font-medium text-md">
-          <i className="fas fa-phone mr-2" style={{color:'#286955'}}></i>
+          <i className="fas fa-phone mr-2" style={{color:'#3f559e'}}></i>
           <span className="font-bold" mb-1>Singapore:</span>&nbsp;+65 6652 5475
         </p>
         <p className="flex items-center mb-0 text-md font-medium">
-          <i className="fas fa-phone mr-2" style={{color:'#286955'}}></i>
+          <i className="fas fa-phone mr-2" style={{color:'#3f559e'}}></i>
           <span className="font-bold mb-1">Chennai, India:</span>&nbsp;+91 44 4784 3003
         </p>
       </div>
@@ -246,24 +237,24 @@ const Contactus = () => {
       <div className="py-3 flex flex-col space-y-2">
       <div className="py-3 flex flex-col space-y-2 mb-2" style={{paddingLeft:"5%"}}>
         <a
-          className="flex items-center" style={{color:'#286955'}}
+          className="flex items-center" style={{color:'#3f559e'}}
           href="https://www.google.com/maps/place/Spritle+software+LLC/@40.0044937,-83.1532564,17z/data=!3m1!4b1!4m6!3m5!1s0x8838978530ed0737:0xaa95bab488bbf005!8m2!3d40.0044937!4d-83.1532564!16s%2Fg%2F11rnntvpmb?entry=ttu"
         >
           <i className="fas fa-flag mr-2"></i>
           <span className="font-bold">Ohio, USA</span>
         </a>
         <a
-          className="flex items-center" style={{color:'#286955'}}
+          className="flex items-center" style={{color:'#3f559e'}}
           href="https://www.google.co.in/maps/place/Spritle+Software/@1.3325619,103.8915719,17z/data=!3m1!5s0x31da19f66c9058fd:0x8871b496b404d2ba!4m6!3m5!1s0x31da1703646cca73:0xee6ab222437d335a!8m2!3d1.332946!4d103.8939974!16s%2Fg%2F11ffltwqh1?entry=ttu"
         >
           <i className="fas fa-flag mr-2"></i>
           <span className="font-bold">Singapore</span>
         </a>
         <a
-          className="flex items-centere" style={{color:'#286955'}}
+          className="flex items-centere" style={{color:'#3f559e'}}
           href="https://www.google.com/maps/place/Spritle+Software/@13.0670529,80.1766501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5263d902a72203:0xa64bbcae249c5436!8m2!3d13.0670529!4d80.1766501!16s%2Fg%2F1tfv3k9g?entry=ttu"
         >
-          <i className="fas fa-flag  mr-2" style={{color:'#286955'}}></i>
+          <i className="fas fa-flag  mr-2" style={{color:'#3f559e'}}></i>
 
           <span className="font-bold">Chennai, India</span>
         </a>
@@ -273,68 +264,155 @@ const Contactus = () => {
 
     <div className="py-1">
       <h6 className="flex items-center text-md font-medium">
-        <i className="fas fa-suitcase mr-2" style={{color:'#286955'}}></i>
-        For Jobs enquiries, email us at&nbsp;<a href="mailto:jobs@spritle.com"><span style={{color:"rgb(40, 105, 85"}}>jobs@spritle.com</span></a>
+        <i className="fas fa-suitcase mr-2" style={{color:'#3f559e'}}></i>
+        For Jobs enquiries, email us at&nbsp;<a href="mailto:jobs@spritle.com"><span style={{color:"#3f559e"}}>jobs@spritle.com</span></a>
       </h6>
       <h6 className="flex items-center mt-2 text-md font-medium">
-        <i className="fas fa-circle-info mr-2" style={{color:'#286955'}}></i>
-        <span>For General enquiries, email us at <a href="mailto:info@spritle.com"><span style={{color:"rgb(40, 105, 85)"}}>info@spritle.com</span> </a></span>
+        <i className="fas fa-circle-info mr-2" style={{color:'#3f559e'}}></i>
+        <span>For General enquiries, email us at <a href="mailto:info@spritle.com"><span style={{color:"#3f559e"}}>info@spritle.com</span> </a></span>
       </h6>
     </div>
   </div>
 </div>
 
 
-      <div className="container mx-auto sm:px-4 ptb-60">
-        <div
-          className="flex flex-wrap   justify-center  "
-          style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
+      {/* CTA */}
+      <div className="relative overflow-hidden bg-gray-900 rounded-2xl my-16 mx-auto" style={{
+              background: "linear-gradient(135deg, #3F559E, #2D4177, #6A86B6, #8A99D8)",
+              width: "90%",
+              maxWidth: "1200px",
+            }}>
+          <div className="px-16 py-8 sm:px-8 lg:px-16 lg:py-14">
+              <div className="md:flex md:items-center md:space-x-12 lg:space-x-24">
+                  <div className="text-center md:text-left">
+                      <h2 className="text-2xl font-bold text-white font-pj">
+                          Still Not Sure?
+                      </h2>
+                      <p className="mt-3 text-base text-white font-medium">
+                          Let us show you a quick DEMO tailored to your store. You’ll be impressed.
+                      </p>
+                  </div>
+                  <div className="block md:hidden lg:block">
+                      <div className="hidden lg:block">
+                          <svg className="w-4 h-auto text-white" viewBox="0 0 16 123" fill="none" stroke="currentColor"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 11)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 46)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 81)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 116)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 18)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 53)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 88)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 123)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 25)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 60)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 95)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 32)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 67)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 102)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 39)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 74)"></line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5"
+                                  transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 109)"></line>
+                          </svg>
+                      </div>
+                      <div className="mt-4 md:hidden flex justify-center items-center">
+                          <svg className="w-auto h-4 text-white" viewBox="0 0 172 16" fill="none" stroke="currentColor"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)">
+                              </line>
+                              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)">
+                              </line>
+                          </svg>
+                      </div>
+                  </div>
+                  <div className="mt-10 md:mt-0">
+        <button
+          title="Schedule Demo"
+          className="flex items-center justify-center px-9 py-3.5 mt-5 text-base font-bold text-gray-900 transition-all duration-200 bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white font-pj hover:bg-opacity-90 rounded-xl"
+          onClick={handleButtonClicks}
+          style={{ borderRadius: "28px" }}
         >
-          <div className="lg:w-1/2 pr-4 pl-4 p-12">
-            <h3 className="mb-3 txt-blk fs-40 fw-600 text-center">
-              Still Not Sure?
-            </h3>
-            <p className="txt-blk fs-18 text-center text-md font-medium mb-5">
-              Let us show you a quick DEMO tailored to your store. You’ll be
-              impressed.
-            </p>
-            <div className="flex items-center justify-center mt-4">
-            <button
-                className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
-                onClick={handleButtonClicks}
-            >
-                Schedule Demo
-            </button>
-            {showsCalendly && (
-                <div className="fixed inset-0 flex items-center justify-center z-50">
-                    <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
-                        <button
-                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                            onClick={handleCalendlyClose}
-                        >
-                            &#10005; {/* X button */}
-                        </button>
-                        <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
-                    </div>
-                </div>
-            )}
-            {overlayVisible && (
-                <div
-                    className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40"
-                    onClick={handleCalendlyClose}
-                />
-            )}
-        </div>
+          Schedule Demo
+        </button>
+      
+        {/* {showsCalendly && (
+          <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-md">
+            <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+              <InlineWidget url="https://calendly.com/smartle/30min" />
+              <button
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl text-white"
+                onClick={handleCalendlyClose}
+              >
+                &#10005;
+              </button>
+            </div>
           </div>
-          <div
-            className="lg:w-1/2 pr-4 pl-4 hidden lg:block"
-            style={{
-              background: "url(images/still-not-sure.webp)",
-              borderRadius: 10,
-              backgroundSize: "cover",
-            }}
-          />
-        </div>
+        )} */}
+      </div>
+      
+              </div>
+          </div>
       </div>
      
     </>
