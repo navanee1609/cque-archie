@@ -128,7 +128,7 @@ const FeatureSection: React.FC = () => {
               <h2 className="text-3xl font-bold text-black leading-tight text-center lg:text-left animate__animated animate__fadeIn animate__delay-1s">
                 Discover Seamless Classroom Management with AI
               </h2>
-              <p className="text-lg text-gray-600 font-medium text-center lg:text-left">
+              <p className="text-xl text-gray-600 font-medium text-center lg:text-left">
                 Enhance your school's efficiency today with AI-powered
                 management tools.
                 <br />

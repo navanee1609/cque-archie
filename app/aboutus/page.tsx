@@ -98,7 +98,7 @@ const handleCloseCalendly = () => {
             <h2 style={{ textAlign: "left" , fontWeight: 500}} className="fw-bold text-5xl my-4">
               Your AI partner
             </h2>
-            <p style={{ textAlign: "left" , fontSize:"1.15rem"}} className="py-3 font-medium">
+            <p className="py-3 font-medium text-lg">
               Imagine a world where conversation isn't confined to screens and
               buttons. Where you can chat, ask questions, and get things done
               with an AI as natural and engaging as a real person. That's the

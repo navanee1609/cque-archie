@@ -36,7 +36,7 @@ const Revenue = () => {
                 />
               </svg>
               <div className="ml-5">
-                <h3 className="text-xl font-semibold text-black">Detect</h3>
+                <h3 className="text-2xl font-semibold text-black">Detect</h3>
                 <p className="mt-3 text-gray-600 text-lg font-medium">
                   CQUE AI identifies abandoned carts in real-time.
                 </p>
@@ -60,7 +60,7 @@ const Revenue = () => {
                 />
               </svg>
               <div className="ml-5">
-                <h3 className="text-xl font-semibold text-black">Re-engage</h3>
+                <h3 className="text-2xl font-semibold text-black">Re-engage</h3>
                 <p className="mt-3 text-gray-600 text-lg font-medium">
                   Personalized messages and exclusive discounts are sent.
                 </p>
@@ -84,7 +84,7 @@ const Revenue = () => {
                 />
               </svg>
               <div className="ml-5">
-                <h3 className="text-xl font-semibold text-black">Recover</h3>
+                <h3 className="text-2xl font-semibold text-black">Recover</h3>
                 <p className="mt-3 text-gray-600 font-medium text-lg">
                   Timely reminders and AI-driven engagement help convert sales.
                 </p>

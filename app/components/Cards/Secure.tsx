@@ -6,9 +6,9 @@ const Secure = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-semibold text-black">Secure, Private, and Always Compliant
+          <h2 className="text-4xl font-semibold text-black">Secure, Private, and Always Compliant
           </h2>
-          <p className="mt-4 font-medium text-lightblack text-lg">
+          <p className="mt-4 text-lightblack text-xl font-medium">
             We take every measure to ensure the highest level of security and compliance, safeguarding your data every step of the way.
           </p>
         </div>

@@ -6,7 +6,7 @@ const Conversionrates = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Tagline Section - Centered */}
         <div className="text-center mb-10">
-          <h3 className="text-center text-lg text-blue font-bold mb-4">
+          <h3 className="text-center text-2xl text-blue font-bold mb-4">
             Unlock the Power of Data-Driven Strategies to Boost Your Conversion Rates
           </h3>
         </div>

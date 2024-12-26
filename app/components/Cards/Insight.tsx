@@ -56,7 +56,7 @@ const Insight = () => {
                 <h3 className="text-2xl font-bold text-md mb-6">
                   {feature.title}
                 </h3>
-                <p className="text-lg">{feature.description}</p>
+                <p className="text-lg font-medium">{feature.description}</p>
               </div>
             </div>
           ))}

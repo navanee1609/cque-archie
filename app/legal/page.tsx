@@ -95,7 +95,7 @@ const page = () => {
               <h2 className="text-3xl font-bold text-black leading-tight text-center lg:text-left animate__animated animate__fadeIn animate__delay-1s">
                 Discover Seamless Relocation with AI Assistance
               </h2>
-              <p className="text-lg text-gray-600 font-medium text-center lg:text-left">
+              <p className="text-xl text-gray-600 font-medium text-center lg:text-left">
                 Make your move effortless with AI-driven insights and tailored
                 relocation guidance.
                 <br />
@@ -111,7 +111,7 @@ const page = () => {
             <h2 className="text-2xl font-bold leading-tight text-black sm:text-3xl lg:text-3xl animate__animated animate__fadeIn">
               Cque AI: Your Perfect Relocation Assistant
             </h2>
-            <p className="mt-4 text-lg text-gray-600 sm:text-xl">
+            <p className="mt-4 text-xl font-medium text-gray-600">
               Simplifying your journey abroad with AI-powered features tailored
               to your relocation needs.
             </p>
