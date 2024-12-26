@@ -7,8 +7,8 @@ const GenAi = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-semibold text-black">Generative AI Capabilities</h2>
-          <p className="mt-4 font-medium text-lightblack text-lg">
+          <h2 className="text-3xl font-bold text-black">Generative AI Capabilities</h2>
+          <p className="mt-4 font-medium text-lightblack text-xl">
           Our platform utilizes advanced generative AI technologies to offer innovative solutions, focusing on security, compliance, and data privacy.
           </p>
         </div>
@@ -21,7 +21,7 @@ const GenAi = () => {
               <FaCheckCircle className="text-blue-500 text-7xl" /> {/* Blue Icon */}
             </div>
             <h3 className="mt-8 text-xl font-semibold text-black">Dynamic Responses</h3>
-            <p className="mt-4 text-black font-medium">
+            <p className="mt-4 text-black font-medium text-lg">
               Personalised experience for each customer
             </p>
           </div>
@@ -32,7 +32,7 @@ const GenAi = () => {
               <FaShieldAlt className="text-orange-500 text-7xl" /> {/* Orange Icon */}
             </div>
             <h3 className="mt-8 text-xl font-semibold text-black">Content Creation</h3>
-            <p className="mt-4 text-black font-medium">
+            <p className="mt-4 text-black font-medium text-lg">
             Generate marketing content for your products.
 
             </p>
@@ -44,7 +44,7 @@ const GenAi = () => {
               <FaUserLock className="text-green-500 text-7xl" /> {/* Green Icon */}
             </div>
             <h3 className="mt-8 text-xl font-semibold text-black">Problem Solving</h3>
-            <p className="mt-4 text-black font-medium">
+            <p className="mt-4 text-black font-medium text-lg">
             Offer tailored solutions to customer issues.
 
             </p>

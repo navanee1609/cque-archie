@@ -162,7 +162,7 @@ const Pricing = () => {
         </div>
       )}
       <h3 className={`mb-2 text-4xl font-bold ${getTextColor(index + 1)}`}>{card.plan}</h3>
-      <p className={`mb-4 fs-15 ${getTextColor(index + 1)}`}>5 days free trial</p>
+      <p className={`mb-4 fs-16 font-medium ${getTextColor(index + 1)}`}>5 days free trial</p>
       <ul className="p-0" style={{ listStyle: 'none' }}>
         {[
           card.replies,
@@ -184,7 +184,7 @@ const Pricing = () => {
           return (
             <li
               key={idx}
-              className={`fs-15 font-medium text-lg mb-2 ${getTextColor(index + 1)} ${
+              className={`fs-16 font-medium text-lg mb-2 ${getTextColor(index + 1)} ${
                 shouldStrike ? 'line-through' : ''
               }`}
             >

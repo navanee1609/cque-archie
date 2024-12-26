@@ -100,7 +100,7 @@ const Fashion = () => {
               <h2 className="text-3xl font-bold text-black leading-tight text-center lg:text-left animate__animated animate__fadeIn animate__delay-1s">
                 Transform Patient Care with AI-Driven Solutions
               </h2>
-              <p className="text-lg text-gray-600 font-medium text-center lg:text-left">
+              <p className="text-xl text-gray-600 font-medium text-center lg:text-left">
                 Simplify healthcare operations with smart AI tools. <br />
                 Start leveraging AI for a seamless experience in patient care
                 today!

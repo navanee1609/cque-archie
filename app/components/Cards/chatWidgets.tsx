@@ -8,7 +8,7 @@ const ChatWidgets = () => {
           <h2 className="text-3xl font-bold text-gray-900 d sm:text-4xl xl:text-5xl">
             Customizable Chat Widgets
           </h2>
-          <p className="max-w-md mx-auto mt-5 font-medium text-lightblack text-lg">
+          <p className="max-w-md mx-auto mt-5 font-medium text-lightblack text-xl">
             Adjust your chat widget's settings to perfectly match your brand, enhance user experience, and control its behavior.
           </p>
         </div>

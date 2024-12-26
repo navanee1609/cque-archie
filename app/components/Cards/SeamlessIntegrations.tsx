@@ -21,7 +21,7 @@ const SeamlessIntegrations = () => {
                 <h5 className="text-2xl font-semibold text-darkpurple mb-4">
                 Quick Setup
                 </h5>
-                <p className="text-gray-700 text-lg">
+                <p className="text-gray-700 text-lg font-medium">
                 Easy installation for instant use.
                 </p>
             </div>
@@ -29,7 +29,7 @@ const SeamlessIntegrations = () => {
                 <h5 className="text-2xl font-semibold text-darkpurple mb-4">
                 Data Sync
                 </h5>
-                <p className="text-gray-700 text-lg">
+                <p className="text-gray-700 text-lg font-medium">
                 Automatically updates with product info.
                 </p>
             </div>
@@ -37,7 +37,7 @@ const SeamlessIntegrations = () => {
                 <h5 className="text-2xl font-semibold text-darkpurple mb-4">
                 Customization
                 </h5>
-                <p className="text-gray-700 text-lg">
+                <p className="text-gray-700 text-lg font-medium">
                 Tailor the AI assistant to your brand.
                 </p>
             </div>

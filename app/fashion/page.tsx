@@ -95,7 +95,7 @@ const Fashion = () => {
               <h2 className="text-3xl font-bold text-black leading-tight text-center lg:text-left animate__animated animate__fadeIn animate__delay-1s">
                 Discover Effortless Style with AI-Enhanced Fashion
               </h2>
-              <p className="text-lg text-gray-600 font-medium text-center lg:text-left">
+              <p className="text-xl text-gray-600 font-medium text-center lg:text-left">
                 Elevate your fashion game today with AI-powered styling. <br />
                 Start your free trial and step into effortless style!
               </p>

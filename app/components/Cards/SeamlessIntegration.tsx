@@ -69,7 +69,7 @@ const SeamlessIntegration = () => {
               <div className="absolute -bottom-10 -left-16 bg-yellow-300 rounded-lg shadow-lg" style={{ background: "#FEDD9E" }}>
                 <div className="px-6 py-8">
                   <span className="block text-4xl font-bold text-black">CQUE AI</span>
-                  <span className="block mt-2 text-md leading-tight text-black">
+                  <span className="block mt-2 text-md leading-tight font-medium text-black">
                     High Conversions<br />Everything
                   </span>
                 </div>

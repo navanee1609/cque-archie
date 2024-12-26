@@ -30,7 +30,7 @@ const HowItWorks = () => {
                         <h5 className="text-2xl font-semibold text-darkpurple mb-4">
                             Adaptive Learning
                         </h5>
-                        <p className="text-gray-700 text-lg">
+                        <p className="text-gray-700 text-lg font-medium">
                             CQUE AI evolves with every interaction.
                         </p>
                     </div>
@@ -38,7 +38,7 @@ const HowItWorks = () => {
                         <h5 className="text-2xl font-semibold text-darkpurple mb-4">
                             Seamless Integration
                         </h5>
-                        <p className="text-gray-700 text-lg">
+                        <p className="text-gray-700 text-lg font-medium">
                             Integrate with your Shopify store in just a few clicks.
                         </p>
                     </div>
@@ -46,7 +46,7 @@ const HowItWorks = () => {
                         <h5 className="text-2xl font-semibold text-darkpurple mb-4">
                             Smart Automation
                         </h5>
-                        <p className="text-gray-700 text-lg">
+                        <p className="text-gray-700 text-lg font-medium">
                             Boost efficiency with AI-driven automated workflows and solutions.
                         </p>
                     </div>

@@ -5,10 +5,10 @@ const Join = () => {
             <div className='mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8'>
 
                 <div className="text-center">
-                    <h3 className="text-blue text-2xl font-normal tracking-widest">JOIN US</h3>
+                    <h3 className="text-blue text-2xl font-semibold tracking-widest">JOIN US</h3>
                     <h2 className="text-4xl sm:text-6xl font-bold my-6 leading-10"> Join CQUE AI Today
                     </h2>
-                    <p className="text-lightblack font-medium text-lg">Unlock the power of AI to transform your e-commerce business. <br />CQUE AI offers seamless integration, immediate impact, and a future-proof solution to elevate your customer experience.
+                    <p className="text-lightblack font-medium text-xl">Unlock the power of AI to transform your e-commerce business. <br />CQUE AI offers seamless integration, immediate impact, and a future-proof solution to elevate your customer experience.
                     </p>
                 </div>
 

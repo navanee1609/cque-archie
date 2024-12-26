@@ -11,7 +11,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   title,
   features,
 }) => (
-  <div className="relative group bg-white/20 backdrop-blur-lg border border-[#3f559e] rounded-3xl p-8 shadow-lg transition-transform duration-500 transform hover:scale-105 hover:shadow-2xl hover:bg-white/50">
+  <div className="relative group mb-4 bg-white/20 backdrop-blur-lg border border-[#3f559e] rounded-3xl p-8 shadow-lg transition-transform duration-500 transform hover:scale-105 hover:shadow-2xl hover:bg-white/50">
     <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#3f559e] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
       <i className={`${iconClass} text-white text-3xl`}></i>
     </div>
@@ -88,10 +88,10 @@ const FeaturedSolutions: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center">
-          <h2 className="text-5xl font-bold text-gray-800 tracking-tight">
+          <h2 className="text-4xl font-bold text-gray-800 tracking-tight">
             Featured Solutions
           </h2>
-          <p className="mt-4 text-lg font-medium text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-xl font-medium text-gray-600 max-w-2xl mx-auto">
           Explore the powerful features we offer to enhance your experience with our platform.
           </p>
         </div>

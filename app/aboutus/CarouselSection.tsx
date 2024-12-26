@@ -96,7 +96,7 @@ const CarouselSection = () => {
                     className="mx-auto mb-3"
                     style={{ width: '80%', color: 'black' }}
                   />
-                  <p className="text-center py-3 text-black">{item.description}</p>
+                  <p className="text-center py-3 text-black font-medium">{item.description}</p>
                 </div>
               </SwiperSlide>
             ))}
