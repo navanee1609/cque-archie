@@ -86,7 +86,7 @@ const Cards = () => {
                                 height={40}
                                 className="mb-5"
                             />
-                            <h4 className="text-lg font-normal text-black mb-5">
+                            <h4 className="text-lg font-medium text-black mb-5">
                                 {item.paragraph}
                             </h4>
                             {/* <Link href="#" className='text-lg font-semibold group-hover:text-white text-blue hover-underline'>
