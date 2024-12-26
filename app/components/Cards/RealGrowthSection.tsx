@@ -6,7 +6,7 @@ const RealGrowthSection = () => {
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Real Results, Real Growth</h2>
-            <p className="mx-auto mt-4 text-lg leading-relaxed text-lightblack">Leverage CQUE AI's capabilities to drive growth, enhance customer satisfaction, and optimize operations. By streamlining workflows and personalizing experiences, your business can achieve remarkable results.
+            <p className="mx-auto mt-4 text-lg font-medium leading-relaxed text-lightblack">Leverage CQUE AI's capabilities to drive growth, enhance customer satisfaction, and optimize operations. By streamlining workflows and personalizing experiences, your business can achieve remarkable results.
 </p>
         </div>
 
@@ -21,7 +21,7 @@ const RealGrowthSection = () => {
                 </div>
                 <div className="ml-6">
                     <h3 className="text-xl font-semibold text-black">Higher Sales</h3>
-                    <p className="mt-4 text-lg text-gray-600">Drive conversions with AI-powered recommendations and smart pop-ups.
+                    <p className="mt-4 text-lg text-black font-medium">Drive conversions with AI-powered recommendations and smart pop-ups.
                     </p>
                 </div>
             </li>
@@ -36,7 +36,7 @@ const RealGrowthSection = () => {
                 </div>
                 <div className="ml-6">
                     <h3 className="text-xl font-semibold text-black">Streamlined Operations                    </h3>
-                    <p className="mt-4 text-lg text-gray-600">Automate repetitive tasks, freeing your team to focus on strategic priorities.
+                    <p className="mt-4 text-lg text-black font-medium">Automate repetitive tasks, freeing your team to focus on strategic priorities.
                     </p>
                 </div>
             </li>
@@ -49,7 +49,7 @@ const RealGrowthSection = () => {
                 </div>
                 <div className="ml-6">
                     <h3 className="text-xl font-semibold text-black">Enhanced Satisfaction</h3>
-                    <p className="mt-4 text-lg text-gray-600">Respond to 97% of customer inquiries instantly, improving experiences.
+                    <p className="mt-4 text-lg text-black font-medium">Respond to 97% of customer inquiries instantly, improving experiences.
                     </p>
                 </div>
             </li>
