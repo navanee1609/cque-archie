@@ -120,7 +120,7 @@ const Navbar: React.FC<NavbarProps> = ({ setShowsCalendly, setOverlayVisible }) 
                   {isDropdownOpen && (
                     <div
                       id="dropdown-menu"
-                      className="absolute flex-wrap bg-white shadow-md rounded-md mt-3 z-10 border border-gray-200"
+                      className="absolute flex-wrap bg-white shadow-md rounded-md mt-3 z-10 "
                     >
                       <ul className="py-2 grid grid-cols-2 gap-x-6 gap-y-2 w-max px-4">
                         {useCases.map((useCase) => (
