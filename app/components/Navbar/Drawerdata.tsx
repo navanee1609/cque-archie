@@ -106,7 +106,7 @@ const Data = ({ setShowsCalendly, setOverlayVisible }: DrawerDataProps) => {
                 </button>
                 {dropdownVisible && (
                   <div
-                    className={`absolute left-0 mt-2 w-60 bg-white shadow-md rounded-md border border-green-500 transform origin-top transition-transform transition-opacity duration-500 ease-in-out ${
+                    className={`absolute left-0 mt-2 w-60 bg-white shadow-md rounded-md border border-green-500 transform origin-top transition-transform duration-500 ease-in-out ${
                       dropdownVisible
                         ? "opacity-100 scale-100 translate-y-0"
                         : "opacity-0 scale-95 -translate-y-4"
