@@ -52,18 +52,18 @@ const Pricing = () => {
   };
 
 
-  useEffect(() => {
-    if (showCalendly) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+  // useEffect(() => {
+  //   if (showCalendly) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
 
-    // Cleanup when the component is unmounted or modal is closed
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [showCalendly]);
+  //   // Cleanup when the component is unmounted or modal is closed
+  //   return () => {
+  //     document.body.style.overflowX = "auto";
+  //   };
+  // }, [showCalendly]);
 
 
 
