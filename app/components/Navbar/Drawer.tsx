@@ -39,7 +39,7 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
             alt="Cque.ai Logo"
             width={120} 
             height={40}  
-            className="h-auto w-auto"
+            // className="h-auto w-auto"
           />
         </div>
       </Link>
