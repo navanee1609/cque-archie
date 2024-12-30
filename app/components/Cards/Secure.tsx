@@ -42,7 +42,7 @@ const Secure = () => {
             <div className="relative flex items-center justify-center mx-auto w-16 h-16 rounded-full bg-green-100">
               <i className="fas fa-user-lock text-green-500 text-7xl"></i> {/* Green Icon */}
             </div>
-            <h3 className="mt-8 text-cl font-semibold text-black">GDPR Compliance</h3>
+            <h3 className="mt-8 text-xl font-semibold text-black">GDPR Compliance</h3>
             <p className="mt-4 text-black text-lg font-medium">
               Meet the highest standards of data protection.
             </p>
