@@ -108,7 +108,7 @@ const Pricing = () => {
         <h2 className="text-center text-3xl md:text-5xl" style={{ paddingBottom: '5%' }}>
           Pricing that propels your success
         </h2>
-        <div className="flex flex-wrap pr-4 pl-4 mx-auto justify-center cursor-pointer">
+        <div className="flex flex-wrap pr-4 pl-4 mx-auto justify-center cursor-pointer gap-6">
   {[
     {
       price: '$199 / month',
@@ -158,7 +158,9 @@ const Pricing = () => {
   ].map((card, index) => (
     <div
       key={index}
-      className={`w-full sm:w-1/2 lg:w-1/3 p-6 ${getCardClasses(index + 1)}`}
+      className={`w-full sm:w-1/2 lg:w-1/3 p-6 transition-all duration-300 ease-in-out transform ${getCardClasses(index + 1)} ${
+        activeCard === index + 1 ? 'scale-105' : ''
+      }`}
       onClick={() => handleCardClick(index + 1)}
       style={{ alignSelf: 'flex-start' }}
     >
@@ -218,7 +220,8 @@ const Pricing = () => {
       </div>
     </div>
   ))}
-</div>;
+</div>
+
 
 
 
