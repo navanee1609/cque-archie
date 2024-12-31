@@ -128,7 +128,7 @@ const Fashion = () => {
                     Discover on-demand style advice and outfit suggestions
                     tailored to your unique preferences and body features. With
                     the power of AI, making confident fashion choices has never
-                    been this easy or enjoyable.
+                    been this easy or enjoyable.a
                   </p>
                 </div>
               </div>
@@ -309,7 +309,7 @@ const Fashion = () => {
                   <h2 className="text-2xl font-bold text-white font-pj">
                     Still Not Sure?
                   </h2>
-                  <p className="mt-3 text-lg text-white font-medium">
+                  <p className="mt-3 text-base text-white font-medium">
                     Let us show you a quick DEMO tailored to your store. You’ll
                     be impressed.
                   </p>
