@@ -80,17 +80,27 @@ const Pricing = () => {
               <span className="fw-600" style={{color:"#3f559e"}}>Conversation to Conversion : </span>
               Mastering the Art of Sales-Driven AI Chat
             </h1>
-            <h2 className=" text-xl font-medium mt-4 lg:block hidden max-w-5xl" style={{ margin: "0 auto" }}>
-              At CQUE.AI, we recognize the unique needs of every business.
-              Ready to transform your conversational AI journey? Choose a plan
-              and let&apos;s build your success story together.
-            </h2>
-            <p className="mt-4 fs-18 block lg:hidden py-4">
-              At CQUE.AI, we recognize the unique needs of every business.
-              Ready to transform your conversational AI journey? Choose a plan
-              and <br /> let&apos;s build your success story together.
-            </p>
-            <p />
+             <div className="flex items-center justify-center">
+                          <button
+                            className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3"
+                            onClick={handleButtonClick}
+                          >
+                            Try CQUE AI For FREE
+                          </button>
+                          {/* {showCalendly && (
+                            <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-md">
+                              <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                                <InlineWidget url="https://calendly.com/smartle/30min" />
+                                <button
+                                  className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl text-white"
+                                  onClick={handleCloseCalendly}
+                                >
+                                  &#10005;
+                                </button>
+                              </div>
+                            </div>
+                          )} */}
+                        </div>
           </div>
         </div>
       </div>
