@@ -112,21 +112,21 @@ const Navbar: React.FC<NavbarProps> = ({ setShowsCalendly, setOverlayVisible }) 
                   <div
   id="dropdown-menu"
   className={classNames(
-    "absolute flex-wrap bg-white shadow-md rounded-md mt-3 z-10 transition-all duration-500 ease-in-out transform origin-top",
+    "absolute flex-wrap bg-white shadow-md rounded-md mt-3 z-10 transition-all duration-500 ease-in-out",
     isDropdownOpen
-      ? "opacity-100 scale-100 translate-y-0"
-      : "opacity-0 scale-95 -translate-y-3 pointer-events-none"
+      ? "opacity-100 translate-y-0"
+      : "opacity-0 -translate-y-3 pointer-events-none"
   )}
 >
   <ul className="py-2 grid grid-cols-2 gap-x-6 gap-y-2 w-max px-4">
     {useCases.map((useCase) => (
       <li
         key={useCase.name}
-        className="flex items-center px-3 py-3 bg-white rounded-md font-medium transition-all duration-500 ease-in-out  hover:bg-[#e5e5e5e] hover:scale-105 hover:shadow-lg hover:border"
+        className="flex items-center px-3 py-3 bg-white rounded-md font-medium transition-all duration-500 ease-in-out hover:bg-[#e5e5e5e] hover:shadow-lg hover:border"
       >
         <FontAwesomeIcon
           icon={useCase.icon}
-          className="mr-2 text-gray-600 h-4 w-4 transition-transform duration-500 hover:rotate-12"
+          className="mr-2 text-gray-600 h-4 w-4 transition-transform duration-500"
         />
         <Link
           href={useCase.href}
@@ -139,6 +139,7 @@ const Navbar: React.FC<NavbarProps> = ({ setShowsCalendly, setOverlayVisible }) 
     ))}
   </ul>
 </div>
+
 
                 </div>
                 <Link
